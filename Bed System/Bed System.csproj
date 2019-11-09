@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3747E13-81AA-46F0-9DDB-2A9F8EF0779B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bed_System</RootNamespace>
+    <AssemblyName>Bed System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addPatient.cs" />
+    <Compile Include="addPatientHandler.cs" />
+    <Compile Include="DatabaseConnertor.cs" />
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStaffLoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalStaffLoginPage.Designer.cs">
+      <DependentUpon>MedicalStaffLoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicalstaff.cs" />
+    <Compile Include="MedicalStaffMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalStaffMenu.Designer.cs">
+      <DependentUpon>MedicalStaffMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSLoginDatabase.cs" />
+    <Compile Include="PatientMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientMode.Designer.cs">
+      <DependentUpon>PatientMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeRegister.Designer.cs">
+      <DependentUpon>DeRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientInfoSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInfoSystem.Designer.cs">
+      <DependentUpon>PatientInfoSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pmdetails.cs" />
+    <Compile Include="pmdetailsHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rederegister.cs" />
+    <Compile Include="rederegisterHandler.cs" />
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalStaffLoginPage.resx">
+      <DependentUpon>MedicalStaffLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalStaffMenu.resx">
+      <DependentUpon>MedicalStaffMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInfoSystem.resx">
+      <DependentUpon>PatientInfoSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientMode.resx">
+      <DependentUpon>PatientMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeRegister.resx">
+      <DependentUpon>DeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stethoscope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReDeregister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select module.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeRegister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
