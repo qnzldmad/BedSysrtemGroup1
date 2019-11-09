@@ -27,7 +27,7 @@ namespace BadSystem
 
             addPatientHandler addPatientHandler = new addPatientHandler();
             int resp2 = addPatientHandler.addNewPatient(databaseConnertor.getconn(), addPatient);
-            Assert.IsNotNull(resp2);
+            Assert.AreEqual(1, resp2);
         }
     }
 }
