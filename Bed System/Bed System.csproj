@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Bed_System</RootNamespace>
     <AssemblyName>Bed System</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,9 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActiveBedside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActiveBedside.Designer.cs">
+      <DependentUpon>ActiveBedside.cs</DependentUpon>
+    </Compile>
     <Compile Include="addPatient.cs" />
     <Compile Include="addPatientHandler.cs" />
     <Compile Include="DatabaseConnertor.cs" />
+    <Compile Include="nurse.cs" />
+    <Compile Include="NurseLoginDatabase.cs" />
+    <Compile Include="NurseLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseLoginForm.Designer.cs">
+      <DependentUpon>NurseLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +86,18 @@
       <DependentUpon>MedicalStaffMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MSLoginDatabase.cs" />
+    <Compile Include="MuteAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuteAlarm.Designer.cs">
+      <DependentUpon>MuteAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseMenu.Designer.cs">
+      <DependentUpon>NurseMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientMode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +122,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rederegister.cs" />
     <Compile Include="rederegisterHandler.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPatient.Designer.cs">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetAlarmLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAlarmLimit.Designer.cs">
+      <DependentUpon>SetAlarmLimit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActiveBedside.resx">
+      <DependentUpon>ActiveBedside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseLoginForm.resx">
+      <DependentUpon>NurseLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedicalStaffMenu.resx">
       <DependentUpon>MedicalStaffMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuteAlarm.resx">
+      <DependentUpon>MuteAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseMenu.resx">
+      <DependentUpon>NurseMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientInfoSystem.resx">
       <DependentUpon>PatientInfoSystem.cs</DependentUpon>
@@ -123,6 +180,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPatient.resx">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAlarmLimit.resx">
+      <DependentUpon>SetAlarmLimit.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

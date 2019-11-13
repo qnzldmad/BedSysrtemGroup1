@@ -42,7 +42,8 @@ namespace Bed_System
 
         private void btnNurse_Click(object sender, EventArgs e)
         {
-
+            NurseLoginForm nurseLoginForm = new NurseLoginForm();
+            nurseLoginForm.Show();
         }
     }
 }
