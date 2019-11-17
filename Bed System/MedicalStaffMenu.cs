@@ -39,6 +39,10 @@ namespace Bed_System
 
         private void selectModulePB_click(object sender, EventArgs e)
         {
+            this.Hide();
+            SelectModule select = new SelectModule();
+            select.ShowDialog();
+            this.Close();
 
         }
 

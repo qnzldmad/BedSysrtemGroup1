@@ -23,9 +23,8 @@ namespace Bed_System
         
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-            PasswordTextBox.PasswordChar = '*';
-            PasswordTextBox.MaxLength = 7;
+        {            
+            PasswordTextBox.MaxLength = 8;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -37,6 +36,9 @@ namespace Bed_System
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            MainPage main = new MainPage();
+            main.ShowDialog();
             this.Close();
         }
 
@@ -45,8 +47,8 @@ namespace Bed_System
 
             NurseLoginDatabase database = new NurseLoginDatabase();
 
-            String username = IdNumberTextBox.Text;
-            String password = PasswordTextBox.Text;
+            String s_loginid = IdNumberTextBox.Text;
+            String s_password = PasswordTextBox.Text;
 
             DataTable table = new DataTable();
 
@@ -71,17 +73,18 @@ namespace Bed_System
                 nurseOne.nLoginID = IdNumberTextBox.Text;
 
                 passingtext = IdNumberTextBox.Text;
+                this.Close();
                 NurseMenu nurseMenu = new NurseMenu();
                 nurseMenu.Show();
             }
             else
             {
 
-                if (username.Trim().Equals(""))
+                if (s_loginid.Trim().Equals(""))
                 {
                     MessageBox.Show("Enter Your Username To Login", "Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (password.Trim().Equals(""))
+                else if (s_password.Trim().Equals(""))
                 {
                     MessageBox.Show("Enter Your Password To Login", "Empty Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -104,5 +107,7 @@ namespace Bed_System
                 PasswordTextBox.UseSystemPasswordChar = false;
             }
         }
+
+        
     }
 }

@@ -29,6 +29,28 @@ namespace Bed_System
 
         }
 
-        
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            DatabaseConnertor dbConn = new DatabaseConnertor();
+            dbConn.connect();
+
+            SetLimit limit = new SetLimit();
+            limit.Id = int.Parse(AlarmIdTextBox.Text);
+            limit.Name = AlarmPatientTextBox.Text;
+            limit.Pulse = int.Parse(PulseRateUpDown.Text);
+            limit.Breathing = int.Parse (BreathingRateUpDown.Text);
+            limit.Blooddias = int.Parse (BloodDiasUpDown.Text);
+            limit.Bloodsys = int.Parse(BloodSysUpDown.Text);
+            limit.Temperature = int.Parse(TemperatureUpDown.Text);
+
+            LimitHandler limHnd = new LimitHandler();
+            int recordCnt = limHnd.SetNewLimit(dbConn.getConn(), limit);
+            MessageBox.Show(recordCnt + " record has been iinserted !");
+
+            SetAlarmLimit setNewlimit = new SetAlarmLimit();
+            setNewlimit.Show();
+            this.Close();
+        }
     }
+   
 }

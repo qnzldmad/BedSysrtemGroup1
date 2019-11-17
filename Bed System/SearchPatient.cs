@@ -19,14 +19,118 @@ namespace Bed_System
             InitializeComponent();
         }
 
-      
-
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
             NurseMenu menu = new NurseMenu();
             menu.ShowDialog();
             this.Close();
         }
+
+        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
+        MySqlCommand mySqlCommand;
+        MySqlDataReader mySqlDataReader;
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            if (radioButton2.Checked)
+            {
+                mySqlConnection.Open();
+                string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_id=" + int.Parse(SearchTextBox.Text);
+                mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    IdLabel.Text = mySqlDataReader.GetString("p_id");
+                    NameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
+                    AgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
+                    PhoneLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
+                    BedNumLabel.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
+                    
+                    GenderLabel.Text = mySqlDataReader.GetString("p_gender");
+                }
+                else
+                {
+                    MessageBox.Show("There is no such Patient ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                mySqlConnection.Close();
+
+                mySqlConnection.Open();
+                string loadDetails = "SELECT * FROM patientmedicaldetails WHERE patientmedicaldetails.p_id=" + int.Parse(SearchTextBox.Text);
+                mySqlCommand = new MySqlCommand(loadDetails, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    systolicLabel.Text = mySqlDataReader.GetInt32("p_systolic").ToString();
+                    diastolicLabel.Text = mySqlDataReader.GetInt32("p_diastolic").ToString();
+                    breathingLabel.Text = mySqlDataReader.GetInt32("p_breathing").ToString();
+                    pulseLabel.Text = mySqlDataReader.GetInt32("p_pulse").ToString();
+                    TemperatureLabel.Text = mySqlDataReader.GetInt32("p_temperater").ToString();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("There is no data for this Patient ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                mySqlConnection.Close();
+
+            }
+            else if (radioButton1.Checked)
+            {
+                mySqlConnection.Open();
+                string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_firstName ='" + SearchTextBox.Text + "' OR p_lastName='" + SearchTextBox.Text + "'";
+                mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    IdLabel.Text = mySqlDataReader.GetString("p_id");
+                    NameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
+                    AgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
+                    PhoneLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
+
+                    GenderLabel.Text = mySqlDataReader.GetString("p_gender");
+                }
+                else
+                {
+                    MessageBox.Show("There is no such Patient Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                mySqlConnection.Close();
+
+                mySqlConnection.Open();
+                string loadDetails = "SELECT * FROM patientmedicaldetails INNER JOIN addpatient ON addpatient.p_id = patientmedicaldetails.p_id WHERE addpatient.p_firstName='" + SearchTextBox.Text + "' OR p_lastName='" + SearchTextBox.Text + "'";
+                mySqlCommand = new MySqlCommand(loadDetails, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    systolicLabel.Text = mySqlDataReader.GetInt32("p_systolic").ToString();
+                    diastolicLabel.Text = mySqlDataReader.GetInt32("p_diastolic").ToString();
+                    breathingLabel.Text = mySqlDataReader.GetInt32("p_breathing").ToString();
+                    pulseLabel.Text = mySqlDataReader.GetInt32("p_pulse").ToString();
+                    TemperatureLabel.Text = mySqlDataReader.GetInt32("p_temperater").ToString();
+                }
+                else
+                {
+                    MessageBox.Show("There is no data for this Patient Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                mySqlConnection.Close();
+            }
+            else if (!radioButton2.Checked || !radioButton1.Checked)
+            {
+                MessageBox.Show("Please Select an Option", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            }
+        }
     }
-}
+
+    

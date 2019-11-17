@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace Bed_System
         public NurseMenu()
         {
             InitializeComponent();
-            
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace Bed_System
             this.Close();
         }
 
-        
+
 
         private void btnAlarmLimit_Click(object sender, EventArgs e)
         {
@@ -69,5 +70,25 @@ namespace Bed_System
             bedside.ShowDialog();
             this.Close();
         }
+
+        private void NurseIdLabel_Click(object sender, EventArgs e)
+        {
+            MySqlCommand command = new MySqlCommand();
+            MySqlConnection conn = new MySqlConnection("server = localhost; port=3306;username=root;password=;database=eahthospital");
+            command.Connection = conn;
+            command.CommandText = "SELECT COUNT(1) FROM TABLE";
+            conn.Open();
+            NurseIdLabel.Text = command.ExecuteScalar().ToString();
+            conn.Close();
+        }
+
+        private void btnSearchPatient_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            SearchPatient search = new SearchPatient();
+            search.ShowDialog();
+            this.Close();
+        }
     }
 }
+

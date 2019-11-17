@@ -31,6 +31,9 @@ namespace Bed_System
             return conn;
         }
 
-        
+        internal MySqlConnection getConn()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
