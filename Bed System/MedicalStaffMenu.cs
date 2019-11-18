@@ -85,7 +85,7 @@ namespace Bed_System
 
         private void MedicalStaffMenu_Load(object sender, EventArgs e)
         {
-            medicalIDLabel.Text = MainPage.passingtext;
+            medicalIDLabel.Text = BedSideMain.passingtext;
 
             
         }

@@ -19,31 +19,21 @@ namespace Bed_System
         {
             InitializeComponent();
         }
-        private void btnPatientMode_Click(object sender, EventArgs e)
+
+        private void btnBed_Click(object sender, EventArgs e)
         {
-            PatientMode patientMode = new PatientMode();
-            patientMode.Show();
+            BedSideMain mainPages = new BedSideMain();
+            mainPages.Show();
         }
 
-        public static string passingtext;
+        private void btnCentral_Click(object sender, EventArgs e)
+        {
 
-        
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnMedical_Click(object sender, EventArgs e)
-        {
-            Medical_Staff_Login_Page medical_Staff_Login_Page = new Medical_Staff_Login_Page();
-            medical_Staff_Login_Page.Show();
-        }
-
-        private void btnNurse_Click(object sender, EventArgs e)
-        {
-            NurseLoginForm nurseLoginForm = new NurseLoginForm();
-            nurseLoginForm.Show();
         }
     }
 }

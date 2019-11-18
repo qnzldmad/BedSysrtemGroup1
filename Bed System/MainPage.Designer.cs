@@ -29,159 +29,119 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnNurse = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnPatientMode = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnMedical = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCentral = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBed = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Controls.Add(this.btnMedical);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.btnNurse);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(224, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(367, 289);
-            this.panel2.TabIndex = 3;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(247, 242);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(83, 35);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnNurse
-            // 
-            this.btnNurse.Location = new System.Drawing.Point(144, 242);
-            this.btnNurse.Name = "btnNurse";
-            this.btnNurse.Size = new System.Drawing.Size(83, 35);
-            this.btnNurse.TabIndex = 8;
-            this.btnNurse.Text = "Nurse";
-            this.btnNurse.UseVisualStyleBackColor = true;
-            this.btnNurse.Click += new System.EventHandler(this.btnNurse_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.btnPatientMode);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 289);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(24, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "East Anglia Hospital Trust Login System";
-            // 
-            // btnPatientMode
-            // 
-            this.btnPatientMode.Location = new System.Drawing.Point(62, 242);
-            this.btnPatientMode.Name = "btnPatientMode";
-            this.btnPatientMode.Size = new System.Drawing.Size(99, 23);
-            this.btnPatientMode.TabIndex = 11;
-            this.btnPatientMode.Text = "Patient Mode";
-            this.btnPatientMode.UseVisualStyleBackColor = true;
-            this.btnPatientMode.Click += new System.EventHandler(this.btnPatientMode_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(92, 136);
+            this.label3.Location = new System.Drawing.Point(86, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Choose Your Position";
+            this.label3.Size = new System.Drawing.Size(225, 16);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Select the Type of Monitor";
             // 
-            // btnMedical
+            // label1
             // 
-            this.btnMedical.Location = new System.Drawing.Point(36, 242);
-            this.btnMedical.Name = "btnMedical";
-            this.btnMedical.Size = new System.Drawing.Size(83, 35);
-            this.btnMedical.TabIndex = 13;
-            this.btnMedical.Text = "Medical Staff";
-            this.btnMedical.UseVisualStyleBackColor = true;
-            this.btnMedical.Click += new System.EventHandler(this.btnMedical_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(251, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 29);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Welcome";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(204, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(223, 16);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "East Anglia Hospital Trust";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCentral
+            // 
+            this.btnCentral.Location = new System.Drawing.Point(236, 160);
+            this.btnCentral.Name = "btnCentral";
+            this.btnCentral.Size = new System.Drawing.Size(75, 41);
+            this.btnCentral.TabIndex = 29;
+            this.btnCentral.Text = "Central Monitor";
+            this.btnCentral.UseVisualStyleBackColor = true;
+            this.btnCentral.Click += new System.EventHandler(this.btnCentral_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(352, 189);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 30;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnBed
+            // 
+            this.btnBed.Location = new System.Drawing.Point(89, 160);
+            this.btnBed.Name = "btnBed";
+            this.btnBed.Size = new System.Drawing.Size(75, 41);
+            this.btnBed.TabIndex = 31;
+            this.btnBed.Text = "Bed Side Monitor";
+            this.btnBed.UseVisualStyleBackColor = true;
+            this.btnBed.Click += new System.EventHandler(this.btnBed_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(591, 289);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(429, 213);
+            this.Controls.Add(this.btnBed);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnCentral);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "MainPage";
             this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnNurse;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnPatientMode;
-        private System.Windows.Forms.Button btnMedical;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCentral;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBed;
     }
 }

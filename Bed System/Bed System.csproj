@@ -59,6 +59,12 @@
     <Compile Include="addPatientHandler.cs" />
     <Compile Include="DatabaseConnertor.cs" />
     <Compile Include="LimitHandler.cs" />
+    <Compile Include="BedSideMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BedSideMain.Designer.cs">
+      <DependentUpon>BedSideMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="nurse.cs" />
     <Compile Include="NurseLoginDatabase.cs" />
     <Compile Include="NurseLoginForm.cs">
@@ -150,6 +156,9 @@
     <Compile Include="SetLimit.cs" />
     <EmbeddedResource Include="ActiveBedside.resx">
       <DependentUpon>ActiveBedside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BedSideMain.resx">
+      <DependentUpon>BedSideMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NurseLoginForm.resx">
       <DependentUpon>NurseLoginForm.cs</DependentUpon>

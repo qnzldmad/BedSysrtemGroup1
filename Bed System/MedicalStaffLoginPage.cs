@@ -16,6 +16,7 @@ namespace Bed_System
         public Medical_Staff_Login_Page()
         {
             InitializeComponent();
+            PasswordTextBox.MaxLength = 8;
         }
 
         public static string passingtext;
@@ -77,6 +78,18 @@ namespace Bed_System
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ShowPassCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ShowPassCheckBox.Checked)
+            {
+                PasswordTextBox.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+            }
         }
     }
 }

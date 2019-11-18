@@ -41,6 +41,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ShowPassCheckBox = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +50,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.ShowPassCheckBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnClear);
@@ -172,6 +174,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // ShowPassCheckBox
+            // 
+            this.ShowPassCheckBox.AutoSize = true;
+            this.ShowPassCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ShowPassCheckBox.Location = new System.Drawing.Point(270, 165);
+            this.ShowPassCheckBox.Name = "ShowPassCheckBox";
+            this.ShowPassCheckBox.Size = new System.Drawing.Size(53, 17);
+            this.ShowPassCheckBox.TabIndex = 6;
+            this.ShowPassCheckBox.Text = "Show";
+            this.ShowPassCheckBox.UseVisualStyleBackColor = true;
+            this.ShowPassCheckBox.CheckedChanged += new System.EventHandler(this.ShowPassCheckBox_CheckedChanged);
+            // 
             // Medical_Staff_Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,5 +218,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox ShowPassCheckBox;
     }
 }
