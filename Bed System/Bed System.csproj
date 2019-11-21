@@ -57,6 +57,8 @@
     </Compile>
     <Compile Include="addPatient.cs" />
     <Compile Include="addPatientHandler.cs" />
+    <Compile Include="Alarm.cs" />
+    <Compile Include="AlarmHandler.cs" />
     <Compile Include="DatabaseConnertor.cs" />
     <Compile Include="LimitHandler.cs" />
     <Compile Include="BedSideMain.cs">
@@ -123,6 +125,12 @@
     <Compile Include="PatientInfoSystem.Designer.cs">
       <DependentUpon>PatientInfoSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientMonitored.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientMonitored.Designer.cs">
+      <DependentUpon>PatientMonitored.cs</DependentUpon>
+    </Compile>
     <Compile Include="pmdetails.cs" />
     <Compile Include="pmdetailsHandler.cs" />
     <Compile Include="Program.cs" />
@@ -135,6 +143,8 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="registerHandler.cs" />
+    <Compile Include="registers.cs" />
     <Compile Include="SearchPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeRegister.resx">
       <DependentUpon>DeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientMonitored.resx">
+      <DependentUpon>PatientMonitored.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

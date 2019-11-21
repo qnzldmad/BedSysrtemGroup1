@@ -16,10 +16,10 @@ namespace Bed_System
         public Medical_Staff_Login_Page()
         {
             InitializeComponent();
-            PasswordTextBox.MaxLength = 8;
+            
         }
-
         public static string passingtext;
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             MSLoginDatabase database = new MSLoginDatabase();
@@ -82,7 +82,7 @@ namespace Bed_System
 
         private void ShowPassCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if(ShowPassCheckBox.Checked)
+            if (ShowPassCheckBox.Checked)
             {
                 PasswordTextBox.UseSystemPasswordChar = true;
             }
@@ -90,6 +90,11 @@ namespace Bed_System
             {
                 PasswordTextBox.UseSystemPasswordChar = false;
             }
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            PasswordTextBox.MaxLength = 8;
         }
     }
 }

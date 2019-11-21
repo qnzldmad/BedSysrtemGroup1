@@ -47,9 +47,8 @@ namespace Bed_System
                     IdLabel.Text = mySqlDataReader.GetString("p_id");
                     NameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
                     AgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
-                    PhoneLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
                     BedNumLabel.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
-                    
+                    PhoneLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
                     GenderLabel.Text = mySqlDataReader.GetString("p_gender");
                 }
                 else
@@ -71,7 +70,7 @@ namespace Bed_System
                     breathingLabel.Text = mySqlDataReader.GetInt32("p_breathing").ToString();
                     pulseLabel.Text = mySqlDataReader.GetInt32("p_pulse").ToString();
                     TemperatureLabel.Text = mySqlDataReader.GetInt32("p_temperater").ToString();
-                    
+
                 }
                 else
                 {
@@ -79,6 +78,23 @@ namespace Bed_System
                 }
                 mySqlConnection.Close();
 
+                mySqlConnection.Open();
+                string loadBed = "SELECT * FROM addpatient WHERE addpatient.p_id=" + int.Parse(SearchTextBox.Text);
+                mySqlCommand = new MySqlCommand(loadBed, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    BedNumLabel.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
+                    FloorLabel.Text = mySqlDataReader.GetInt32("p_floor").ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("There is no data for this Patient ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                mySqlConnection.Close();
             }
             else if (radioButton1.Checked)
             {
@@ -122,6 +138,24 @@ namespace Bed_System
                     MessageBox.Show("There is no data for this Patient Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 mySqlConnection.Close();
+
+                mySqlConnection.Open();
+                string loadBed = "SELECT* FROM eahthospital.addpatient WHERE p_firstName = '" + SearchTextBox.Text + "' OR p_lastName = '" + SearchTextBox.Text + "'";
+                mySqlCommand = new MySqlCommand(loadDetails, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    BedNumLabel.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
+                    FloorLabel.Text = mySqlDataReader.GetInt32("p_floor").ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("There is no data for this Patient ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                mySqlConnection.Close();
             }
             else if (!radioButton2.Checked || !radioButton1.Checked)
             {
@@ -129,8 +163,36 @@ namespace Bed_System
             }
 
 
+        }
+
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchTextBox.Text = "";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchTextBox.Text = "";
+        }
+
+        private void SearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (radioButton1.Checked)
+            {
+                if (!Char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
             }
         }
     }
-
-    
+}

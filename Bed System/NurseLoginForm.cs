@@ -20,15 +20,15 @@ namespace Bed_System
             InitializeComponent();
         }
         public static string passingtext;
-        
+
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
-        {            
+        {
             PasswordTextBox.MaxLength = 8;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
-            
+
         {
             IdNumberTextBox.Text = " ";
             PasswordTextBox.Text = " ";
@@ -43,7 +43,7 @@ namespace Bed_System
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {       
+        {
 
             NurseLoginDatabase database = new NurseLoginDatabase();
 
@@ -57,7 +57,7 @@ namespace Bed_System
             MySqlCommand Command = new MySqlCommand("SELECT * FROM `nurse` WHERE `s_loginid` = @usn and `s_password` = @pass ", database.getConnection());
 
             Command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = s_loginid;
-            Command.Parameters.Add("@pass", MySqlDbType.VarChar).Value =s_password;
+            Command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = s_password;
 
             adapter.SelectCommand = Command;
 
@@ -92,13 +92,13 @@ namespace Bed_System
                 {
                     MessageBox.Show("Wrong Username Or Password", "Wrong Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
         }
 
-            private void ShowPassCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void ShowPassCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if(ShowPassCheckBox.Checked)
+            if (ShowPassCheckBox.Checked)
             {
                 PasswordTextBox.UseSystemPasswordChar = true;
             }
@@ -108,6 +108,6 @@ namespace Bed_System
             }
         }
 
-        
+
     }
 }

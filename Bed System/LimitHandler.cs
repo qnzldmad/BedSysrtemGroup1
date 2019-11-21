@@ -13,7 +13,7 @@ namespace Bed_System
 {
     class LimitHandler
     {
-        public int AlarmLimit(MySqlConnection conn, SetAlarmLimit alarmLimit)
+        public int AlarmLimit(MySqlConnection conn, SetLimit alarmLimit)
         {
             string sql = null;
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
@@ -21,9 +21,6 @@ namespace Bed_System
             return sqlComm.ExecuteNonQuery();
         }
 
-        internal int SetNewLimit(MySqlConnection mySqlConnection, SetLimit limit)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

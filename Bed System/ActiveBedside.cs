@@ -18,5 +18,13 @@ namespace Bed_System
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NurseMenu mute = new NurseMenu();
+            mute.ShowDialog();
+            this.Close();
+        }
     }
 }

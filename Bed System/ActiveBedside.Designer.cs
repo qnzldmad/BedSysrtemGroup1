@@ -32,16 +32,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnBed8 = new System.Windows.Forms.Button();
+            this.btnBed7 = new System.Windows.Forms.Button();
+            this.btnBed6 = new System.Windows.Forms.Button();
+            this.btnBed5 = new System.Windows.Forms.Button();
+            this.btnBed4 = new System.Windows.Forms.Button();
+            this.btnBed3 = new System.Windows.Forms.Button();
+            this.btnBed2 = new System.Windows.Forms.Button();
+            this.btnBed1 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,108 +69,109 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnBed8);
+            this.panel1.Controls.Add(this.btnBed7);
+            this.panel1.Controls.Add(this.btnBed6);
+            this.panel1.Controls.Add(this.btnBed5);
+            this.panel1.Controls.Add(this.btnBed4);
+            this.panel1.Controls.Add(this.btnBed3);
+            this.panel1.Controls.Add(this.btnBed2);
+            this.panel1.Controls.Add(this.btnBed1);
             this.panel1.Location = new System.Drawing.Point(12, 95);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(705, 303);
             this.panel1.TabIndex = 2;
             // 
-            // button8
+            // btnBed8
             // 
-            this.button8.Location = new System.Drawing.Point(549, 162);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(127, 120);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Bed 8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnBed8.Location = new System.Drawing.Point(549, 162);
+            this.btnBed8.Name = "btnBed8";
+            this.btnBed8.Size = new System.Drawing.Size(127, 120);
+            this.btnBed8.TabIndex = 7;
+            this.btnBed8.Text = "Bed 8";
+            this.btnBed8.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnBed7
             // 
-            this.button7.Location = new System.Drawing.Point(374, 162);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(127, 120);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Bed 7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnBed7.Location = new System.Drawing.Point(374, 162);
+            this.btnBed7.Name = "btnBed7";
+            this.btnBed7.Size = new System.Drawing.Size(127, 120);
+            this.btnBed7.TabIndex = 6;
+            this.btnBed7.Text = "Bed 7";
+            this.btnBed7.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnBed6
             // 
-            this.button6.Location = new System.Drawing.Point(202, 162);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 120);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Bed 6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnBed6.Location = new System.Drawing.Point(202, 162);
+            this.btnBed6.Name = "btnBed6";
+            this.btnBed6.Size = new System.Drawing.Size(127, 120);
+            this.btnBed6.TabIndex = 5;
+            this.btnBed6.Text = "Bed 6";
+            this.btnBed6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnBed5
             // 
-            this.button5.Location = new System.Drawing.Point(34, 162);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 120);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Bed 5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnBed5.Location = new System.Drawing.Point(34, 162);
+            this.btnBed5.Name = "btnBed5";
+            this.btnBed5.Size = new System.Drawing.Size(127, 120);
+            this.btnBed5.TabIndex = 4;
+            this.btnBed5.Text = "Bed 5";
+            this.btnBed5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBed4
             // 
-            this.button4.Location = new System.Drawing.Point(549, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 120);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Bed 4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBed4.Location = new System.Drawing.Point(549, 19);
+            this.btnBed4.Name = "btnBed4";
+            this.btnBed4.Size = new System.Drawing.Size(127, 120);
+            this.btnBed4.TabIndex = 3;
+            this.btnBed4.Text = "Bed 4";
+            this.btnBed4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnBed3
             // 
-            this.button3.Location = new System.Drawing.Point(374, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 120);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Bed 3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBed3.Location = new System.Drawing.Point(374, 19);
+            this.btnBed3.Name = "btnBed3";
+            this.btnBed3.Size = new System.Drawing.Size(127, 120);
+            this.btnBed3.TabIndex = 2;
+            this.btnBed3.Text = "Bed 3";
+            this.btnBed3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBed2
             // 
-            this.button2.Location = new System.Drawing.Point(202, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 120);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Bed 2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBed2.Location = new System.Drawing.Point(202, 19);
+            this.btnBed2.Name = "btnBed2";
+            this.btnBed2.Size = new System.Drawing.Size(127, 120);
+            this.btnBed2.TabIndex = 1;
+            this.btnBed2.Text = "Bed 2";
+            this.btnBed2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBed1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 120);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Bed 1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBed1.Location = new System.Drawing.Point(34, 19);
+            this.btnBed1.Name = "btnBed1";
+            this.btnBed1.Size = new System.Drawing.Size(127, 120);
+            this.btnBed1.TabIndex = 0;
+            this.btnBed1.Text = "Bed 1";
+            this.btnBed1.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnEdit
             // 
-            this.button9.Location = new System.Drawing.Point(227, 415);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Edit";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(227, 415);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnExit
             // 
-            this.button10.Location = new System.Drawing.Point(397, 415);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Exit";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(397, 415);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // ActiveBedside
             // 
@@ -178,8 +179,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(729, 450);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -197,15 +198,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnBed8;
+        private System.Windows.Forms.Button btnBed7;
+        private System.Windows.Forms.Button btnBed6;
+        private System.Windows.Forms.Button btnBed5;
+        private System.Windows.Forms.Button btnBed4;
+        private System.Windows.Forms.Button btnBed3;
+        private System.Windows.Forms.Button btnBed2;
+        private System.Windows.Forms.Button btnBed1;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnExit;
     }
 }

@@ -45,10 +45,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.BloodDiasUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AlarmIdTextBox = new System.Windows.Forms.TextBox();
-            this.AlarmPatientTextBox = new System.Windows.Forms.TextBox();
+            this.AlarmPatientIdTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.AlarmPatientNameLabel = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BreathingRateUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TemperatureUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PulseRateUpDown)).BeginInit();
@@ -196,19 +197,12 @@
             this.BloodDiasUpDown.Size = new System.Drawing.Size(120, 20);
             this.BloodDiasUpDown.TabIndex = 17;
             // 
-            // AlarmIdTextBox
+            // AlarmPatientIdTextBox
             // 
-            this.AlarmIdTextBox.Location = new System.Drawing.Point(140, 108);
-            this.AlarmIdTextBox.Name = "AlarmIdTextBox";
-            this.AlarmIdTextBox.Size = new System.Drawing.Size(167, 20);
-            this.AlarmIdTextBox.TabIndex = 18;
-            // 
-            // AlarmPatientTextBox
-            // 
-            this.AlarmPatientTextBox.Location = new System.Drawing.Point(140, 146);
-            this.AlarmPatientTextBox.Name = "AlarmPatientTextBox";
-            this.AlarmPatientTextBox.Size = new System.Drawing.Size(167, 20);
-            this.AlarmPatientTextBox.TabIndex = 19;
+            this.AlarmPatientIdTextBox.Location = new System.Drawing.Point(141, 108);
+            this.AlarmPatientIdTextBox.Name = "AlarmPatientIdTextBox";
+            this.AlarmPatientIdTextBox.Size = new System.Drawing.Size(150, 20);
+            this.AlarmPatientIdTextBox.TabIndex = 19;
             // 
             // label6
             // 
@@ -228,16 +222,35 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Patient Name :";
             // 
+            // AlarmPatientNameLabel
+            // 
+            this.AlarmPatientNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AlarmPatientNameLabel.Location = new System.Drawing.Point(141, 146);
+            this.AlarmPatientNameLabel.Name = "AlarmPatientNameLabel";
+            this.AlarmPatientNameLabel.Size = new System.Drawing.Size(150, 23);
+            this.AlarmPatientNameLabel.TabIndex = 22;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(141, 191);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 23;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // SetAlarmLimit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(621, 351);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.AlarmPatientNameLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.AlarmPatientTextBox);
-            this.Controls.Add(this.AlarmIdTextBox);
+            this.Controls.Add(this.AlarmPatientIdTextBox);
             this.Controls.Add(this.BloodDiasUpDown);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
@@ -287,9 +300,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown BloodDiasUpDown;
-        private System.Windows.Forms.TextBox AlarmIdTextBox;
-        private System.Windows.Forms.TextBox AlarmPatientTextBox;
+        private System.Windows.Forms.TextBox AlarmPatientIdTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label AlarmPatientNameLabel;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

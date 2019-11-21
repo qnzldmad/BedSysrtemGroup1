@@ -89,6 +89,14 @@ namespace Bed_System
             search.ShowDialog();
             this.Close();
         }
+
+        private void btnPatientMonitored_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PatientMonitored search = new PatientMonitored();
+            search.ShowDialog();
+            this.Close();
+        }
     }
 }
 

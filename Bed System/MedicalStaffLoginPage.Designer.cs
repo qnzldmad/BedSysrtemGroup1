@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medical_Staff_Login_Page));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ShowPassCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ShowPassCheckBox = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +64,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(367, 289);
             this.panel2.TabIndex = 5;
+            // 
+            // ShowPassCheckBox
+            // 
+            this.ShowPassCheckBox.AutoSize = true;
+            this.ShowPassCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ShowPassCheckBox.Location = new System.Drawing.Point(270, 165);
+            this.ShowPassCheckBox.Name = "ShowPassCheckBox";
+            this.ShowPassCheckBox.Size = new System.Drawing.Size(53, 17);
+            this.ShowPassCheckBox.TabIndex = 2;
+            this.ShowPassCheckBox.Text = "Show";
+            this.ShowPassCheckBox.UseVisualStyleBackColor = true;
+            this.ShowPassCheckBox.CheckedChanged += new System.EventHandler(this.ShowPassCheckBox_CheckedChanged);
             // 
             // label2
             // 
@@ -116,9 +128,12 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(126, 162);
+            this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(134, 20);
             this.PasswordTextBox.TabIndex = 5;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // label5
             // 
@@ -173,18 +188,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // ShowPassCheckBox
-            // 
-            this.ShowPassCheckBox.AutoSize = true;
-            this.ShowPassCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ShowPassCheckBox.Location = new System.Drawing.Point(270, 165);
-            this.ShowPassCheckBox.Name = "ShowPassCheckBox";
-            this.ShowPassCheckBox.Size = new System.Drawing.Size(53, 17);
-            this.ShowPassCheckBox.TabIndex = 6;
-            this.ShowPassCheckBox.Text = "Show";
-            this.ShowPassCheckBox.UseVisualStyleBackColor = true;
-            this.ShowPassCheckBox.CheckedChanged += new System.EventHandler(this.ShowPassCheckBox_CheckedChanged);
             // 
             // Medical_Staff_Login_Page
             // 
