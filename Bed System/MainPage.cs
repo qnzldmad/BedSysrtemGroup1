@@ -22,13 +22,14 @@ namespace Bed_System
 
         private void btnBed_Click(object sender, EventArgs e)
         {
-            BedSideMain mainPages = new BedSideMain();
-            mainPages.Show();
+            RealTime realTime = new RealTime();
+            realTime.Show();
         }
 
         private void btnCentral_Click(object sender, EventArgs e)
         {
-
+            BedSideMain mainPages = new BedSideMain();
+            mainPages.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
