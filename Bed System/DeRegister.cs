@@ -20,6 +20,7 @@ namespace Bed_System
         private void DeRegister_Load(object sender, EventArgs e)
         {
             medicalIDLabel.Text = MedicalStaffMenu.passingtext1;
+            lbMedicalID.Text = MedicalStaffMenu.passingtext2;
             dateTimePicker1.Format = DateTimePickerFormat.Time;
         }
 
@@ -34,6 +35,7 @@ namespace Bed_System
             databaseConnertor.connect();
 
             rederegister rederegister = new rederegister();
+            rederegister.Ms_id = int.Parse(lbMedicalID.Text);
             rederegister.Register_date = this.dateTimePicker2.Value;
             rederegister.Register_time = this.dateTimePicker1.Value;
 
@@ -63,6 +65,21 @@ namespace Bed_System
         private void resetPB_MouseLeave(object sender, EventArgs e)
         {
             resetPB.BackColor = Color.White;
+        }
+
+        private void pbDeregister_Click(object sender, EventArgs e)
+        {
+            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
+            databaseConnertor.connect();
+
+            rederegister rederegister = new rederegister();
+            rederegister.Ms_id = int.Parse(lbMedicalID.Text);
+            rederegister.Deregister_date = this.dateTimePicker2.Value;
+            rederegister.Deregister_time = this.dateTimePicker1.Value;
+
+            rederegisterHandler rederegisterHandler = new rederegisterHandler();
+            int recordCnt1 = rederegisterHandler.addReDeregister(databaseConnertor.getconn(), rederegister);
+            MessageBox.Show(recordCnt1 + " record has been inserted !!");
         }
     }
 }

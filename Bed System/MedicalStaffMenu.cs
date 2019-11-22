@@ -18,15 +18,23 @@ namespace Bed_System
             InitializeComponent();
         }
 
+        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
+        MySqlCommand mySqlCommand;
+        MySqlDataReader mySqlDataReader;
+
+        public static string passingtext1;
+        public static string passingtext2;
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        public static string passingtext1;
+
         private void deRegisterPB_click(object sender, EventArgs e)
         {
             passingtext1 = medicalIDLabel.Text;
+            passingtext2 = medicalStaffID.Text;
             DeRegister deRegister = new DeRegister();
             deRegister.Show();
         }
@@ -85,9 +93,25 @@ namespace Bed_System
 
         private void MedicalStaffMenu_Load(object sender, EventArgs e)
         {
-            medicalIDLabel.Text = BedSideMain.passingtext;
+            medicalIDLabel.Text = Medical_Staff_Login_Page.passingtext;
 
-            
+            mySqlConnection.Open();
+            string loadMlogin = "SELECT * FROM eahthospital.medicalstaff WHERE ms_loginid='" + medicalIDLabel.Text + "'";
+            mySqlCommand = new MySqlCommand(loadMlogin, mySqlConnection);
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (mySqlDataReader.Read())
+            {
+                medicalStaffID.Text = mySqlDataReader.GetString("ms_id");
+            }
+
+            else
+            {
+                return;
+            }
+            mySqlConnection.Close();
+
         }
     }
 }
