@@ -28,7 +28,7 @@ namespace Bed_System
 
         private void btnCentral_Click(object sender, EventArgs e)
         {
-            BedSideMain mainPages = new BedSideMain();
+            Central mainPages = new Central();
             mainPages.Show();
         }
 

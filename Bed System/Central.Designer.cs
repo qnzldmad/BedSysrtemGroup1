@@ -1,6 +1,6 @@
 ﻿namespace Bed_System
 {
-    partial class BedSideMain
+    partial class Central
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BedSideMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Central));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMedical = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +39,7 @@
             this.btnPatientMode = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnManager = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,6 +48,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.btnManager);
             this.panel2.Controls.Add(this.btnMedical);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -60,7 +62,7 @@
             // 
             // btnMedical
             // 
-            this.btnMedical.Location = new System.Drawing.Point(36, 242);
+            this.btnMedical.Location = new System.Drawing.Point(6, 242);
             this.btnMedical.Name = "btnMedical";
             this.btnMedical.Size = new System.Drawing.Size(83, 35);
             this.btnMedical.TabIndex = 13;
@@ -92,7 +94,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(247, 242);
+            this.btnExit.Location = new System.Drawing.Point(272, 242);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(83, 35);
             this.btnExit.TabIndex = 9;
@@ -102,7 +104,7 @@
             // 
             // btnNurse
             // 
-            this.btnNurse.Location = new System.Drawing.Point(144, 242);
+            this.btnNurse.Location = new System.Drawing.Point(95, 242);
             this.btnNurse.Name = "btnNurse";
             this.btnNurse.Size = new System.Drawing.Size(83, 35);
             this.btnNurse.TabIndex = 8;
@@ -152,14 +154,24 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // MainPages
+            // btnManager
+            // 
+            this.btnManager.Location = new System.Drawing.Point(183, 242);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(83, 35);
+            this.btnManager.TabIndex = 14;
+            this.btnManager.Text = "Manager";
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            // 
+            // BedSideMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 289);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "MainPages";
+            this.Name = "BedSideMain";
             this.Text = "MainPages";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Button btnPatientMode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnManager;
     }
 }

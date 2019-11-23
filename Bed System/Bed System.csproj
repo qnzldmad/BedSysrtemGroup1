@@ -56,17 +56,33 @@
     <Compile Include="ActiveBedside.Designer.cs">
       <DependentUpon>ActiveBedside.cs</DependentUpon>
     </Compile>
+    <Compile Include="addMedicalstaffs.cs" />
+    <Compile Include="addMedicalstaffshandler.cs" />
+    <Compile Include="addNurses.cs" />
+    <Compile Include="addNursesHandler.cs" />
     <Compile Include="addPatient.cs" />
     <Compile Include="addPatientHandler.cs" />
     <Compile Include="Alarm.cs" />
     <Compile Include="AlarmHandler.cs" />
     <Compile Include="DatabaseConnertor.cs" />
     <Compile Include="LimitHandler.cs" />
-    <Compile Include="BedSideMain.cs">
+    <Compile Include="Central.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BedSideMain.Designer.cs">
-      <DependentUpon>BedSideMain.cs</DependentUpon>
+    <Compile Include="Central.Designer.cs">
+      <DependentUpon>Central.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerLoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerLoginPage.Designer.cs">
+      <DependentUpon>ManagerLoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerMenu.Designer.cs">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="nurse.cs" />
     <Compile Include="NurseLoginDatabase.cs" />
@@ -176,8 +192,14 @@
     <EmbeddedResource Include="ActiveBedside.resx">
       <DependentUpon>ActiveBedside.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BedSideMain.resx">
-      <DependentUpon>BedSideMain.cs</DependentUpon>
+    <EmbeddedResource Include="Central.resx">
+      <DependentUpon>Central.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerLoginPage.resx">
+      <DependentUpon>ManagerLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerMenu.resx">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NurseLoginForm.resx">
       <DependentUpon>NurseLoginForm.cs</DependentUpon>
@@ -289,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Reset1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

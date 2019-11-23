@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace Bed_System
 {
-    public partial class BedSideMain : Form
+    public partial class Central : Form
     {
         MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
-        public BedSideMain()
+        public Central()
         {
             InitializeComponent();
         }
@@ -24,6 +24,12 @@ namespace Bed_System
         {
             Medical_Staff_Login_Page medical_Staff_Login_Page = new Medical_Staff_Login_Page();
             medical_Staff_Login_Page.Show();
+        }
+
+        private void btnManager_Click(object sender, EventArgs e)
+        {
+            ManagerLoginPage managerLoginPage = new ManagerLoginPage();
+            managerLoginPage.Show();
         }
 
         private void btnNurse_Click(object sender, EventArgs e)
@@ -42,5 +48,7 @@ namespace Bed_System
             PatientMode patientMode = new PatientMode();
             patientMode.Show();
         }
+
+       
     }
 }
