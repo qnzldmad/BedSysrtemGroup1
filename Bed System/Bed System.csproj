@@ -65,6 +65,12 @@
     <Compile Include="Alarm.cs" />
     <Compile Include="AlarmHandler.cs" />
     <Compile Include="DatabaseConnertor.cs" />
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
     <Compile Include="LimitHandler.cs" />
     <Compile Include="Central.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,12 @@
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="nurse.cs" />
+    <Compile Include="nurseAddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nurseAddPatient.Designer.cs">
+      <DependentUpon>nurseAddPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="NurseLoginDatabase.cs" />
     <Compile Include="NurseLoginForm.cs">
       <SubType>Form</SubType>
@@ -195,11 +207,17 @@
     <EmbeddedResource Include="Central.resx">
       <DependentUpon>Central.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerLoginPage.resx">
       <DependentUpon>ManagerLoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nurseAddPatient.resx">
+      <DependentUpon>nurseAddPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NurseLoginForm.resx">
       <DependentUpon>NurseLoginForm.cs</DependentUpon>

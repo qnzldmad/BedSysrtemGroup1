@@ -97,6 +97,12 @@ namespace Bed_System
             search.ShowDialog();
             this.Close();
         }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            nurseAddPatient nurseAddPatient = new nurseAddPatient();
+            nurseAddPatient.Show();
+        }
     }
 }
 

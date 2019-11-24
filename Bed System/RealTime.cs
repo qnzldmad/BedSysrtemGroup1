@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Media;
+using System.Runtime.InteropServices;
 
 namespace Bed_System
 {
@@ -19,6 +20,15 @@ namespace Bed_System
         {
             InitializeComponent();
         }
+
+        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
+        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        private const int WM_APPCOMMAND = 0x319;
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
+           IntPtr wParam, IntPtr lParam);
 
         MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
         MySqlCommand mySqlCommand;
@@ -46,6 +56,7 @@ namespace Bed_System
             panel6.Show();
             btnExit.Hide();
             btnExit2.Show();
+            btnCheck.Hide();
 
             panel2.Width = 400;
             panel2.Height = 200;
@@ -192,6 +203,8 @@ namespace Bed_System
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            btnCheck.Show();
+
             if (tbPID.Text == "")
             {
                 MessageBox.Show("Search Patient First!");
@@ -232,6 +245,30 @@ namespace Bed_System
             tbDOB.Value = DateTime.Now;
             tbGender.Text = "";
             tbAdd.Text = "";
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            History history = new History();
+            history.Show();
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+               (IntPtr)APPCOMMAND_VOLUME_UP);
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+                (IntPtr)APPCOMMAND_VOLUME_DOWN);
+        }
+
+        private void btnMute_Click(object sender, EventArgs e)
+        {
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
+               (IntPtr)APPCOMMAND_VOLUME_MUTE);
         }
     }
 }

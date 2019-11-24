@@ -13,6 +13,9 @@ namespace Bed_System
 {
     public partial class Medical_Staff_Login_Page : Form
     {
+        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
+        MySqlDataReader mySqlDataReader;
+
         public Medical_Staff_Login_Page()
         {
             InitializeComponent();
@@ -33,12 +36,6 @@ namespace Bed_System
 
             MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM `medicalstaff` WHERE `ms_loginid` = @usn and `ms_password` = @pass ", database.getConnection());
 
-            /*"and `ms_id` = @id and `ms_position` = @position " +
-            "and `ms_firstName` = @fname and `ms_lastName` = @lname and `ms_dob` = @dob " +
-            "and `ms_age` = @age and `ms_contact` = @contact and `ms_email` = @email"*/
-
-
-
             mySqlCommand.Parameters.Add("@usn", MySqlDbType.VarChar).Value = ms_loginid;
             mySqlCommand.Parameters.Add("@pass", MySqlDbType.VarChar).Value = ms_password;
 
@@ -46,18 +43,38 @@ namespace Bed_System
 
             mySqlDataAdapter.Fill(dataTable);
 
+            mySqlConnection.Open();
+            string loadMlogin = "SELECT * FROM eahthospital.medicalstaff WHERE ms_loginid='" + IdNumberTextBox.Text + "'";
+            mySqlCommand = new MySqlCommand(loadMlogin, mySqlConnection);
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (mySqlDataReader.Read())
+            {
+                label3.Text = mySqlDataReader.GetString("ms_id");
+                label4.Text = mySqlDataReader.GetString("ms_firstName");
+                label7.Text = mySqlDataReader.GetString("ms_lastName");
+                label8.Text = mySqlDataReader.GetString("ms_age");
+            }
+
+            else
+            {
+                return;
+            }
+            mySqlConnection.Close();
+
             if (dataTable.Rows.Count > 0)
             {
                 medicalstaff staffOne = new medicalstaff();
-                staffOne.staffID = int.Parse(ms_password);
-                staffOne.firstName = ms_loginid;
-                staffOne.lastName = "Rahman";
-                staffOne.age = 30;
+                staffOne.staffID = int.Parse(label3.Text);
+                staffOne.firstName = label4.Text;
+                staffOne.lastName = label7.Text;
+                staffOne.age = int.Parse(label8.Text);
                 staffOne.loginID = IdNumberTextBox.Text;
 
                 MessageBox.Show("Medical Staff Information" + "\n" + "\n" + "ID: " + staffOne.staffID + "\n" +
-                    "Name: " + staffOne.firstName + " " + staffOne.lastName + "\n" + "Login ID: "
-                    + staffOne.loginID + "\n" + "Password: ");
+                    "Name: " + staffOne.firstName + " " + staffOne.lastName + "\n" + "Age:" + staffOne.age + "\n" + "Login ID: "
+                    + staffOne.loginID + "\n");
                 //MessageBox.Show("login");
                 passingtext = IdNumberTextBox.Text;
                 MedicalStaffMenu medicalStaffMenu = new MedicalStaffMenu();
@@ -95,6 +112,11 @@ namespace Bed_System
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
             PasswordTextBox.MaxLength = 8;
+        }
+
+        private void Medical_Staff_Login_Page_Load(object sender, EventArgs e)
+        {
+            panel3.Hide();
         }
     }
 }

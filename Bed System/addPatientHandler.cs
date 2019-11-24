@@ -11,11 +11,11 @@ namespace Bed_System
     {
         public int addNewPatient(MySqlConnection conn, addPatient addPatient)
         {
-            string sql = "INSERT INTO addPatient (p_firstName, p_lastName, p_age, p_dob, p_contact, p_emergencyContact, p_gender, p_address)"
+            string sql = "INSERT INTO addPatient (p_firstName, p_lastName, p_age, p_dob, p_contact, p_emergencyContact, p_gender, p_address, p_bedNum, p_floor)"
                 + " VALUES ('" + addPatient.P_firstName + "', '" + addPatient.P_lastName
                 + "   ', " + addPatient.P_age + ", '" + addPatient.P_dob.ToString("yyyy-MM-dd") 
                 + "   ', " + addPatient.P_contact + "   , " + addPatient.P_emergencyContact 
-                + "   , '" + addPatient.P_gender + "   ', '" + addPatient.P_address + "')";
+                + "   , '" + addPatient.P_gender + "   ', '" + addPatient.P_address + "   ', " + addPatient.P_bedNum + "  , '" + addPatient.P_floor + "')";
 
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
             return sqlComm.ExecuteNonQuery();

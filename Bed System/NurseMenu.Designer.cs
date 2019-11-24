@@ -159,6 +159,7 @@
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // panel1
             // 
