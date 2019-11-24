@@ -64,6 +64,8 @@
     <Compile Include="addPatientHandler.cs" />
     <Compile Include="Alarm.cs" />
     <Compile Include="AlarmHandler.cs" />
+    <Compile Include="bedside.cs" />
+    <Compile Include="bedsideDatabase.cs" />
     <Compile Include="DatabaseConnertor.cs" />
     <Compile Include="History.cs">
       <SubType>Form</SubType>

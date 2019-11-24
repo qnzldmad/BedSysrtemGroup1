@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Bed_System
 {
@@ -16,6 +17,10 @@ namespace Bed_System
         {
             InitializeComponent();
         }
+
+        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
+        MySqlCommand mySqlCommand;
+        MySqlDataReader mySqlDataReader;
 
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
@@ -61,6 +66,28 @@ namespace Bed_System
         private void resetPictureBox_MouseLeave(object sender, EventArgs e)
         {
             resetPictureBox.BackColor = Color.White;
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            LoginIdLabel.Text = NurseLoginForm.passingtext;
+
+            mySqlConnection.Open();
+            string loadMlogin = "SELECT * FROM eahthospital.nurse WHERE s_loginid='" + LoginIdLabel.Text + "'";
+            mySqlCommand = new MySqlCommand(loadMlogin, mySqlConnection);
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+
+            if (mySqlDataReader.Read())
+            {
+                LoginIdLabel.Text = mySqlDataReader.GetString("s_id");
+            }
+            else
+            {
+                return;
+            }
+            mySqlConnection.Close();
         }
     }
 }

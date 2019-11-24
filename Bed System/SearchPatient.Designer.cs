@@ -32,11 +32,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.AdmissionDateLabel = new System.Windows.Forms.Label();
             this.PhoneLabel = new System.Windows.Forms.Label();
             this.GenderLabel = new System.Windows.Forms.Label();
             this.AgeLabel = new System.Windows.Forms.Label();
-            this.BirthdateLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.btnDeletePatient = new System.Windows.Forms.Button();
@@ -77,6 +75,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.AdmissionPicker = new System.Windows.Forms.DateTimePicker();
+            this.BirthdatePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,12 +98,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BirthdatePicker);
+            this.groupBox1.Controls.Add(this.AdmissionPicker);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.AdmissionDateLabel);
             this.groupBox1.Controls.Add(this.PhoneLabel);
             this.groupBox1.Controls.Add(this.GenderLabel);
             this.groupBox1.Controls.Add(this.AgeLabel);
-            this.groupBox1.Controls.Add(this.BirthdateLabel);
             this.groupBox1.Controls.Add(this.IdLabel);
             this.groupBox1.Controls.Add(this.NameLabel);
             this.groupBox1.Controls.Add(this.btnDeletePatient);
@@ -137,14 +137,6 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // AdmissionDateLabel
-            // 
-            this.AdmissionDateLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.AdmissionDateLabel.Location = new System.Drawing.Point(123, 316);
-            this.AdmissionDateLabel.Name = "AdmissionDateLabel";
-            this.AdmissionDateLabel.Size = new System.Drawing.Size(114, 26);
-            this.AdmissionDateLabel.TabIndex = 15;
-            // 
             // PhoneLabel
             // 
             this.PhoneLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -168,15 +160,6 @@
             this.AgeLabel.Name = "AgeLabel";
             this.AgeLabel.Size = new System.Drawing.Size(117, 27);
             this.AgeLabel.TabIndex = 11;
-            // 
-            // BirthdateLabel
-            // 
-            this.BirthdateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.BirthdateLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.BirthdateLabel.Location = new System.Drawing.Point(79, 174);
-            this.BirthdateLabel.Name = "BirthdateLabel";
-            this.BirthdateLabel.Size = new System.Drawing.Size(117, 26);
-            this.BirthdateLabel.TabIndex = 12;
             // 
             // IdLabel
             // 
@@ -558,6 +541,20 @@
             this.label24.Size = new System.Drawing.Size(191, 197);
             this.label24.TabIndex = 11;
             // 
+            // AdmissionPicker
+            // 
+            this.AdmissionPicker.Location = new System.Drawing.Point(116, 321);
+            this.AdmissionPicker.Name = "AdmissionPicker";
+            this.AdmissionPicker.Size = new System.Drawing.Size(130, 22);
+            this.AdmissionPicker.TabIndex = 17;
+            // 
+            // BirthdatePicker
+            // 
+            this.BirthdatePicker.Location = new System.Drawing.Point(79, 179);
+            this.BirthdatePicker.Name = "BirthdatePicker";
+            this.BirthdatePicker.Size = new System.Drawing.Size(167, 22);
+            this.BirthdatePicker.TabIndex = 18;
+            // 
             // SearchPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,11 +609,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label systolicLabel;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label AdmissionDateLabel;
         private System.Windows.Forms.Label PhoneLabel;
         private System.Windows.Forms.Label GenderLabel;
         private System.Windows.Forms.Label AgeLabel;
-        private System.Windows.Forms.Label BirthdateLabel;
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label FloorLabel;
@@ -637,5 +632,7 @@
         private System.Windows.Forms.Label diastolicLabel;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DateTimePicker BirthdatePicker;
+        private System.Windows.Forms.DateTimePicker AdmissionPicker;
     }
 }

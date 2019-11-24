@@ -50,6 +50,8 @@ namespace Bed_System
                     BedNumLabel.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
                     PhoneLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
                     GenderLabel.Text = mySqlDataReader.GetString("p_gender");
+                    BirthdatePicker.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
+                    AdmissionPicker.Value = mySqlDataReader.GetMySqlDateTime("p_admission").Value;
                 }
                 else
                 {
@@ -110,7 +112,8 @@ namespace Bed_System
                     NameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
                     AgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
                     PhoneLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
-
+                    BirthdatePicker.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
+                    AdmissionPicker.Value = mySqlDataReader.GetMySqlDateTime("p_admission").Value;
                     GenderLabel.Text = mySqlDataReader.GetString("p_gender");
                 }
                 else

@@ -369,6 +369,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "NurseMenu";
             this.Text = "NurseMenu";
+            this.Load += new System.EventHandler(this.NurseMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

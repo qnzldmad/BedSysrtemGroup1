@@ -21,6 +21,10 @@ namespace Bed_System
 
         }
 
+        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
+        MySqlCommand mySqlCommand;
+        MySqlDataReader mySqlDataReader;
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -102,6 +106,29 @@ namespace Bed_System
         {
             nurseAddPatient nurseAddPatient = new nurseAddPatient();
             nurseAddPatient.Show();
+        }
+
+        private void NurseMenu_Load(object sender, EventArgs e)
+        {
+            NurseIdLabel.Text = NurseLoginForm.passingtext;
+
+            mySqlConnection.Open();
+            string loadMlogin = "SELECT * FROM eahthospital.nurse WHERE s_loginid='" + NurseIdLabel.Text + "'";
+            mySqlCommand = new MySqlCommand(loadMlogin, mySqlConnection);
+
+            mySqlDataReader = mySqlCommand.ExecuteReader();
+
+            if (mySqlDataReader.Read())
+            {
+                NurseLoginIdLabel.Text = mySqlDataReader.GetString("s_id");
+            }
+
+            else
+            {
+                return;
+            }
+            mySqlConnection.Close();
+
         }
     }
 }
