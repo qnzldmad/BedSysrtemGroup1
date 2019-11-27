@@ -331,7 +331,7 @@
             // NurseLoginIdLabel
             // 
             this.NurseLoginIdLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NurseLoginIdLabel.Location = new System.Drawing.Point(593, 105);
+            this.NurseLoginIdLabel.Location = new System.Drawing.Point(84, 102);
             this.NurseLoginIdLabel.Name = "NurseLoginIdLabel";
             this.NurseLoginIdLabel.Size = new System.Drawing.Size(127, 22);
             this.NurseLoginIdLabel.TabIndex = 13;
@@ -347,7 +347,7 @@
             // NurseIdLabel
             // 
             this.NurseIdLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NurseIdLabel.Location = new System.Drawing.Point(84, 105);
+            this.NurseIdLabel.Location = new System.Drawing.Point(593, 101);
             this.NurseIdLabel.Name = "NurseIdLabel";
             this.NurseIdLabel.Size = new System.Drawing.Size(117, 23);
             this.NurseIdLabel.TabIndex = 15;

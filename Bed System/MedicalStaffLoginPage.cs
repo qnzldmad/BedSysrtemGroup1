@@ -13,13 +13,9 @@ namespace Bed_System
 {
     public partial class Medical_Staff_Login_Page : Form
     {
-        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
-        MySqlDataReader mySqlDataReader;
-
         public Medical_Staff_Login_Page()
         {
-            InitializeComponent();
-            
+            InitializeComponent();   
         }
         public static string passingtext;
 
@@ -43,39 +39,8 @@ namespace Bed_System
 
             mySqlDataAdapter.Fill(dataTable);
 
-            mySqlConnection.Open();
-            string loadMlogin = "SELECT * FROM eahthospital.medicalstaff WHERE ms_loginid='" + IdNumberTextBox.Text + "'";
-            mySqlCommand = new MySqlCommand(loadMlogin, mySqlConnection);
-
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if (mySqlDataReader.Read())
-            {
-                label3.Text = mySqlDataReader.GetString("ms_id");
-                label4.Text = mySqlDataReader.GetString("ms_firstName");
-                label7.Text = mySqlDataReader.GetString("ms_lastName");
-                label8.Text = mySqlDataReader.GetString("ms_age");
-            }
-
-            else
-            {
-                return;
-            }
-            mySqlConnection.Close();
-
             if (dataTable.Rows.Count > 0)
             {
-                medicalstaff staffOne = new medicalstaff();
-                staffOne.staffID = int.Parse(label3.Text);
-                staffOne.firstName = label4.Text;
-                staffOne.lastName = label7.Text;
-                staffOne.age = int.Parse(label8.Text);
-                staffOne.loginID = IdNumberTextBox.Text;
-
-                MessageBox.Show("Medical Staff Information" + "\n" + "\n" + "ID: " + staffOne.staffID + "\n" +
-                    "Name: " + staffOne.firstName + " " + staffOne.lastName + "\n" + "Age:" + staffOne.age + "\n" + "Login ID: "
-                    + staffOne.loginID + "\n");
-                //MessageBox.Show("login");
                 passingtext = IdNumberTextBox.Text;
                 MedicalStaffMenu medicalStaffMenu = new MedicalStaffMenu();
                 medicalStaffMenu.Show();
@@ -116,7 +81,7 @@ namespace Bed_System
 
         private void Medical_Staff_Login_Page_Load(object sender, EventArgs e)
         {
-            panel3.Hide();
+            
         }
     }
 }

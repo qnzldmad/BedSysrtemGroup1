@@ -11,8 +11,8 @@ namespace Bed_System
     {
         public int addRegister(MySqlConnection conn, registers register)
         {
-            string sql = "INSERT INTO register (register_date, register_time, deregister_date, deregister_time)"
-                + " VALUES ('" + register.Register_date.ToString("yyyy-MM-dd") + "   ', '" + register.Register_time.ToString("HH:mm:ss")
+            string sql = "INSERT INTO register (s_id, register_date, register_time, deregister_date, deregister_time)"
+                + " VALUES ("+ register.S_id + "  ,'" + register.Register_date.ToString("yyyy-MM-dd") + "   ', '" + register.Register_time.ToString("HH:mm:ss")
                 + "   ', '" + register.Deregister_date.ToString("yyyy-MM-dd") + "   ', '" + register.Deregister_time.ToString("HH:mm:ss") + "')";
 
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);

@@ -41,14 +41,6 @@ namespace Bed_System
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnPatientMode_Click(object sender, EventArgs e)
-        {
-            PatientMode patientMode = new PatientMode();
-            patientMode.Show();
-        }
-
-       
+        }       
     }
 }

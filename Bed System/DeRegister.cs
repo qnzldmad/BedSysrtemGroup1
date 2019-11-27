@@ -31,6 +31,7 @@ namespace Bed_System
 
         private void pbRegister_Click(object sender, EventArgs e)
         {
+
             DatabaseConnertor databaseConnertor = new DatabaseConnertor();
             databaseConnertor.connect();
 

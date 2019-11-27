@@ -33,6 +33,7 @@ namespace Bed_System
             addPatient.P_address = tbAddress.Text;
             addPatient.P_bedNum = int.Parse(tbBed.Text);
             addPatient.P_floor = tbFloor.Text;
+            addPatient.P_admission = dtpAdmission.Value;
 
             addPatientHandler addPatientHandler = new addPatientHandler();
             int recordCnt = addPatientHandler.addNewPatient(databaseConnertor.getconn(), addPatient);

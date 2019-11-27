@@ -99,7 +99,6 @@
     <Compile Include="nurseAddPatient.Designer.cs">
       <DependentUpon>nurseAddPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="NurseLoginDatabase.cs" />
     <Compile Include="NurseLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +136,6 @@
     </Compile>
     <Compile Include="NurseMenu.Designer.cs">
       <DependentUpon>NurseMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PatientMode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PatientMode.Designer.cs">
-      <DependentUpon>PatientMode.cs</DependentUpon>
     </Compile>
     <Compile Include="DeRegister.cs">
       <SubType>Form</SubType>
@@ -241,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientInfoSystem.resx">
       <DependentUpon>PatientInfoSystem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PatientMode.resx">
-      <DependentUpon>PatientMode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeRegister.resx">
       <DependentUpon>DeRegister.cs</DependentUpon>

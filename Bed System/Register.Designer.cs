@@ -41,6 +41,7 @@
             this.registerPictureBox = new System.Windows.Forms.PictureBox();
             this.exitPictureBox = new System.Windows.Forms.PictureBox();
             this.deregisterPictureBox = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resetPictureBox)).BeginInit();
@@ -76,9 +77,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(298, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Login ID :";
+            this.label2.Text = "Nurse ID :";
             // 
             // label3
             // 
@@ -165,12 +166,21 @@
             this.deregisterPictureBox.TabStop = false;
             this.deregisterPictureBox.Click += new System.EventHandler(this.deregisterPictureBox_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(93, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 14;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(466, 337);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.deregisterPictureBox);
             this.Controls.Add(this.exitPictureBox);
             this.Controls.Add(this.registerPictureBox);
@@ -210,5 +220,6 @@
         private System.Windows.Forms.PictureBox registerPictureBox;
         private System.Windows.Forms.PictureBox exitPictureBox;
         private System.Windows.Forms.PictureBox deregisterPictureBox;
+        private System.Windows.Forms.Label label5;
     }
 }

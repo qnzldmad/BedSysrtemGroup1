@@ -35,6 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.addPatientPanel = new System.Windows.Forms.Panel();
+            this.dtpAdmission = new System.Windows.Forms.DateTimePicker();
+            this.label47 = new System.Windows.Forms.Label();
+            this.tbBed = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.tbFloor = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.lastNameTB = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,7 +62,6 @@
             this.firstNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addDetailPanel = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
             this.genderTB = new System.Windows.Forms.TextBox();
             this.patientSearchPB = new System.Windows.Forms.PictureBox();
             this.dobTB = new System.Windows.Forms.DateTimePicker();
@@ -101,7 +106,6 @@
             this.patientAgeLabel = new System.Windows.Forms.Label();
             this.patientNameLabel = new System.Windows.Forms.Label();
             this.piSearchpb = new System.Windows.Forms.PictureBox();
-            this.label43 = new System.Windows.Forms.Label();
             this.patientIDLabel = new System.Windows.Forms.Label();
             this.patientNameTB = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -109,6 +113,13 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.medicalPanel = new System.Windows.Forms.Panel();
+            this.dtpAdmissions = new System.Windows.Forms.DateTimePicker();
+            this.lbBed = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.lbFloor = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -120,11 +131,10 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.searchPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.patientDAT = new System.Windows.Forms.DataGridView();
             this.label53 = new System.Windows.Forms.Label();
             this.searchPB = new System.Windows.Forms.PictureBox();
@@ -132,7 +142,12 @@
             this.medicalDetailPB = new System.Windows.Forms.PictureBox();
             this.displayPB = new System.Windows.Forms.PictureBox();
             this.addPatientPB = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rbSearchID = new System.Windows.Forms.RadioButton();
+            this.rbSearchN = new System.Windows.Forms.RadioButton();
+            this.rbSI = new System.Windows.Forms.RadioButton();
+            this.rbSN = new System.Windows.Forms.RadioButton();
+            this.lbAdd = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resetpb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -143,13 +158,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.piSearchpb)).BeginInit();
             this.medicalPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDAT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicalDetailPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.displayPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPatientPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,6 +231,12 @@
             // addPatientPanel
             // 
             this.addPatientPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.addPatientPanel.Controls.Add(this.dtpAdmission);
+            this.addPatientPanel.Controls.Add(this.label47);
+            this.addPatientPanel.Controls.Add(this.tbBed);
+            this.addPatientPanel.Controls.Add(this.label45);
+            this.addPatientPanel.Controls.Add(this.tbFloor);
+            this.addPatientPanel.Controls.Add(this.label44);
             this.addPatientPanel.Controls.Add(this.btnRegister);
             this.addPatientPanel.Controls.Add(this.lastNameTB);
             this.addPatientPanel.Controls.Add(this.label12);
@@ -241,9 +262,60 @@
             this.addPatientPanel.Size = new System.Drawing.Size(588, 377);
             this.addPatientPanel.TabIndex = 14;
             // 
+            // dtpAdmission
+            // 
+            this.dtpAdmission.Location = new System.Drawing.Point(98, 343);
+            this.dtpAdmission.Name = "dtpAdmission";
+            this.dtpAdmission.Size = new System.Drawing.Size(200, 20);
+            this.dtpAdmission.TabIndex = 46;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(6, 343);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(86, 20);
+            this.label47.TabIndex = 45;
+            this.label47.Text = "Admission:";
+            // 
+            // tbBed
+            // 
+            this.tbBed.Location = new System.Drawing.Point(343, 309);
+            this.tbBed.Name = "tbBed";
+            this.tbBed.Size = new System.Drawing.Size(61, 20);
+            this.tbBed.TabIndex = 44;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(235, 309);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(102, 20);
+            this.label45.TabIndex = 43;
+            this.label45.Text = "Bed Number:";
+            // 
+            // tbFloor
+            // 
+            this.tbFloor.Location = new System.Drawing.Point(102, 311);
+            this.tbFloor.Name = "tbFloor";
+            this.tbFloor.Size = new System.Drawing.Size(61, 20);
+            this.tbFloor.TabIndex = 42;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(6, 311);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(49, 20);
+            this.label44.TabIndex = 41;
+            this.label44.Text = "Floor:";
+            // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(414, 340);
+            this.btnRegister.Location = new System.Drawing.Point(493, 311);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 40;
@@ -272,7 +344,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 292);
+            this.label11.Location = new System.Drawing.Point(4, 277);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(78, 20);
             this.label11.TabIndex = 37;
@@ -345,7 +417,7 @@
             // 
             // addressTB
             // 
-            this.addressTB.Location = new System.Drawing.Point(162, 292);
+            this.addressTB.Location = new System.Drawing.Point(158, 277);
             this.addressTB.Name = "addressTB";
             this.addressTB.Size = new System.Drawing.Size(324, 20);
             this.addressTB.TabIndex = 27;
@@ -364,7 +436,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(84, 292);
+            this.label6.Location = new System.Drawing.Point(80, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 25;
@@ -428,7 +500,8 @@
             // addDetailPanel
             // 
             this.addDetailPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.addDetailPanel.Controls.Add(this.label42);
+            this.addDetailPanel.Controls.Add(this.rbSI);
+            this.addDetailPanel.Controls.Add(this.rbSN);
             this.addDetailPanel.Controls.Add(this.genderTB);
             this.addDetailPanel.Controls.Add(this.patientSearchPB);
             this.addDetailPanel.Controls.Add(this.dobTB);
@@ -465,16 +538,6 @@
             this.addDetailPanel.Name = "addDetailPanel";
             this.addDetailPanel.Size = new System.Drawing.Size(588, 377);
             this.addDetailPanel.TabIndex = 40;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(25, 78);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(71, 15);
-            this.label42.TabIndex = 75;
-            this.label42.Text = "Patient ID:";
             // 
             // genderTB
             // 
@@ -776,7 +839,11 @@
             // informPanel
             // 
             this.informPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.informPanel.Controls.Add(this.lbAdd);
+            this.informPanel.Controls.Add(this.label42);
+            this.informPanel.Controls.Add(this.rbSearchID);
             this.informPanel.Controls.Add(this.dtodob);
+            this.informPanel.Controls.Add(this.rbSearchN);
             this.informPanel.Controls.Add(this.label50);
             this.informPanel.Controls.Add(this.genderLabel);
             this.informPanel.Controls.Add(this.label48);
@@ -787,7 +854,6 @@
             this.informPanel.Controls.Add(this.patientAgeLabel);
             this.informPanel.Controls.Add(this.patientNameLabel);
             this.informPanel.Controls.Add(this.piSearchpb);
-            this.informPanel.Controls.Add(this.label43);
             this.informPanel.Controls.Add(this.patientIDLabel);
             this.informPanel.Controls.Add(this.patientNameTB);
             this.informPanel.Controls.Add(this.label19);
@@ -840,9 +906,9 @@
             // 
             this.emergencyContactLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.emergencyContactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emergencyContactLabel.Location = new System.Drawing.Point(59, 341);
+            this.emergencyContactLabel.Location = new System.Drawing.Point(113, 307);
             this.emergencyContactLabel.Name = "emergencyContactLabel";
-            this.emergencyContactLabel.Size = new System.Drawing.Size(178, 22);
+            this.emergencyContactLabel.Size = new System.Drawing.Size(160, 22);
             this.emergencyContactLabel.TabIndex = 67;
             this.emergencyContactLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -850,11 +916,11 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(74, 321);
+            this.label46.Location = new System.Drawing.Point(6, 310);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(149, 16);
+            this.label46.Size = new System.Drawing.Size(101, 16);
             this.label46.TabIndex = 66;
-            this.label46.Text = "Emergency Contact No.";
+            this.label46.Text = "Emergency No.";
             // 
             // contactLabel
             // 
@@ -899,24 +965,13 @@
             // piSearchpb
             // 
             this.piSearchpb.Image = global::Bed_System.Properties.Resources.search;
-            this.piSearchpb.Location = new System.Drawing.Point(260, 54);
+            this.piSearchpb.Location = new System.Drawing.Point(263, 63);
             this.piSearchpb.Name = "piSearchpb";
             this.piSearchpb.Size = new System.Drawing.Size(25, 20);
             this.piSearchpb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piSearchpb.TabIndex = 54;
             this.piSearchpb.TabStop = false;
             this.piSearchpb.Click += new System.EventHandler(this.piSearchpb_Click);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(21, 58);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(68, 16);
-            this.label43.TabIndex = 61;
-            this.label43.Text = "Patient ID:";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // patientIDLabel
             // 
@@ -930,7 +985,7 @@
             // 
             // patientNameTB
             // 
-            this.patientNameTB.Location = new System.Drawing.Point(95, 54);
+            this.patientNameTB.Location = new System.Drawing.Point(98, 63);
             this.patientNameTB.Name = "patientNameTB";
             this.patientNameTB.Size = new System.Drawing.Size(159, 20);
             this.patientNameTB.TabIndex = 47;
@@ -979,6 +1034,13 @@
             // medicalPanel
             // 
             this.medicalPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.medicalPanel.Controls.Add(this.dtpAdmissions);
+            this.medicalPanel.Controls.Add(this.lbBed);
+            this.medicalPanel.Controls.Add(this.label54);
+            this.medicalPanel.Controls.Add(this.label52);
+            this.medicalPanel.Controls.Add(this.lbFloor);
+            this.medicalPanel.Controls.Add(this.label49);
+            this.medicalPanel.Controls.Add(this.label30);
             this.medicalPanel.Controls.Add(this.label41);
             this.medicalPanel.Controls.Add(this.label40);
             this.medicalPanel.Controls.Add(this.label39);
@@ -990,14 +1052,80 @@
             this.medicalPanel.Controls.Add(this.label27);
             this.medicalPanel.Controls.Add(this.label28);
             this.medicalPanel.Controls.Add(this.label29);
-            this.medicalPanel.Controls.Add(this.label30);
-            this.medicalPanel.Controls.Add(this.label31);
             this.medicalPanel.Controls.Add(this.label32);
             this.medicalPanel.Controls.Add(this.label33);
             this.medicalPanel.Location = new System.Drawing.Point(309, 182);
             this.medicalPanel.Name = "medicalPanel";
             this.medicalPanel.Size = new System.Drawing.Size(291, 377);
             this.medicalPanel.TabIndex = 53;
+            // 
+            // dtpAdmissions
+            // 
+            this.dtpAdmissions.Location = new System.Drawing.Point(89, 99);
+            this.dtpAdmissions.Name = "dtpAdmissions";
+            this.dtpAdmissions.Size = new System.Drawing.Size(159, 20);
+            this.dtpAdmissions.TabIndex = 73;
+            // 
+            // lbBed
+            // 
+            this.lbBed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbBed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBed.Location = new System.Drawing.Point(203, 55);
+            this.lbBed.Name = "lbBed";
+            this.lbBed.Size = new System.Drawing.Size(74, 22);
+            this.lbBed.TabIndex = 64;
+            this.lbBed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(9, 99);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(74, 16);
+            this.label54.TabIndex = 72;
+            this.label54.Text = "Admission:";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(137, 57);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(60, 16);
+            this.label52.TabIndex = 63;
+            this.label52.Text = "Bed No.:";
+            // 
+            // lbFloor
+            // 
+            this.lbFloor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbFloor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFloor.Location = new System.Drawing.Point(57, 55);
+            this.lbFloor.Name = "lbFloor";
+            this.lbFloor.Size = new System.Drawing.Size(74, 22);
+            this.lbFloor.TabIndex = 62;
+            this.lbFloor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(9, 58);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(42, 16);
+            this.label49.TabIndex = 61;
+            this.label49.Text = "Floor:";
+            // 
+            // label30
+            // 
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(192, 146);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(16, 22);
+            this.label30.TabIndex = 60;
+            this.label30.Text = "/";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label41
             // 
@@ -1066,7 +1194,7 @@
             // 
             this.diastolicLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.diastolicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diastolicLabel.Location = new System.Drawing.Point(115, 123);
+            this.diastolicLabel.Location = new System.Drawing.Point(214, 146);
             this.diastolicLabel.Name = "diastolicLabel";
             this.diastolicLabel.Size = new System.Drawing.Size(74, 22);
             this.diastolicLabel.TabIndex = 53;
@@ -1076,7 +1204,7 @@
             // 
             this.systolicLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.systolicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.systolicLabel.Location = new System.Drawing.Point(115, 87);
+            this.systolicLabel.Location = new System.Drawing.Point(115, 146);
             this.systolicLabel.Name = "systolicLabel";
             this.systolicLabel.Size = new System.Drawing.Size(74, 22);
             this.systolicLabel.TabIndex = 52;
@@ -1112,35 +1240,15 @@
             this.label29.TabIndex = 42;
             this.label29.Text = "Pulse Rate:";
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(46, 129);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 16);
-            this.label30.TabIndex = 39;
-            this.label30.Text = "Diastolic:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(51, 91);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(58, 16);
-            this.label31.TabIndex = 38;
-            this.label31.Text = "Systolic:";
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(9, 67);
+            this.label32.Location = new System.Drawing.Point(5, 146);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(101, 16);
+            this.label32.Size = new System.Drawing.Size(104, 16);
             this.label32.TabIndex = 37;
-            this.label32.Text = "Blood Pressure";
+            this.label32.Text = "Blood Pressure:";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
@@ -1163,6 +1271,14 @@
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(588, 377);
             this.searchPanel.TabIndex = 40;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(297, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(277, 274);
+            this.dataGridView1.TabIndex = 57;
             // 
             // patientDAT
             // 
@@ -1245,20 +1361,76 @@
             this.addPatientPB.MouseLeave += new System.EventHandler(this.addPatientPB_MouseLeave);
             this.addPatientPB.MouseHover += new System.EventHandler(this.addPatientPB_MouseHover);
             // 
-            // dataGridView1
+            // rbSearchID
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(297, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(277, 274);
-            this.dataGridView1.TabIndex = 57;
+            this.rbSearchID.AutoSize = true;
+            this.rbSearchID.Location = new System.Drawing.Point(9, 67);
+            this.rbSearchID.Name = "rbSearchID";
+            this.rbSearchID.Size = new System.Drawing.Size(88, 17);
+            this.rbSearchID.TabIndex = 56;
+            this.rbSearchID.TabStop = true;
+            this.rbSearchID.Text = "Search By ID";
+            this.rbSearchID.UseVisualStyleBackColor = true;
+            // 
+            // rbSearchN
+            // 
+            this.rbSearchN.AutoSize = true;
+            this.rbSearchN.Location = new System.Drawing.Point(9, 41);
+            this.rbSearchN.Name = "rbSearchN";
+            this.rbSearchN.Size = new System.Drawing.Size(105, 17);
+            this.rbSearchN.TabIndex = 55;
+            this.rbSearchN.TabStop = true;
+            this.rbSearchN.Text = "Search By Name";
+            this.rbSearchN.UseVisualStyleBackColor = true;
+            // 
+            // rbSI
+            // 
+            this.rbSI.AutoSize = true;
+            this.rbSI.Location = new System.Drawing.Point(8, 79);
+            this.rbSI.Name = "rbSI";
+            this.rbSI.Size = new System.Drawing.Size(88, 17);
+            this.rbSI.TabIndex = 76;
+            this.rbSI.TabStop = true;
+            this.rbSI.Text = "Search By ID";
+            this.rbSI.UseVisualStyleBackColor = true;
+            // 
+            // rbSN
+            // 
+            this.rbSN.AutoSize = true;
+            this.rbSN.Location = new System.Drawing.Point(8, 53);
+            this.rbSN.Name = "rbSN";
+            this.rbSN.Size = new System.Drawing.Size(105, 17);
+            this.rbSN.TabIndex = 75;
+            this.rbSN.TabStop = true;
+            this.rbSN.Text = "Search By Name";
+            this.rbSN.UseVisualStyleBackColor = true;
+            // 
+            // lbAdd
+            // 
+            this.lbAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAdd.Location = new System.Drawing.Point(74, 344);
+            this.lbAdd.Name = "lbAdd";
+            this.lbAdd.Size = new System.Drawing.Size(199, 22);
+            this.lbAdd.TabIndex = 73;
+            this.lbAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(6, 347);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(62, 16);
+            this.label42.TabIndex = 72;
+            this.label42.Text = "Address:";
             // 
             // PatientInfoSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(615, 571);
+            this.ClientSize = new System.Drawing.Size(615, 570);
             this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.medicalPanel);
             this.Controls.Add(this.searchPB);
@@ -1289,13 +1461,13 @@
             this.medicalPanel.PerformLayout();
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDAT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicalDetailPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.displayPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPatientPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1354,8 +1526,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label41;
@@ -1366,7 +1536,6 @@
         private System.Windows.Forms.Label breathingLabel;
         private System.Windows.Forms.Label diastolicLabel;
         private System.Windows.Forms.Label systolicLabel;
-        private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label patientIDLabel;
         private System.Windows.Forms.PictureBox piSearchpb;
         private System.Windows.Forms.Label label50;
@@ -1401,11 +1570,29 @@
         private System.Windows.Forms.TextBox txtsearchpatient;
         private System.Windows.Forms.PictureBox patientSearchPB;
         private System.Windows.Forms.TextBox genderTB;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox resetpb;
         private System.Windows.Forms.DateTimePicker dtodob;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpAdmission;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox tbBed;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox tbFloor;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.DateTimePicker dtpAdmissions;
+        private System.Windows.Forms.Label lbBed;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label lbFloor;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RadioButton rbSI;
+        private System.Windows.Forms.RadioButton rbSN;
+        private System.Windows.Forms.RadioButton rbSearchID;
+        private System.Windows.Forms.RadioButton rbSearchN;
+        private System.Windows.Forms.Label lbAdd;
+        private System.Windows.Forms.Label label42;
     }
 }

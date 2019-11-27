@@ -57,6 +57,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpAdmission = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -302,6 +304,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpAdmission);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.tbAddress);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnSave);
@@ -332,6 +336,22 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient";
+            // 
+            // dtpAdmission
+            // 
+            this.dtpAdmission.Location = new System.Drawing.Point(133, 328);
+            this.dtpAdmission.Name = "dtpAdmission";
+            this.dtpAdmission.Size = new System.Drawing.Size(156, 22);
+            this.dtpAdmission.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(50, 334);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 16);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Admission :";
             // 
             // nurseAddPatient
             // 
@@ -382,5 +402,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dtpAdmission;
+        private System.Windows.Forms.Label label7;
     }
 }

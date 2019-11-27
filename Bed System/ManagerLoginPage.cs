@@ -14,8 +14,6 @@ namespace Bed_System
     public partial class ManagerLoginPage : Form
     {
 
-        MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
-        MySqlDataReader mySqlDataReader;
 
         public ManagerLoginPage()
         {
@@ -44,39 +42,8 @@ namespace Bed_System
 
             mySqlDataAdapter.Fill(dataTable);
 
-            mySqlConnection.Open();
-            string loadManager = "SELECT * FROM eahthospital.manager WHERE m_loginid='" + IdNumberTextBox.Text + "'";
-            mySqlCommand = new MySqlCommand(loadManager, mySqlConnection);
-
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if (mySqlDataReader.Read())
-            {
-                label3.Text = mySqlDataReader.GetString("m_id");
-                label4.Text = mySqlDataReader.GetString("m_firsName");
-                label7.Text = mySqlDataReader.GetString("m_lastName");
-                label8.Text = mySqlDataReader.GetString("m_age");
-            }
-
-            else
-            {
-                return;
-            }
-            mySqlConnection.Close();
-
             if (dataTable.Rows.Count > 0)
             {
-                medicalstaff staffOne = new medicalstaff();
-                staffOne.staffID = int.Parse(label3.Text);
-                staffOne.firstName = label4.Text;
-                staffOne.lastName = label7.Text;
-                staffOne.age = int.Parse(label8.Text);
-                staffOne.loginID = IdNumberTextBox.Text;
-
-                MessageBox.Show("Medical Staff Information" + "\n" + "\n" + "ID: " + staffOne.staffID + "\n" +
-                    "Name: " + staffOne.firstName + " " + staffOne.lastName + "\n" + "Age:" + staffOne.age + "\n" + "Login ID: "
-                    + staffOne.loginID + "\n");
-
                 ManagerMenu managerMenu = new ManagerMenu();
                 managerMenu.Show();
             }
@@ -111,7 +78,7 @@ namespace Bed_System
 
         private void ManagerLoginPage_Load(object sender, EventArgs e)
         {
-            panel3.Hide();
+
         }
     }
 }

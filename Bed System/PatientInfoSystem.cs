@@ -194,6 +194,9 @@ namespace Bed_System
             emergencyContactTB.Text = "";
             genderCB.Text = "";
             addressTB.Text = "";
+            tbFloor.Text = "";
+            tbBed.Text = "";
+            dtpAdmission.Value = DateTime.Now;
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -209,6 +212,9 @@ namespace Bed_System
             addPatient.P_emergencyContact = int.Parse(emergencyContactTB.Text);
             addPatient.P_gender = genderCB.Text;
             addPatient.P_address = addressTB.Text;
+            addPatient.P_floor = tbFloor.Text;
+            addPatient.P_bedNum = int.Parse(tbBed.Text);
+            addPatient.P_admission = this.dtpAdmission.Value;
 
             addPatientHandler addPatientHandler = new addPatientHandler();
             int recordCnt = addPatientHandler.addNewPatient(databaseConnertor.getconn(), addPatient);
@@ -220,30 +226,61 @@ namespace Bed_System
         MySqlDataReader mySqlDataReader;
         private void patientSearchPB_click(object sender, EventArgs e)
         {
-            mySqlConnection.Open();
-
-            string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_id=" + int.Parse(txtsearchpatient.Text);
-            mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
-
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if(mySqlDataReader.Read())
+            if (rbSI.Checked)
             {
-                patientIDTB.Text = mySqlDataReader.GetString("p_id");
-                pNameTB.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
-                pAgeTB.Text = mySqlDataReader.GetInt32("p_age").ToString();
-                pContactTB.Text = mySqlDataReader.GetInt32("p_contact").ToString();
-                pEContactTB.Text = mySqlDataReader.GetInt32("p_emergencyContact").ToString();
-                dobTB.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
-                genderTB.Text = mySqlDataReader.GetString("p_gender");
-                addTB.Text = mySqlDataReader.GetString("p_address");
-            }
-            else
-            {
-                MessageBox.Show("There is no data for this Patient ID");
-            }
+                mySqlConnection.Open();
 
-            mySqlConnection.Close();
+                string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_id=" + int.Parse(txtsearchpatient.Text);
+                mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    patientIDTB.Text = mySqlDataReader.GetString("p_id");
+                    pNameTB.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
+                    pAgeTB.Text = mySqlDataReader.GetInt32("p_age").ToString();
+                    pContactTB.Text = mySqlDataReader.GetInt32("p_contact").ToString();
+                    pEContactTB.Text = mySqlDataReader.GetInt32("p_emergencyContact").ToString();
+                    dobTB.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
+                    genderTB.Text = mySqlDataReader.GetString("p_gender");
+                    addTB.Text = mySqlDataReader.GetString("p_address");
+                }
+                else
+                {
+                    MessageBox.Show("There is no data for this Patient ID");
+                }
+
+                mySqlConnection.Close();
+            }
+            else if (rbSN.Checked)
+            {
+                mySqlConnection.Open();
+                string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_firstName ='" + txtsearchpatient.Text + "' OR p_lastName='" + txtsearchpatient.Text + "'";
+                mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    patientIDTB.Text = mySqlDataReader.GetString("p_id");
+                    pNameTB.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
+                    pAgeTB.Text = mySqlDataReader.GetInt32("p_age").ToString();
+                    pContactTB.Text = mySqlDataReader.GetInt32("p_contact").ToString();
+                    pEContactTB.Text = mySqlDataReader.GetInt32("p_emergencyContact").ToString();
+                    dobTB.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
+                    genderTB.Text = mySqlDataReader.GetString("p_gender");
+                    addTB.Text = mySqlDataReader.GetString("p_address");
+                }
+                else
+                {
+                    MessageBox.Show("There is no data for this Patient Name");
+                }
+            }
+            else if (!rbSI.Checked || !rbSN.Checked)
+            {
+                MessageBox.Show("Please Select an Option", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -252,7 +289,7 @@ namespace Bed_System
             databaseConnertor.connect();
 
             pmdetails pmdetails = new pmdetails();
-            pmdetails.P_id = int.Parse(txtsearchpatient.Text);
+            pmdetails.P_id = int.Parse(patientIDTB.Text);
             pmdetails.P_systolic = int.Parse(systolicTB.Text);
             pmdetails.P_diastolic = int.Parse(diastolicTB.Text);
             pmdetails.P_breathing = int.Parse(breathingTB.Text);
@@ -284,51 +321,109 @@ namespace Bed_System
         
         private void piSearchpb_Click(object sender, EventArgs e)
         {
-            mySqlConnection.Open();
-            
-            string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_id=" + int.Parse(patientNameTB.Text);
-            mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
-
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if (mySqlDataReader.Read())
+            if (rbSearchID.Checked)
             {
-                patientIDLabel.Text = mySqlDataReader.GetString("p_id");
-                patientNameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
-                patientAgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
-                contactLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
-                emergencyContactLabel.Text = mySqlDataReader.GetInt32("p_emergencyContact").ToString();
-                dtodob.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
-                genderLabel.Text = mySqlDataReader.GetString("p_gender");
+                mySqlConnection.Open();
+
+                string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_id=" + int.Parse(patientNameTB.Text);
+                mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    patientIDLabel.Text = mySqlDataReader.GetString("p_id");
+                    patientNameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
+                    patientAgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
+                    contactLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
+                    emergencyContactLabel.Text = mySqlDataReader.GetInt32("p_emergencyContact").ToString();
+                    dtodob.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
+                    genderLabel.Text = mySqlDataReader.GetString("p_gender");
+                    lbFloor.Text = mySqlDataReader.GetString("p_floor");
+                    lbBed.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
+                    dtpAdmissions.Value = mySqlDataReader.GetMySqlDateTime("p_admission").Value;
+                    lbAdd.Text = mySqlDataReader.GetString("p_address");
+                }
+                else
+                {
+                    MessageBox.Show("There is no personal information data for this Patient ID");
+                }
+
+                mySqlConnection.Close();
+
+                mySqlConnection.Open();
+
+                string loadDetails = "SELECT * FROM eahthospital.patientmedicaldetails WHERE p_id=" + int.Parse(patientNameTB.Text);
+                mySqlCommand = new MySqlCommand(loadDetails, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    systolicLabel.Text = mySqlDataReader.GetInt32("p_systolic").ToString();
+                    diastolicLabel.Text = mySqlDataReader.GetInt32("p_diastolic").ToString();
+                    breathingLabel.Text = mySqlDataReader.GetInt32("p_breathing").ToString();
+                    pulseLabel.Text = mySqlDataReader.GetInt32("p_pulse").ToString();
+                    temperatureLabel.Text = mySqlDataReader.GetInt32("p_temperater").ToString();
+                }
+                else
+                {
+                    MessageBox.Show("There is no medical details data for this Patient ID");
+                }
+
+                mySqlConnection.Close();
             }
-            else
+            else if (rbSearchN.Checked)
             {
-                MessageBox.Show("There is no data for this Patient ID");
+                mySqlConnection.Open();
+                string loadPatient = "SELECT * FROM eahthospital.addpatient WHERE p_firstName ='" + patientNameTB.Text + "' OR p_lastName='" + patientNameTB.Text + "'";
+                mySqlCommand = new MySqlCommand(loadPatient, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    patientIDLabel.Text = mySqlDataReader.GetString("p_id");
+                    patientNameLabel.Text = mySqlDataReader.GetString("p_firstName") + mySqlDataReader.GetString("p_lastName");
+                    patientAgeLabel.Text = mySqlDataReader.GetInt32("p_age").ToString();
+                    contactLabel.Text = mySqlDataReader.GetInt32("p_contact").ToString();
+                    emergencyContactLabel.Text = mySqlDataReader.GetInt32("p_emergencyContact").ToString();
+                    dtodob.Value = mySqlDataReader.GetMySqlDateTime("p_dob").Value;
+                    genderLabel.Text = mySqlDataReader.GetString("p_gender");
+                    lbFloor.Text = mySqlDataReader.GetString("p_floor");
+                    lbBed.Text = mySqlDataReader.GetInt32("p_bedNum").ToString();
+                    dtpAdmissions.Value = mySqlDataReader.GetMySqlDateTime("p_admission").Value;
+                }
+                else
+                {
+                    MessageBox.Show("There is no personal information data for this Patient Name");
+                }
+                mySqlConnection.Close();
+
+                mySqlConnection.Open();
+                string loadDetails = "SELECT * FROM patientmedicaldetails INNER JOIN addpatient ON addpatient.p_id = patientmedicaldetails.p_id WHERE addpatient.p_firstName='" + patientNameTB.Text + "' OR p_lastName='" + patientNameTB.Text + "'";
+                mySqlCommand = new MySqlCommand(loadDetails, mySqlConnection);
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                if (mySqlDataReader.Read())
+                {
+                    systolicLabel.Text = mySqlDataReader.GetInt32("p_systolic").ToString();
+                    diastolicLabel.Text = mySqlDataReader.GetInt32("p_diastolic").ToString();
+                    breathingLabel.Text = mySqlDataReader.GetInt32("p_breathing").ToString();
+                    pulseLabel.Text = mySqlDataReader.GetInt32("p_pulse").ToString();
+                    temperatureLabel.Text = mySqlDataReader.GetInt32("p_temperater").ToString();
+                }
+                else
+                {
+                    MessageBox.Show("There is no medical details data for this Patient Name");
+                }
+                mySqlConnection.Close();
             }
-
-            mySqlConnection.Close();
-
-            mySqlConnection.Open();
-
-            string loadDetails = "SELECT * FROM eahthospital.patientmedicaldetails WHERE p_id=" + int.Parse(patientNameTB.Text);
-            mySqlCommand = new MySqlCommand(loadDetails, mySqlConnection);
-
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-            if (mySqlDataReader.Read())
+            else if (!rbSearchID.Checked || !rbSearchN.Checked)
             {
-                systolicLabel.Text = mySqlDataReader.GetInt32("p_systolic").ToString();
-                diastolicLabel.Text = mySqlDataReader.GetInt32("p_diastolic").ToString();
-                breathingLabel.Text = mySqlDataReader.GetInt32("p_breathing").ToString();
-                pulseLabel.Text = mySqlDataReader.GetInt32("p_pulse").ToString();
-                temperatureLabel.Text = mySqlDataReader.GetInt32("p_temperater").ToString();
+                MessageBox.Show("Please Select an Option", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("There is no data for this Patient ID");
-            }
-
-            mySqlConnection.Close();
         }
     }
 }

@@ -28,34 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
+            this.dgvPatient = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvHistory
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(555, 326);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistory.Location = new System.Drawing.Point(12, 12);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.Size = new System.Drawing.Size(555, 326);
+            this.dgvHistory.TabIndex = 1;
+            // 
+            // dgvPatient
+            // 
+            this.dgvPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPatient.Location = new System.Drawing.Point(10, 344);
+            this.dgvPatient.Name = "dgvPatient";
+            this.dgvPatient.Size = new System.Drawing.Size(555, 183);
+            this.dgvPatient.TabIndex = 2;
             // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 345);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(577, 542);
+            this.Controls.Add(this.dgvPatient);
+            this.Controls.Add(this.dgvHistory);
             this.Name = "History";
             this.Text = "History";
             this.Load += new System.EventHandler(this.History_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHistory;
+        private System.Windows.Forms.DataGridView dgvPatient;
     }
 }

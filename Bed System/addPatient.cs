@@ -19,6 +19,7 @@ namespace Bed_System
         private string p_address;
         private int p_bedNum;
         private string p_floor;
+        private DateTime p_admission;
 
         public int P_id { get => p_id; set => p_id = value; }
         public string P_firstName { get => p_firstName; set => p_firstName = value; }
@@ -31,5 +32,6 @@ namespace Bed_System
         public string P_address { get => p_address; set => p_address = value; }
         public int P_bedNum { get => p_bedNum; set => p_bedNum = value; }
         public string P_floor { get => p_floor; set => p_floor = value; }
+        public DateTime P_admission { get => p_admission; set => p_admission = value; }
     }
 }

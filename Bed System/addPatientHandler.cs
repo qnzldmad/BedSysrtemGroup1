@@ -11,11 +11,12 @@ namespace Bed_System
     {
         public int addNewPatient(MySqlConnection conn, addPatient addPatient)
         {
-            string sql = "INSERT INTO addPatient (p_firstName, p_lastName, p_age, p_dob, p_contact, p_emergencyContact, p_gender, p_address, p_bedNum, p_floor)"
+            string sql = "INSERT INTO addPatient (p_firstName, p_lastName, p_age, p_dob, p_contact, p_emergencyContact, p_gender, p_address, p_bedNum, p_floor, p_admission)"
                 + " VALUES ('" + addPatient.P_firstName + "', '" + addPatient.P_lastName
                 + "   ', " + addPatient.P_age + ", '" + addPatient.P_dob.ToString("yyyy-MM-dd") 
                 + "   ', " + addPatient.P_contact + "   , " + addPatient.P_emergencyContact 
-                + "   , '" + addPatient.P_gender + "   ', '" + addPatient.P_address + "   ', " + addPatient.P_bedNum + "  , '" + addPatient.P_floor + "')";
+                + "   , '" + addPatient.P_gender + "   ', '" + addPatient.P_address + "   ', " + addPatient.P_bedNum + "  , '" + addPatient.P_floor + "'   , '"
+                + addPatient.P_admission +"')";
 
             MySqlCommand sqlComm = new MySqlCommand(sql, conn);
             return sqlComm.ExecuteNonQuery();
@@ -40,6 +41,9 @@ namespace Bed_System
                 aLabr.P_emergencyContact = (int)myReader.GetValue(6);
                 aLabr.P_gender = (string)myReader.GetValue(7);
                 aLabr.P_address = (string)myReader.GetValue(8);
+                aLabr.P_bedNum = (int)myReader.GetValue(9);
+                aLabr.P_floor = (string)myReader.GetValue(10);
+                aLabr.P_admission = (DateTime)myReader.GetValue(11);
                 listLabr.Add(aLabr);
             }
             return listLabr;

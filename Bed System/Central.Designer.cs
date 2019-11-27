@@ -30,16 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Central));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnManager = new System.Windows.Forms.Button();
             this.btnMedical = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnNurse = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPatientMode = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnManager = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +58,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(367, 289);
             this.panel2.TabIndex = 5;
+            // 
+            // btnManager
+            // 
+            this.btnManager.Location = new System.Drawing.Point(183, 242);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(83, 35);
+            this.btnManager.TabIndex = 14;
+            this.btnManager.Text = "Manager";
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnMedical
             // 
@@ -115,7 +124,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.btnPatientMode);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -123,16 +131,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(224, 289);
             this.panel1.TabIndex = 4;
-            // 
-            // btnPatientMode
-            // 
-            this.btnPatientMode.Location = new System.Drawing.Point(62, 242);
-            this.btnPatientMode.Name = "btnPatientMode";
-            this.btnPatientMode.Size = new System.Drawing.Size(99, 23);
-            this.btnPatientMode.TabIndex = 11;
-            this.btnPatientMode.Text = "Patient Mode";
-            this.btnPatientMode.UseVisualStyleBackColor = true;
-            this.btnPatientMode.Click += new System.EventHandler(this.btnPatientMode_Click);
             // 
             // label1
             // 
@@ -154,24 +152,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnManager
-            // 
-            this.btnManager.Location = new System.Drawing.Point(183, 242);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(83, 35);
-            this.btnManager.TabIndex = 14;
-            this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
-            // 
-            // BedSideMain
+            // Central
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 289);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "BedSideMain";
+            this.Name = "Central";
             this.Text = "MainPages";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -191,7 +179,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnNurse;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnPatientMode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnManager;

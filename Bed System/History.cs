@@ -21,9 +21,14 @@ namespace Bed_System
         {
             DatabaseConnertor database = new DatabaseConnertor();
             database.connect();
-            pmdetailsHandler pmdetailsHandler = new pmdetailsHandler();
+            realtimeHandler realtimeHandler = new realtimeHandler();
 
-            dataGridView1.DataSource = pmdetailsHandler.getAlldetails(database.getconn());
+            dgvHistory.DataSource = realtimeHandler.getAlldetails(database.getconn());
+
+            database.connect();
+            addPatientHandler addPatientHandler = new addPatientHandler();
+
+            dgvPatient.DataSource = addPatientHandler.getAllPatient(database.getconn());
         }
     }
 }

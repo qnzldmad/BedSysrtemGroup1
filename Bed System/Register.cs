@@ -36,18 +36,28 @@ namespace Bed_System
             databaseConnertor.connect();
 
             registers register = new registers();
+            register.S_id = int.Parse(LoginIdLabel.Text);
             register.Register_date = this.datePicker.Value;
             register.Register_time = this.timePicker.Value;
 
-            registerHandler rederegisterHandler = new registerHandler();
-            int recordCnt1 = rederegisterHandler.addRegister(databaseConnertor.getconn(), register);
+            registerHandler registerHandler = new registerHandler();
+            int recordCnt1 = registerHandler.addRegister(databaseConnertor.getconn(), register);
             MessageBox.Show(recordCnt1 + " record has been inserted !!");
         }
 
         private void deregisterPictureBox_Click(object sender, EventArgs e)
         {
-            LoginIdLabel.Text = MedicalStaffMenu.passingtext1;
-            datePicker.Format = DateTimePickerFormat.Time;
+            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
+            databaseConnertor.connect();
+
+            registers register = new registers();
+            register.S_id = int.Parse(LoginIdLabel.Text);
+            register.Deregister_date = this.datePicker.Value;
+            register.Deregister_time = this.timePicker.Value;
+
+            registerHandler registerHandler = new registerHandler();
+            int recordCnt1 = registerHandler.addRegister(databaseConnertor.getconn(), register);
+            MessageBox.Show(recordCnt1 + " record has been inserted !!");
         }
 
         private void resetPictureBox_Click(object sender, EventArgs e)
