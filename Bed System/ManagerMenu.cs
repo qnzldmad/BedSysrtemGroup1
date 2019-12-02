@@ -266,7 +266,7 @@ namespace Bed_System
                     lbID.Text = mySqlDataReader.GetString("ms_id");
                     lbN.Text = mySqlDataReader.GetString("ms_firstName") + mySqlDataReader.GetString("ms_lastName");
                     lbA.Text = mySqlDataReader.GetInt32("ms_age").ToString();
-                    lbC.Text = mySqlDataReader.GetInt32("ms_contact").ToString();
+                    lbC.Text = mySqlDataReader.GetInt64("ms_contact").ToString();
                     lbE.Text = mySqlDataReader.GetString("ms_email");
                     dtpS.Value = mySqlDataReader.GetMySqlDateTime("ms_dob").Value;
                     lbPosition.Text = mySqlDataReader.GetString("ms_position");
@@ -291,7 +291,7 @@ namespace Bed_System
                     lbID.Text = mySqlDataReader.GetString("ms_id");
                     lbN.Text = mySqlDataReader.GetString("ms_firstName") + mySqlDataReader.GetString("ms_lastName");
                     lbA.Text = mySqlDataReader.GetInt32("ms_age").ToString();
-                    lbC.Text = mySqlDataReader.GetInt32("ms_contact").ToString();
+                    lbC.Text = mySqlDataReader.GetInt64("ms_contact").ToString();
                     lbE.Text = mySqlDataReader.GetString("ms_email");
                     dtpS.Value = mySqlDataReader.GetMySqlDateTime("ms_dob").Value;
                     lbPosition.Text = mySqlDataReader.GetString("ms_position");
@@ -323,7 +323,7 @@ namespace Bed_System
                     lbID.Text = mySqlDataReader.GetString("s_id");
                     lbN.Text = mySqlDataReader.GetString("s_firstName") + mySqlDataReader.GetString("s_lastName");
                     lbA.Text = mySqlDataReader.GetInt32("s_age").ToString();
-                    lbC.Text = mySqlDataReader.GetInt32("s_contact").ToString();
+                    lbC.Text = mySqlDataReader.GetInt64("s_contact").ToString();
                     lbE.Text = mySqlDataReader.GetString("s_email");
                     dtpS.Value = mySqlDataReader.GetMySqlDateTime("s_dob").Value;
                     lbPosition.Text = mySqlDataReader.GetString("s_position");
@@ -348,7 +348,7 @@ namespace Bed_System
                     lbID.Text = mySqlDataReader.GetString("s_id");
                     lbN.Text = mySqlDataReader.GetString("s_firstName") + mySqlDataReader.GetString("s_lastName");
                     lbA.Text = mySqlDataReader.GetInt32("s_age").ToString();
-                    lbC.Text = mySqlDataReader.GetInt32("s_contact").ToString();
+                    lbC.Text = mySqlDataReader.GetInt64("s_contact").ToString();
                     lbE.Text = mySqlDataReader.GetString("s_email");
                     dtpS.Value = mySqlDataReader.GetMySqlDateTime("s_dob").Value;
                     lbPosition.Text = mySqlDataReader.GetString("s_position");
