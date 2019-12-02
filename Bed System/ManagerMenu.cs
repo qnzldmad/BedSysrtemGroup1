@@ -375,5 +375,31 @@ namespace Bed_System
             dtpS.Value = DateTime.Now;
             lbPosition.Text = "";
         }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
+            databaseConnertor.connect();
+            rederegisterHandler rederegisterHandler = new rederegisterHandler();
+
+            dataGridView1.DataSource = rederegisterHandler.getAllRegister(databaseConnertor.getconn());
+
+            
+        }
+
+        private void btnNur_Click(object sender, EventArgs e)
+        {
+            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
+            databaseConnertor.connect();
+            registerHandler registerHandler = new registerHandler();
+
+            dataGridView1.DataSource = registerHandler.getAllRegister(databaseConnertor.getconn());
+        }
+
+        private void report_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+        }
     }
 }

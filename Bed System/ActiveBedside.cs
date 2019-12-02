@@ -92,7 +92,7 @@ namespace Bed_System
                     label4.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 1 limit exceeded");
                     
@@ -113,7 +113,7 @@ namespace Bed_System
                     label7.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wavv";
                     player1.Play();
                     MessageBox.Show("Patient Bed 2 limit exceeded");
                    
@@ -135,7 +135,7 @@ namespace Bed_System
                     label4.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 1 limit exceeded");
                    
@@ -156,7 +156,7 @@ namespace Bed_System
                     label7.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 2 limit exceeded");
                    
@@ -178,7 +178,7 @@ namespace Bed_System
                     label4.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 1 limit exceeded");
                     
@@ -200,7 +200,7 @@ namespace Bed_System
                     label7.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 2 limit exceeded");
                     
@@ -222,7 +222,7 @@ namespace Bed_System
                     label4.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 1 limit exceeded");
                     
@@ -245,7 +245,7 @@ namespace Bed_System
                     label7.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 2 limit exceeded");
                  
@@ -267,7 +267,7 @@ namespace Bed_System
                     label4.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 1 limit exceeded");
                     
@@ -289,7 +289,7 @@ namespace Bed_System
                     label7.BackColor = Color.Red;
                     timer.Stop();
                     SoundPlayer player1 = new System.Media.SoundPlayer();
-                    player1.SoundLocation = @"C:\Users\USER\Desktop\Alarm.wav";
+                    player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
                     player1.Play();
                     MessageBox.Show("Patient Bed 1 limit exceeded");
                    

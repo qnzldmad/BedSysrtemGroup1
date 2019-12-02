@@ -47,11 +47,8 @@ namespace Bed_System
 
         private void selectModulePB_click(object sender, EventArgs e)
         {
-            this.Hide();
-            SelectModule select = new SelectModule();
-            select.ShowDialog();
-            this.Close();
-
+            SetAlarmLimit setAlarmLimit = new SetAlarmLimit();
+            setAlarmLimit.Show();
         }
 
         private void deRegisterPB_MouseHover(object sender, EventArgs e)
@@ -71,7 +68,7 @@ namespace Bed_System
         private void selectModulePB_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(this.selectModulePB, "Select Modules");
+            toolTip.SetToolTip(this.selectModulePB, "Set Alarm Limit");
             selectModulePB.BackColor = Color.Gray;
         }
 

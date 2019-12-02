@@ -38,7 +38,7 @@ namespace Bed_System
             registers register = new registers();
             register.S_id = int.Parse(LoginIdLabel.Text);
             register.Register_date = this.datePicker.Value;
-            register.Register_time = this.timePicker.Value;
+            register.Register_time = tbTime.Text;
 
             registerHandler registerHandler = new registerHandler();
             int recordCnt1 = registerHandler.addRegister(databaseConnertor.getconn(), register);
@@ -53,7 +53,7 @@ namespace Bed_System
             registers register = new registers();
             register.S_id = int.Parse(LoginIdLabel.Text);
             register.Deregister_date = this.datePicker.Value;
-            register.Deregister_time = this.timePicker.Value;
+            register.Deregister_time = tbTime.Text;
 
             registerHandler registerHandler = new registerHandler();
             int recordCnt1 = registerHandler.addRegister(databaseConnertor.getconn(), register);
@@ -63,7 +63,7 @@ namespace Bed_System
         private void resetPictureBox_Click(object sender, EventArgs e)
         {
             datePicker.Value = DateTime.Now;
-            timePicker.Value = DateTime.Now;
+            tbTime.Text = "";
         }
 
         private void resetPictureBox_MouseHover(object sender, EventArgs e)

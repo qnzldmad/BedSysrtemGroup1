@@ -47,34 +47,29 @@ namespace Bed_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO patientlimit(p_id, p_min_blood_sys, p_min_temperature, p_min_blood_dias, p_min_breathing_rate, p_min_pulse_rate, p_max_pulse, p_max_temperature, p_max_breathing, p_max_sys, p_max_dias) VALUES('" + AlarmPatientIdTextBox.Text + "','" + tbMinSys.Text + "','" + tbMinTemperature.Text + "'," + tbMinDias.Text + "'," + tbMinBreathing.Text + "," + tbminPulse.Text + "," + tbMaxSys.Text + "," + tbMaxTemperature.Text + "," + tbMaxDias.Text + "," + tbMaxBreathing.Text + "," + tbMaxPulse.Text + ",)";
-            mySqlConnection.Open();
-            MySqlCommand command = new MySqlCommand(insertQuery, mySqlConnection);
+            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
+            databaseConnertor.connect();
 
-            try
-            {
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Record has been inserted");
-                }
-                else
-                {
-                    MessageBox.Show("Record has not been inserted");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            mySqlConnection.Close();
+            setalarm setalarm = new setalarm();
+            setalarm.P_id = int.Parse(AlarmPatientIdTextBox.Text);
+            setalarm.P_min_pulse_rate = int.Parse(tbminPulse.Text);
+            setalarm.P_max_pulse = int.Parse(tbMaxPulse.Text);
+            setalarm.P_min_temperature = int.Parse(tbMinTemperature.Text);
+            setalarm.P_max_temperature = int.Parse(tbMaxTemperature.Text);
+            setalarm.P_min_breathing_rate = int.Parse(tbMinBreathing.Text);
+            setalarm.P_max_breathing = int.Parse(tbMaxBreathing.Text);
+            setalarm.P_min_blood_sys = int.Parse(tbMinSys.Text);
+            setalarm.P_max_sys = int.Parse(tbMaxSys.Text);
+            setalarm.P_min_blood_dias = int.Parse(tbMinDias.Text);
+            setalarm.P_max_dias = int.Parse(tbMaxDias.Text);
+
+            setalarmHandler setalarmHandler = new setalarmHandler();
+            int recordCnt = setalarmHandler.addSetAlarm(databaseConnertor.getconn(), setalarm);
+            MessageBox.Show(recordCnt + " record has been inserted !!");
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
-            NurseMenu menu = new NurseMenu();
-            menu.ShowDialog();
             this.Close();
         }
     }

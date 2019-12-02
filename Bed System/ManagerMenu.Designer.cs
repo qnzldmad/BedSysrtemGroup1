@@ -52,8 +52,10 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
+            this.searchNurse = new System.Windows.Forms.PictureBox();
             this.rbID = new System.Windows.Forms.RadioButton();
             this.rbName = new System.Windows.Forms.RadioButton();
+            this.searchStaff = new System.Windows.Forms.PictureBox();
             this.dtpS = new System.Windows.Forms.DateTimePicker();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lbPosition = new System.Windows.Forms.Label();
@@ -75,6 +77,7 @@
             this.checkPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddMedicalStaff = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddNurse = new System.Windows.Forms.Button();
@@ -83,23 +86,22 @@
             this.addStaff = new System.Windows.Forms.PictureBox();
             this.checkStaff = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.PictureBox();
-            this.searchNurse = new System.Windows.Forms.PictureBox();
-            this.searchStaff = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.report = new System.Windows.Forms.PictureBox();
             this.addInfor.SuspendLayout();
             this.searchInfor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.searchPanel.SuspendLayout();
             this.checkPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.addPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.report)).BeginInit();
             this.SuspendLayout();
             // 
             // addInfor
@@ -292,6 +294,7 @@
             this.btnNur.TabIndex = 3;
             this.btnNur.Text = "Nurse";
             this.btnNur.UseVisualStyleBackColor = true;
+            this.btnNur.Click += new System.EventHandler(this.btnNur_Click);
             // 
             // btnStaff
             // 
@@ -301,6 +304,7 @@
             this.btnStaff.TabIndex = 1;
             this.btnStaff.Text = "Medical Staff";
             this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // searchInfor
             // 
@@ -362,6 +366,18 @@
             this.lbID.Size = new System.Drawing.Size(135, 18);
             this.lbID.TabIndex = 40;
             // 
+            // searchNurse
+            // 
+            this.searchNurse.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchNurse.Image = global::Bed_System.Properties.Resources.search;
+            this.searchNurse.Location = new System.Drawing.Point(298, 37);
+            this.searchNurse.Name = "searchNurse";
+            this.searchNurse.Size = new System.Drawing.Size(32, 20);
+            this.searchNurse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchNurse.TabIndex = 38;
+            this.searchNurse.TabStop = false;
+            this.searchNurse.Click += new System.EventHandler(this.searchNurse_Click);
+            // 
             // rbID
             // 
             this.rbID.AutoSize = true;
@@ -383,6 +399,18 @@
             this.rbName.TabStop = true;
             this.rbName.Text = "Search By Name";
             this.rbName.UseVisualStyleBackColor = true;
+            // 
+            // searchStaff
+            // 
+            this.searchStaff.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchStaff.Image = global::Bed_System.Properties.Resources.search;
+            this.searchStaff.Location = new System.Drawing.Point(258, 37);
+            this.searchStaff.Name = "searchStaff";
+            this.searchStaff.Size = new System.Drawing.Size(32, 20);
+            this.searchStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchStaff.TabIndex = 0;
+            this.searchStaff.TabStop = false;
+            this.searchStaff.Click += new System.EventHandler(this.searchStaff_Click);
             // 
             // dtpS
             // 
@@ -569,7 +597,7 @@
             this.checkPanel.Controls.Add(this.btnNur);
             this.checkPanel.Controls.Add(this.btnStaff);
             this.checkPanel.Controls.Add(this.dataGridView1);
-            this.checkPanel.Location = new System.Drawing.Point(26, 454);
+            this.checkPanel.Location = new System.Drawing.Point(13, 159);
             this.checkPanel.Name = "checkPanel";
             this.checkPanel.Size = new System.Drawing.Size(458, 274);
             this.checkPanel.TabIndex = 54;
@@ -594,6 +622,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 79);
             this.panel1.TabIndex = 47;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = global::Bed_System.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAddMedicalStaff
             // 
@@ -631,7 +670,7 @@
             this.addPanel.Controls.Add(this.btnAddNurse);
             this.addPanel.Controls.Add(this.btnAddMedicalStaff);
             this.addPanel.Controls.Add(this.label2);
-            this.addPanel.Location = new System.Drawing.Point(21, 157);
+            this.addPanel.Location = new System.Drawing.Point(13, 454);
             this.addPanel.Name = "addPanel";
             this.addPanel.Size = new System.Drawing.Size(458, 274);
             this.addPanel.TabIndex = 49;
@@ -640,7 +679,7 @@
             // 
             this.database.BackColor = System.Drawing.Color.LightGray;
             this.database.Image = global::Bed_System.Properties.Resources.Database;
-            this.database.Location = new System.Drawing.Point(289, 86);
+            this.database.Location = new System.Drawing.Point(223, 86);
             this.database.Name = "database";
             this.database.Size = new System.Drawing.Size(73, 67);
             this.database.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -668,7 +707,7 @@
             // 
             this.checkStaff.BackColor = System.Drawing.Color.LightGray;
             this.checkStaff.Image = global::Bed_System.Properties.Resources.staff;
-            this.checkStaff.Location = new System.Drawing.Point(156, 86);
+            this.checkStaff.Location = new System.Drawing.Point(116, 86);
             this.checkStaff.Name = "checkStaff";
             this.checkStaff.Size = new System.Drawing.Size(73, 67);
             this.checkStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -690,56 +729,34 @@
             this.exit.TabStop = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // searchNurse
+            // report
             // 
-            this.searchNurse.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.searchNurse.Image = global::Bed_System.Properties.Resources.search;
-            this.searchNurse.Location = new System.Drawing.Point(298, 37);
-            this.searchNurse.Name = "searchNurse";
-            this.searchNurse.Size = new System.Drawing.Size(32, 20);
-            this.searchNurse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchNurse.TabIndex = 38;
-            this.searchNurse.TabStop = false;
-            this.searchNurse.Click += new System.EventHandler(this.searchNurse_Click);
-            // 
-            // searchStaff
-            // 
-            this.searchStaff.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.searchStaff.Image = global::Bed_System.Properties.Resources.search;
-            this.searchStaff.Location = new System.Drawing.Point(258, 37);
-            this.searchStaff.Name = "searchStaff";
-            this.searchStaff.Size = new System.Drawing.Size(32, 20);
-            this.searchStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchStaff.TabIndex = 0;
-            this.searchStaff.TabStop = false;
-            this.searchStaff.Click += new System.EventHandler(this.searchStaff_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = global::Bed_System.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
+            this.report.BackColor = System.Drawing.Color.LightGray;
+            this.report.Image = global::Bed_System.Properties.Resources.select_module;
+            this.report.Location = new System.Drawing.Point(323, 86);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(73, 67);
+            this.report.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.report.TabIndex = 57;
+            this.report.TabStop = false;
+            this.report.Click += new System.EventHandler(this.report_Click);
             // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 442);
+            this.ClientSize = new System.Drawing.Size(517, 447);
+            this.Controls.Add(this.report);
             this.Controls.Add(this.addInfor);
             this.Controls.Add(this.database);
             this.Controls.Add(this.addStaff);
+            this.Controls.Add(this.addPanel);
             this.Controls.Add(this.checkStaff);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.searchInfor);
             this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.checkPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.addPanel);
             this.Name = "ManagerMenu";
             this.Text = "ManagerMenu";
             this.Load += new System.EventHandler(this.ManagerMenu_Load);
@@ -747,20 +764,21 @@
             this.addInfor.PerformLayout();
             this.searchInfor.ResumeLayout(false);
             this.searchInfor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.checkPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.report)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -825,5 +843,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddNurse;
         private System.Windows.Forms.Panel addPanel;
+        private System.Windows.Forms.PictureBox report;
     }
 }

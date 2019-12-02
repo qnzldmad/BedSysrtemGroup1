@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Bed_System
 {
-    class LimitHandler
+    public partial class Report : Form
     {
-        public int AlarmLimit(MySqlConnection conn, SetLimit alarmLimit)
+        public Report()
         {
-            string sql = null;
-            MySqlCommand sqlComm = new MySqlCommand(sql, conn);
-
-            return sqlComm.ExecuteNonQuery();
+            InitializeComponent();
         }
-
-
     }
 }

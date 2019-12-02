@@ -11,15 +11,15 @@ namespace Bed_System
         private int register_id;
         private int s_id;
         private DateTime register_date;
-        private DateTime register_time;
+        private string register_time;
         private DateTime deregister_date;
-        private DateTime deregister_time;
+        private string deregister_time;
 
         public int Register_id { get => register_id; set => register_id = value; }
         public int S_id { get => s_id; set => s_id = value; }
         public DateTime Register_date { get => register_date; set => register_date = value; }
-        public DateTime Register_time { get => register_time; set => register_time = value; }
         public DateTime Deregister_date { get => deregister_date; set => deregister_date = value; }
-        public DateTime Deregister_time { get => deregister_time; set => deregister_time = value; }
+        public string Register_time { get => register_time; set => register_time = value; }
+        public string Deregister_time { get => deregister_time; set => deregister_time = value; }
     }
 }

@@ -21,7 +21,6 @@ namespace Bed_System
         {
             medicalIDLabel.Text = MedicalStaffMenu.passingtext1;
             lbMedicalID.Text = MedicalStaffMenu.passingtext2;
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
         }
 
         private void pbExit_click(object sender, EventArgs e)
@@ -38,7 +37,7 @@ namespace Bed_System
             rederegister rederegister = new rederegister();
             rederegister.Ms_id = int.Parse(lbMedicalID.Text);
             rederegister.Register_date = this.dateTimePicker2.Value;
-            rederegister.Register_time = this.dateTimePicker1.Value;
+            rederegister.Register_time = tbTime.Text;
 
             rederegisterHandler rederegisterHandler = new rederegisterHandler();
             int recordCnt1 = rederegisterHandler.addReDeregister(databaseConnertor.getconn(), rederegister);
@@ -52,7 +51,7 @@ namespace Bed_System
 
         private void resetPB_click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Now;
+            tbTime.Text = "";
             dateTimePicker2.Value = DateTime.Now;
         }
 
@@ -76,7 +75,7 @@ namespace Bed_System
             rederegister rederegister = new rederegister();
             rederegister.Ms_id = int.Parse(lbMedicalID.Text);
             rederegister.Deregister_date = this.dateTimePicker2.Value;
-            rederegister.Deregister_time = this.dateTimePicker1.Value;
+            rederegister.Deregister_time = tbTime.Text;
 
             rederegisterHandler rederegisterHandler = new rederegisterHandler();
             int recordCnt1 = rederegisterHandler.addReDeregister(databaseConnertor.getconn(), rederegister);

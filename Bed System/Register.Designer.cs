@@ -36,12 +36,12 @@
             this.LoginIdLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
-            this.timePicker = new System.Windows.Forms.DateTimePicker();
             this.resetPictureBox = new System.Windows.Forms.PictureBox();
             this.registerPictureBox = new System.Windows.Forms.PictureBox();
             this.exitPictureBox = new System.Windows.Forms.PictureBox();
             this.deregisterPictureBox = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.tbTime = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resetPictureBox)).BeginInit();
@@ -114,14 +114,6 @@
             this.datePicker.Size = new System.Drawing.Size(200, 20);
             this.datePicker.TabIndex = 7;
             // 
-            // timePicker
-            // 
-            this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timePicker.Location = new System.Drawing.Point(55, 193);
-            this.timePicker.Name = "timePicker";
-            this.timePicker.Size = new System.Drawing.Size(200, 20);
-            this.timePicker.TabIndex = 8;
-            // 
             // resetPictureBox
             // 
             this.resetPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("resetPictureBox.Image")));
@@ -174,18 +166,25 @@
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 14;
             // 
+            // tbTime
+            // 
+            this.tbTime.Location = new System.Drawing.Point(155, 176);
+            this.tbTime.Name = "tbTime";
+            this.tbTime.Size = new System.Drawing.Size(100, 20);
+            this.tbTime.TabIndex = 15;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(466, 337);
+            this.Controls.Add(this.tbTime);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.deregisterPictureBox);
             this.Controls.Add(this.exitPictureBox);
             this.Controls.Add(this.registerPictureBox);
             this.Controls.Add(this.resetPictureBox);
-            this.Controls.Add(this.timePicker);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LoginIdLabel);
@@ -215,11 +214,11 @@
         private System.Windows.Forms.Label LoginIdLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker datePicker;
-        private System.Windows.Forms.DateTimePicker timePicker;
         private System.Windows.Forms.PictureBox resetPictureBox;
         private System.Windows.Forms.PictureBox registerPictureBox;
         private System.Windows.Forms.PictureBox exitPictureBox;
         private System.Windows.Forms.PictureBox deregisterPictureBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbTime;
     }
 }

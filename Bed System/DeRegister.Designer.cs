@@ -33,7 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.medicalIDLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.resetPB = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
@@ -41,6 +40,7 @@
             this.pbRegister = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbMedicalID = new System.Windows.Forms.Label();
+            this.tbTime = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resetPB)).BeginInit();
@@ -100,15 +100,6 @@
             this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 47;
             this.label2.Text = "Login ID:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(233, 200);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(157, 26);
-            this.dateTimePicker1.TabIndex = 48;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
@@ -184,17 +175,24 @@
             this.lbMedicalID.TabIndex = 53;
             this.lbMedicalID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tbTime
+            // 
+            this.tbTime.Location = new System.Drawing.Point(243, 202);
+            this.tbTime.Name = "tbTime";
+            this.tbTime.Size = new System.Drawing.Size(138, 20);
+            this.tbTime.TabIndex = 55;
+            // 
             // DeRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(403, 320);
+            this.Controls.Add(this.tbTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbMedicalID);
             this.Controls.Add(this.resetPB);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.medicalIDLabel);
             this.Controls.Add(this.panel1);
@@ -225,10 +223,10 @@
         private System.Windows.Forms.PictureBox pbRegister;
         private System.Windows.Forms.Label medicalIDLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.PictureBox resetPB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbMedicalID;
+        private System.Windows.Forms.TextBox tbTime;
     }
 }
