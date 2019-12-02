@@ -287,6 +287,7 @@
             this.btnEmergency.Text = "Emergency Monitoring";
             this.btnEmergency.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmergency.UseVisualStyleBackColor = false;
+            this.btnEmergency.Click += new System.EventHandler(this.btnEmergency_Click);
             // 
             // btnSearchPatient
             // 

@@ -130,6 +130,14 @@ namespace Bed_System
             mySqlConnection.Close();
 
         }
+
+        private void btnEmergency_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            emergencymonitoring emergency = new emergencymonitoring();
+            emergency.ShowDialog();
+            this.Close();
+        }
     }
 }
 

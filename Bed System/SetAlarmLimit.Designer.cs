@@ -33,39 +33,40 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.BreathingRateUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TemperatureUpDown = new System.Windows.Forms.NumericUpDown();
-            this.PulseRateUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.BloodSysUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.BloodDiasUpDown = new System.Windows.Forms.NumericUpDown();
             this.AlarmPatientIdTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.AlarmPatientNameLabel = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.BreathingRateUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TemperatureUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PulseRateUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BloodSysUpDown)).BeginInit();
+            this.tbMaxSys = new System.Windows.Forms.TextBox();
+            this.tbMinSys = new System.Windows.Forms.TextBox();
+            this.tbMaxBreathing = new System.Windows.Forms.TextBox();
+            this.tbMinBreathing = new System.Windows.Forms.TextBox();
+            this.tbMaxTemperature = new System.Windows.Forms.TextBox();
+            this.tbMinTemperature = new System.Windows.Forms.TextBox();
+            this.tbMaxPulse = new System.Windows.Forms.TextBox();
+            this.tbminPulse = new System.Windows.Forms.TextBox();
+            this.tbMaxDias = new System.Windows.Forms.TextBox();
+            this.tbMinDias = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BloodDiasUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(299, 27);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(298, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 16);
+            this.label1.Size = new System.Drawing.Size(113, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Alarm Limit";
             // 
@@ -96,27 +97,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Temperature:";
             // 
-            // BreathingRateUpDown
-            // 
-            this.BreathingRateUpDown.Location = new System.Drawing.Point(482, 189);
-            this.BreathingRateUpDown.Name = "BreathingRateUpDown";
-            this.BreathingRateUpDown.Size = new System.Drawing.Size(120, 20);
-            this.BreathingRateUpDown.TabIndex = 4;
-            // 
-            // TemperatureUpDown
-            // 
-            this.TemperatureUpDown.Location = new System.Drawing.Point(482, 144);
-            this.TemperatureUpDown.Name = "TemperatureUpDown";
-            this.TemperatureUpDown.Size = new System.Drawing.Size(120, 20);
-            this.TemperatureUpDown.TabIndex = 5;
-            // 
-            // PulseRateUpDown
-            // 
-            this.PulseRateUpDown.Location = new System.Drawing.Point(482, 101);
-            this.PulseRateUpDown.Name = "PulseRateUpDown";
-            this.PulseRateUpDown.Size = new System.Drawing.Size(120, 20);
-            this.PulseRateUpDown.TabIndex = 6;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -126,16 +106,9 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Breathing Rate :";
             // 
-            // BloodSysUpDown
-            // 
-            this.BloodSysUpDown.Location = new System.Drawing.Point(482, 229);
-            this.BloodSysUpDown.Name = "BloodSysUpDown";
-            this.BloodSysUpDown.Size = new System.Drawing.Size(120, 20);
-            this.BloodSysUpDown.TabIndex = 8;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -173,6 +146,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -189,13 +163,6 @@
             this.label8.Size = new System.Drawing.Size(133, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Blood Pressure (Diastolic) :";
-            // 
-            // BloodDiasUpDown
-            // 
-            this.BloodDiasUpDown.Location = new System.Drawing.Point(482, 270);
-            this.BloodDiasUpDown.Name = "BloodDiasUpDown";
-            this.BloodDiasUpDown.Size = new System.Drawing.Size(120, 20);
-            this.BloodDiasUpDown.TabIndex = 17;
             // 
             // AlarmPatientIdTextBox
             // 
@@ -240,43 +207,113 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // tbMaxSys
+            // 
+            this.tbMaxSys.Location = new System.Drawing.Point(551, 229);
+            this.tbMaxSys.Name = "tbMaxSys";
+            this.tbMaxSys.Size = new System.Drawing.Size(58, 20);
+            this.tbMaxSys.TabIndex = 24;
+            // 
+            // tbMinSys
+            // 
+            this.tbMinSys.Location = new System.Drawing.Point(473, 229);
+            this.tbMinSys.Name = "tbMinSys";
+            this.tbMinSys.Size = new System.Drawing.Size(60, 20);
+            this.tbMinSys.TabIndex = 25;
+            // 
+            // tbMaxBreathing
+            // 
+            this.tbMaxBreathing.Location = new System.Drawing.Point(509, 188);
+            this.tbMaxBreathing.Name = "tbMaxBreathing";
+            this.tbMaxBreathing.Size = new System.Drawing.Size(65, 20);
+            this.tbMaxBreathing.TabIndex = 26;
+            // 
+            // tbMinBreathing
+            // 
+            this.tbMinBreathing.Location = new System.Drawing.Point(431, 188);
+            this.tbMinBreathing.Name = "tbMinBreathing";
+            this.tbMinBreathing.Size = new System.Drawing.Size(55, 20);
+            this.tbMinBreathing.TabIndex = 27;
+            // 
+            // tbMaxTemperature
+            // 
+            this.tbMaxTemperature.Location = new System.Drawing.Point(509, 144);
+            this.tbMaxTemperature.Name = "tbMaxTemperature";
+            this.tbMaxTemperature.Size = new System.Drawing.Size(65, 20);
+            this.tbMaxTemperature.TabIndex = 28;
+            // 
+            // tbMinTemperature
+            // 
+            this.tbMinTemperature.Location = new System.Drawing.Point(417, 144);
+            this.tbMinTemperature.Name = "tbMinTemperature";
+            this.tbMinTemperature.Size = new System.Drawing.Size(59, 20);
+            this.tbMinTemperature.TabIndex = 29;
+            // 
+            // tbMaxPulse
+            // 
+            this.tbMaxPulse.Location = new System.Drawing.Point(509, 104);
+            this.tbMaxPulse.Name = "tbMaxPulse";
+            this.tbMaxPulse.Size = new System.Drawing.Size(65, 20);
+            this.tbMaxPulse.TabIndex = 30;
+            // 
+            // tbminPulse
+            // 
+            this.tbminPulse.Location = new System.Drawing.Point(412, 105);
+            this.tbminPulse.Name = "tbminPulse";
+            this.tbminPulse.Size = new System.Drawing.Size(64, 20);
+            this.tbminPulse.TabIndex = 31;
+            // 
+            // tbMaxDias
+            // 
+            this.tbMaxDias.Location = new System.Drawing.Point(551, 270);
+            this.tbMaxDias.Name = "tbMaxDias";
+            this.tbMaxDias.Size = new System.Drawing.Size(58, 20);
+            this.tbMaxDias.TabIndex = 32;
+            // 
+            // tbMinDias
+            // 
+            this.tbMinDias.Location = new System.Drawing.Point(473, 270);
+            this.tbMinDias.Name = "tbMinDias";
+            this.tbMinDias.Size = new System.Drawing.Size(60, 20);
+            this.tbMinDias.TabIndex = 33;
+            // 
             // SetAlarmLimit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(621, 351);
+            this.Controls.Add(this.tbMinDias);
+            this.Controls.Add(this.tbMaxDias);
+            this.Controls.Add(this.tbminPulse);
+            this.Controls.Add(this.tbMaxPulse);
+            this.Controls.Add(this.tbMinTemperature);
+            this.Controls.Add(this.tbMaxTemperature);
+            this.Controls.Add(this.tbMinBreathing);
+            this.Controls.Add(this.tbMaxBreathing);
+            this.Controls.Add(this.tbMinSys);
+            this.Controls.Add(this.tbMaxSys);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.AlarmPatientNameLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.AlarmPatientIdTextBox);
-            this.Controls.Add(this.BloodDiasUpDown);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.BloodSysUpDown);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.PulseRateUpDown);
-            this.Controls.Add(this.TemperatureUpDown);
-            this.Controls.Add(this.BreathingRateUpDown);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "SetAlarmLimit";
             this.Text = "Set Alarm Limit";
-            ((System.ComponentModel.ISupportInitialize)(this.BreathingRateUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TemperatureUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PulseRateUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BloodSysUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BloodDiasUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,22 +325,27 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown BreathingRateUpDown;
-        private System.Windows.Forms.NumericUpDown TemperatureUpDown;
-        private System.Windows.Forms.NumericUpDown PulseRateUpDown;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown BloodSysUpDown;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown BloodDiasUpDown;
         private System.Windows.Forms.TextBox AlarmPatientIdTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label AlarmPatientNameLabel;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox tbMaxSys;
+        private System.Windows.Forms.TextBox tbMinSys;
+        private System.Windows.Forms.TextBox tbMaxBreathing;
+        private System.Windows.Forms.TextBox tbMinBreathing;
+        private System.Windows.Forms.TextBox tbMaxTemperature;
+        private System.Windows.Forms.TextBox tbMinTemperature;
+        private System.Windows.Forms.TextBox tbMaxPulse;
+        private System.Windows.Forms.TextBox tbminPulse;
+        private System.Windows.Forms.TextBox tbMaxDias;
+        private System.Windows.Forms.TextBox tbMinDias;
     }
 }

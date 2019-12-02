@@ -47,7 +47,7 @@ namespace Bed_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO patientlimit(p_id, p_blood_sys, p_temperature, p_blood_dias, p_breathing_rate, p_pulse_rate) VALUES('" + PulseRateUpDown.Text + "','" + BreathingRateUpDown.Text + "','" + BloodDiasUpDown.Text + "'," + BloodSysUpDown.Text + "'," + TemperatureUpDown.Text + ")";
+            string insertQuery = "INSERT INTO patientlimit(p_id, p_min_blood_sys, p_min_temperature, p_min_blood_dias, p_min_breathing_rate, p_min_pulse_rate, p_max_pulse, p_max_temperature, p_max_breathing, p_max_sys, p_max_dias) VALUES('" + AlarmPatientIdTextBox.Text + "','" + tbMinSys.Text + "','" + tbMinTemperature.Text + "'," + tbMinDias.Text + "'," + tbMinBreathing.Text + "," + tbminPulse.Text + "," + tbMaxSys.Text + "," + tbMaxTemperature.Text + "," + tbMaxDias.Text + "," + tbMaxBreathing.Text + "," + tbMaxPulse.Text + ",)";
             mySqlConnection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, mySqlConnection);
 

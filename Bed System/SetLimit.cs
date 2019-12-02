@@ -10,18 +10,28 @@ namespace Bed_System
     {
         private int id;
         private string name;
-        private int pulse;
-        private int breathing;
-        private int bloodsys;
-        private int temperature;
-        private int blooddias;
+        private int minpulse;
+        private int minbreathing;
+        private int minbloodsys;
+        private int mintemperature;
+        private int minblooddias;
+        private int maxpulse;
+        private int maxbreathing;
+        private int maxbloodsys;
+        private int maxtemperature;
+        private int maxblooddias;
 
         public int Id { get => id; set => id = value; }
-        public int Pulse { get => pulse; set => pulse = value; }
-        public int Breathing { get => breathing; set => breathing = value; }
-        public int Bloodsys { get => bloodsys; set => bloodsys = value; }
-        public int Temperature { get => temperature; set => temperature = value; }
-        public int Blooddias { get => blooddias; set => blooddias = value; }
+        public int Minpulse { get => minpulse; set => minpulse = value; }
+        public int Minbreathing { get => minbreathing; set => minbreathing = value; }
+        public int Minbloodsys { get => minbloodsys; set => minbloodsys = value; }
+        public int Mintemperature { get => mintemperature; set => mintemperature = value; }
+        public int Minblooddias { get => minblooddias; set => minblooddias = value; }
+        public int Maxpulse { get => maxpulse; set => maxpulse = value; }
         public string Name { get => name; set => name = value; }
+        public int Maxbreathing { get => maxbreathing; set => maxbreathing = value; }
+        public int Maxbloodsys { get => maxbloodsys; set => maxbloodsys = value; }
+        public int Maxtemperature { get => maxtemperature; set => maxtemperature = value; }
+        public int Maxblooddias { get => maxblooddias; set => maxblooddias = value; }
     }
 }

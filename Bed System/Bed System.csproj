@@ -67,6 +67,12 @@
     <Compile Include="bedside.cs" />
     <Compile Include="bedsideDatabase.cs" />
     <Compile Include="DatabaseConnertor.cs" />
+    <Compile Include="emergencymonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emergencymonitoring.Designer.cs">
+      <DependentUpon>emergencymonitoring.cs</DependentUpon>
+    </Compile>
     <Compile Include="History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Central.resx">
       <DependentUpon>Central.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emergencymonitoring.resx">
+      <DependentUpon>emergencymonitoring.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.resx">
       <DependentUpon>History.cs</DependentUpon>
