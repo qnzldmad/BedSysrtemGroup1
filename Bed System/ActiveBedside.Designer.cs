@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -61,20 +62,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.pnlBed1 = new System.Windows.Forms.Panel();
             this.bedNumberTextBox = new System.Windows.Forms.TextBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.lblBed = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -217,7 +217,7 @@
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(71, 276);
+            this.label7.Location = new System.Drawing.Point(71, 275);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 23);
             this.label7.TabIndex = 19;
@@ -256,6 +256,17 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Location = new System.Drawing.Point(678, 342);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 15);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "50";
+            this.label8.Visible = false;
             // 
             // panel6
             // 
@@ -390,6 +401,17 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "Bed 1";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label22.Location = new System.Drawing.Point(705, 342);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(21, 15);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "80";
+            this.label22.Visible = false;
+            // 
             // pnlBed1
             // 
             this.pnlBed1.BackColor = System.Drawing.Color.Maroon;
@@ -424,7 +446,7 @@
             // 
             this.lblBed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblBed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBed.Location = new System.Drawing.Point(36, 150);
+            this.lblBed.Location = new System.Drawing.Point(36, 148);
             this.lblBed.Name = "lblBed";
             this.lblBed.Size = new System.Drawing.Size(169, 23);
             this.lblBed.TabIndex = 7;
@@ -451,30 +473,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Bed Number :";
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(275, 429);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Maroon;
-            this.panel10.Controls.Add(this.label1);
-            this.panel10.Controls.Add(this.pictureBox1);
-            this.panel10.Location = new System.Drawing.Point(1, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(755, 68);
-            this.panel10.TabIndex = 5;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -485,17 +483,6 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "140";
             this.label9.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Location = new System.Drawing.Point(678, 342);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "50";
-            this.label8.Visible = false;
             // 
             // label20
             // 
@@ -519,16 +506,29 @@
             this.label21.Text = "90";
             this.label21.Visible = false;
             // 
-            // label22
+            // btnExit
             // 
-            this.label22.AutoSize = true;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Location = new System.Drawing.Point(705, 342);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(21, 15);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "80";
-            this.label22.Visible = false;
+            this.btnExit.Location = new System.Drawing.Point(275, 429);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Maroon;
+            this.panel10.Controls.Add(this.label1);
+            this.panel10.Controls.Add(this.pictureBox1);
+            this.panel10.Location = new System.Drawing.Point(1, 2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(755, 68);
+            this.panel10.TabIndex = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnStop
             // 
