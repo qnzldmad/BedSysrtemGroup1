@@ -132,12 +132,6 @@
       <DependentUpon>MedicalStaffMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MSLoginDatabase.cs" />
-    <Compile Include="MuteAlarm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MuteAlarm.Designer.cs">
-      <DependentUpon>MuteAlarm.cs</DependentUpon>
-    </Compile>
     <Compile Include="NurseMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,12 +190,6 @@
     <Compile Include="SearchPatient.Designer.cs">
       <DependentUpon>SearchPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SelectModule.Designer.cs">
-      <DependentUpon>SelectModule.cs</DependentUpon>
-    </Compile>
     <Compile Include="setalarm.cs" />
     <Compile Include="setalarmHandler.cs" />
     <Compile Include="SetAlarmLimit.cs">
@@ -243,9 +231,6 @@
     <EmbeddedResource Include="MedicalStaffMenu.resx">
       <DependentUpon>MedicalStaffMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MuteAlarm.resx">
-      <DependentUpon>MuteAlarm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NurseMenu.resx">
       <DependentUpon>NurseMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,9 +264,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPatient.resx">
       <DependentUpon>SearchPatient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SelectModule.resx">
-      <DependentUpon>SelectModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetAlarmLimit.resx">
       <DependentUpon>SetAlarmLimit.cs</DependentUpon>

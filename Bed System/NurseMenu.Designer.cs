@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnMuteAlarm = new System.Windows.Forms.Button();
             this.btnAlarmLimit = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnPatientMonitored = new System.Windows.Forms.Button();
@@ -62,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -99,18 +96,6 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnMuteAlarm
-            // 
-            this.btnMuteAlarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnMuteAlarm.Location = new System.Drawing.Point(537, 14);
-            this.btnMuteAlarm.Name = "btnMuteAlarm";
-            this.btnMuteAlarm.Size = new System.Drawing.Size(136, 133);
-            this.btnMuteAlarm.TabIndex = 5;
-            this.btnMuteAlarm.Text = "Mute Alarm";
-            this.btnMuteAlarm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMuteAlarm.UseVisualStyleBackColor = false;
-            this.btnMuteAlarm.Click += new System.EventHandler(this.btnMuteAlarm_Click);
             // 
             // btnAlarmLimit
             // 
@@ -169,7 +154,6 @@
             this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btnPatientMonitored);
@@ -178,7 +162,6 @@
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnAlarmLimit);
-            this.panel1.Controls.Add(this.btnMuteAlarm);
             this.panel1.Controls.Add(this.btnSearchPatient);
             this.panel1.Location = new System.Drawing.Point(47, 140);
             this.panel1.Name = "panel1";
@@ -218,7 +201,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(546, 188);
+            this.pictureBox8.Location = new System.Drawing.Point(548, 105);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(115, 98);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -234,16 +217,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(546, 25);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(115, 104);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -280,7 +253,7 @@
             // btnEmergency
             // 
             this.btnEmergency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnEmergency.Location = new System.Drawing.Point(537, 175);
+            this.btnEmergency.Location = new System.Drawing.Point(539, 92);
             this.btnEmergency.Name = "btnEmergency";
             this.btnEmergency.Size = new System.Drawing.Size(139, 132);
             this.btnEmergency.TabIndex = 9;
@@ -378,7 +351,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -392,7 +364,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnMuteAlarm;
         private System.Windows.Forms.Button btnAlarmLimit;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnRegister;
@@ -409,7 +380,6 @@
         private System.Windows.Forms.Label NurseIdLabel;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox9;

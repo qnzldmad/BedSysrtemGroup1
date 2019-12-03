@@ -22,6 +22,15 @@ namespace Bed_System
         MySqlCommand mySqlCommand;
         MySqlDataReader mySqlDataReader;
 
+        public void populateDGV()
+        {
+            string selectQuery = "SELECT * FROM register";
+            DataTable table = new DataTable();
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(selectQuery, mySqlConnection);
+            mySqlDataAdapter.Fill(table);
+            dataGridView1.DataSource = table;
+        }
+
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -39,25 +48,66 @@ namespace Bed_System
             register.S_id = int.Parse(LoginIdLabel.Text);
             register.Register_date = this.datePicker.Value;
             register.Register_time = tbTime.Text;
+            register.Deregister_date = this.datePicker1.Value;
+            register.Deregister_time = tbDtime.Text;
 
             registerHandler registerHandler = new registerHandler();
             int recordCnt1 = registerHandler.addRegister(databaseConnertor.getconn(), register);
             MessageBox.Show(recordCnt1 + " record has been inserted !!");
+
+            this.Close();
+            Register register1 = new Register();
+            register1.Show();
+        }
+
+        public void openConnection()
+        {
+            if (mySqlConnection.State == ConnectionState.Closed)
+            {
+                mySqlConnection.Open();
+            }
+        }
+
+        public void closeConnection()
+        {
+            if (mySqlConnection.State == ConnectionState.Open)
+            {
+                mySqlConnection.Close();
+            }
+        }
+
+        public void executeMyQuery(string query)
+        {
+            try
+            {
+                openConnection();
+                mySqlCommand = new MySqlCommand(query, mySqlConnection);
+
+                if (mySqlCommand.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Query Executed");
+                }
+
+                else
+                {
+                    MessageBox.Show("Quert No Executed");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                closeConnection();
+            }
         }
 
         private void deregisterPictureBox_Click(object sender, EventArgs e)
         {
-            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
-            databaseConnertor.connect();
-
-            registers register = new registers();
-            register.S_id = int.Parse(LoginIdLabel.Text);
-            register.Deregister_date = this.datePicker.Value;
-            register.Deregister_time = tbTime.Text;
-
-            registerHandler registerHandler = new registerHandler();
-            int recordCnt1 = registerHandler.addRegister(databaseConnertor.getconn(), register);
-            MessageBox.Show(recordCnt1 + " record has been inserted !!");
+            string updateQuery = "UPDATE register SET s_id='" + LoginIdLabel.Text + "',register_date='" + datePicker.Value + "',register_time='" + tbTime.Text + "',deregister_date='" + datePicker1.Value + "',deregister_time='" + tbDtime.Text + "' WHERE id =" + int.Parse(lbRD.Text);
+            executeMyQuery(updateQuery);
+            populateDGV();
         }
 
         private void resetPictureBox_Click(object sender, EventArgs e)
@@ -80,24 +130,31 @@ namespace Bed_System
 
         private void Register_Load(object sender, EventArgs e)
         {
-            LoginIdLabel.Text = NurseLoginForm.passingtext;
+            LoginIdLabel.Text = NurseMenu.passingtext;
 
-            mySqlConnection.Open();
-            string loadMlogin = "SELECT * FROM eahthospital.nurse WHERE s_loginid='" + LoginIdLabel.Text + "'";
-            mySqlCommand = new MySqlCommand(loadMlogin, mySqlConnection);
+            populateDGV();
+        }
 
-            mySqlDataReader = mySqlCommand.ExecuteReader();
-
-
-            if (mySqlDataReader.Read())
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Type dtp2 = dataGridView1.CurrentRow.Cells[2].Value.GetType();
+            Type dtp1 = dataGridView1.CurrentRow.Cells[4].Value.GetType();
+            if (dtp2 == typeof(DBNull))
             {
-                LoginIdLabel.Text = mySqlDataReader.GetString("s_id");
+                datePicker.Value = DateTime.Now;
+            }
+            else if (dtp1 == typeof(DBNull))
+            {
+                datePicker1.Value = DateTime.Now;
             }
             else
             {
-                return;
+                lbRD.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                datePicker.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[2].Value);
+                tbTime.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                datePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[4].Value);
+                tbDtime.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             }
-            mySqlConnection.Close();
         }
     }
 }

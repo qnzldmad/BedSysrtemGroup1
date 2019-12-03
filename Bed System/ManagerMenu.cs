@@ -25,7 +25,6 @@ namespace Bed_System
         private void ManagerMenu_Load(object sender, EventArgs e)
         {
             addPanel.Hide();
-            checkPanel.Hide();
             searchPanel.Hide();
             addInfor.Hide();
             searchInfor.Hide();
@@ -33,9 +32,6 @@ namespace Bed_System
             addPanel.Width = 458;
             addPanel.Height = 274;
             addPanel.Location = new Point(21, 158);
-            checkPanel.Width = 458;
-            checkPanel.Height = 274;
-            checkPanel.Location = new Point(21, 158);
             searchPanel.Width = 458;
             searchPanel.Height = 274;
             searchPanel.Location = new Point(21, 158);
@@ -50,14 +46,12 @@ namespace Bed_System
         private void addStaff_Click(object sender, EventArgs e)
         {
             addPanel.Show();
-            checkPanel.Hide();
             searchPanel.Hide();
             addInfor.Hide();
             searchInfor.Hide();
 
             addStaff.BorderStyle = BorderStyle.Fixed3D;
             checkStaff.BorderStyle = BorderStyle.None;
-            database.BorderStyle = BorderStyle.None;
             exit.BorderStyle = BorderStyle.None;
         }
 
@@ -76,14 +70,12 @@ namespace Bed_System
         private void checkStaff_Click(object sender, EventArgs e)
         {
             addPanel.Hide();
-            checkPanel.Hide();
             searchPanel.Show();
             addInfor.Hide();
             searchInfor.Hide();
 
             addStaff.BorderStyle = BorderStyle.None;
             checkStaff.BorderStyle = BorderStyle.Fixed3D;
-            database.BorderStyle = BorderStyle.None;
             exit.BorderStyle = BorderStyle.None;
         }
 
@@ -99,32 +91,6 @@ namespace Bed_System
             checkStaff.BackColor = Color.LightGray;
         }
 
-        private void database_Click(object sender, EventArgs e)
-        {
-            addPanel.Hide();
-            checkPanel.Show();
-            searchPanel.Hide();
-            addInfor.Hide();
-            searchInfor.Hide();
-
-            addStaff.BorderStyle = BorderStyle.None;
-            checkStaff.BorderStyle = BorderStyle.None;
-            database.BorderStyle = BorderStyle.Fixed3D;
-            exit.BorderStyle = BorderStyle.None;
-        }
-
-        private void database_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(this.database, "Database");
-            database.BackColor = Color.Gray;
-        }
-
-        private void database_MouseLeave(object sender, EventArgs e)
-        {
-            database.BackColor = Color.LightGray;
-        }
-
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -133,7 +99,6 @@ namespace Bed_System
         private void btnAddMedicalStaff_Click(object sender, EventArgs e)
         {
             addPanel.Show();
-            checkPanel.Hide();
             searchPanel.Hide();
             addInfor.Show();
             searchInfor.Hide();
@@ -146,7 +111,6 @@ namespace Bed_System
         private void btnAddNurse_Click(object sender, EventArgs e)
         {
             addPanel.Show();
-            checkPanel.Hide();
             searchPanel.Hide();
             addInfor.Show();
             searchInfor.Hide();
@@ -226,7 +190,6 @@ namespace Bed_System
         private void btnSearchMedical_Click(object sender, EventArgs e)
         {
             addPanel.Hide();
-            checkPanel.Hide();
             searchPanel.Show();
             addInfor.Hide();
             searchInfor.Show();
@@ -237,7 +200,6 @@ namespace Bed_System
         private void btnSearchNurse_Click(object sender, EventArgs e)
         {
             addPanel.Hide();
-            checkPanel.Hide();
             searchPanel.Show();
             addInfor.Hide();
             searchInfor.Show();
@@ -375,27 +337,7 @@ namespace Bed_System
             dtpS.Value = DateTime.Now;
             lbPosition.Text = "";
         }
-
-        private void btnStaff_Click(object sender, EventArgs e)
-        {
-            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
-            databaseConnertor.connect();
-            rederegisterHandler rederegisterHandler = new rederegisterHandler();
-
-            dataGridView1.DataSource = rederegisterHandler.getAllRegister(databaseConnertor.getconn());
-
-            
-        }
-
-        private void btnNur_Click(object sender, EventArgs e)
-        {
-            DatabaseConnertor databaseConnertor = new DatabaseConnertor();
-            databaseConnertor.connect();
-            registerHandler registerHandler = new registerHandler();
-
-            dataGridView1.DataSource = registerHandler.getAllRegister(databaseConnertor.getconn());
-        }
-
+       
         private void report_Click(object sender, EventArgs e)
         {
             Report report = new Report();

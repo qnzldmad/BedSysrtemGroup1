@@ -18,8 +18,9 @@ namespace Bed_System
         public NurseMenu()
         {
             InitializeComponent();
-
         }
+
+        public static string passingtext;
 
         MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=eahthospital");
         MySqlCommand mySqlCommand;
@@ -48,14 +49,6 @@ namespace Bed_System
             this.Hide();
             SetAlarmLimit alarm = new SetAlarmLimit();
             alarm.ShowDialog();
-            this.Close();
-        }
-
-        private void btnMuteAlarm_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MuteAlarm mute = new MuteAlarm();
-            mute.ShowDialog();
             this.Close();
         }
 
@@ -129,6 +122,7 @@ namespace Bed_System
             }
             mySqlConnection.Close();
 
+            passingtext = NurseLoginIdLabel.Text;
         }
 
         private void btnEmergency_Click(object sender, EventArgs e)
