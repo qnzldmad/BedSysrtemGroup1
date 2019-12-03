@@ -50,12 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="active.cs" />
     <Compile Include="ActiveBedside.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ActiveBedside.Designer.cs">
       <DependentUpon>ActiveBedside.cs</DependentUpon>
     </Compile>
+    <Compile Include="activeHandler.cs" />
     <Compile Include="addMedicalstaffs.cs" />
     <Compile Include="addMedicalstaffshandler.cs" />
     <Compile Include="addNurses.cs" />

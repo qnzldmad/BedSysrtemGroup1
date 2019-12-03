@@ -160,7 +160,21 @@ namespace Bed_System
                 player.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Test\BedSysrtemGroup18\BedsideSounds.wav";
                 player.Play();
             }
+
+            passingtext1 = lbSys.Text;
+            passingtext2 = lbDia.Text;
+            passingtext3 = lbPul.Text;
+            passingtext4 = lbBre.Text;
+            passingtext5 = lbTem.Text;
+            passingtext6 = pID.Text;
         }
+
+        public static string passingtext1;
+        public static string passingtext2;
+        public static string passingtext3;
+        public static string passingtext4;
+        public static string passingtext5;
+        public static string passingtext6;
 
         private void btnExit_Click(object sender, EventArgs e)
         {
