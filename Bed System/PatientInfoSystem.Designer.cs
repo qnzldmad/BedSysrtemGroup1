@@ -62,6 +62,8 @@
             this.firstNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addDetailPanel = new System.Windows.Forms.Panel();
+            this.rbSI = new System.Windows.Forms.RadioButton();
+            this.rbSN = new System.Windows.Forms.RadioButton();
             this.genderTB = new System.Windows.Forms.TextBox();
             this.patientSearchPB = new System.Windows.Forms.PictureBox();
             this.dobTB = new System.Windows.Forms.DateTimePicker();
@@ -95,7 +97,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.informPanel = new System.Windows.Forms.Panel();
+            this.lbAdd = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.rbSearchID = new System.Windows.Forms.RadioButton();
             this.dtodob = new System.Windows.Forms.DateTimePicker();
+            this.rbSearchN = new System.Windows.Forms.RadioButton();
             this.label50 = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -142,12 +148,7 @@
             this.medicalDetailPB = new System.Windows.Forms.PictureBox();
             this.displayPB = new System.Windows.Forms.PictureBox();
             this.addPatientPB = new System.Windows.Forms.PictureBox();
-            this.rbSearchID = new System.Windows.Forms.RadioButton();
-            this.rbSearchN = new System.Windows.Forms.RadioButton();
-            this.rbSI = new System.Windows.Forms.RadioButton();
-            this.rbSN = new System.Windows.Forms.RadioButton();
-            this.lbAdd = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resetpb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -500,6 +501,7 @@
             // addDetailPanel
             // 
             this.addDetailPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.addDetailPanel.Controls.Add(this.btnUpdate);
             this.addDetailPanel.Controls.Add(this.rbSI);
             this.addDetailPanel.Controls.Add(this.rbSN);
             this.addDetailPanel.Controls.Add(this.genderTB);
@@ -534,10 +536,32 @@
             this.addDetailPanel.Controls.Add(this.label15);
             this.addDetailPanel.Controls.Add(this.button4);
             this.addDetailPanel.Controls.Add(this.btnSave);
-            this.addDetailPanel.Location = new System.Drawing.Point(606, 565);
+            this.addDetailPanel.Location = new System.Drawing.Point(12, 182);
             this.addDetailPanel.Name = "addDetailPanel";
             this.addDetailPanel.Size = new System.Drawing.Size(588, 377);
             this.addDetailPanel.TabIndex = 40;
+            // 
+            // rbSI
+            // 
+            this.rbSI.AutoSize = true;
+            this.rbSI.Location = new System.Drawing.Point(8, 79);
+            this.rbSI.Name = "rbSI";
+            this.rbSI.Size = new System.Drawing.Size(88, 17);
+            this.rbSI.TabIndex = 76;
+            this.rbSI.TabStop = true;
+            this.rbSI.Text = "Search By ID";
+            this.rbSI.UseVisualStyleBackColor = true;
+            // 
+            // rbSN
+            // 
+            this.rbSN.AutoSize = true;
+            this.rbSN.Location = new System.Drawing.Point(8, 53);
+            this.rbSN.Name = "rbSN";
+            this.rbSN.Size = new System.Drawing.Size(105, 17);
+            this.rbSN.TabIndex = 75;
+            this.rbSN.TabStop = true;
+            this.rbSN.Text = "Search By Name";
+            this.rbSN.UseVisualStyleBackColor = true;
             // 
             // genderTB
             // 
@@ -828,7 +852,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(412, 340);
+            this.btnSave.Location = new System.Drawing.Point(331, 340);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 33;
@@ -860,10 +884,41 @@
             this.informPanel.Controls.Add(this.label21);
             this.informPanel.Controls.Add(this.label25);
             this.informPanel.Controls.Add(this.label26);
-            this.informPanel.Location = new System.Drawing.Point(12, 182);
+            this.informPanel.Location = new System.Drawing.Point(606, 565);
             this.informPanel.Name = "informPanel";
             this.informPanel.Size = new System.Drawing.Size(291, 377);
             this.informPanel.TabIndex = 52;
+            // 
+            // lbAdd
+            // 
+            this.lbAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAdd.Location = new System.Drawing.Point(74, 344);
+            this.lbAdd.Name = "lbAdd";
+            this.lbAdd.Size = new System.Drawing.Size(199, 22);
+            this.lbAdd.TabIndex = 73;
+            this.lbAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(6, 347);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(62, 16);
+            this.label42.TabIndex = 72;
+            this.label42.Text = "Address:";
+            // 
+            // rbSearchID
+            // 
+            this.rbSearchID.AutoSize = true;
+            this.rbSearchID.Location = new System.Drawing.Point(9, 67);
+            this.rbSearchID.Name = "rbSearchID";
+            this.rbSearchID.Size = new System.Drawing.Size(88, 17);
+            this.rbSearchID.TabIndex = 56;
+            this.rbSearchID.TabStop = true;
+            this.rbSearchID.Text = "Search By ID";
+            this.rbSearchID.UseVisualStyleBackColor = true;
             // 
             // dtodob
             // 
@@ -871,6 +926,17 @@
             this.dtodob.Name = "dtodob";
             this.dtodob.Size = new System.Drawing.Size(159, 20);
             this.dtodob.TabIndex = 71;
+            // 
+            // rbSearchN
+            // 
+            this.rbSearchN.AutoSize = true;
+            this.rbSearchN.Location = new System.Drawing.Point(9, 41);
+            this.rbSearchN.Name = "rbSearchN";
+            this.rbSearchN.Size = new System.Drawing.Size(105, 17);
+            this.rbSearchN.TabIndex = 55;
+            this.rbSearchN.TabStop = true;
+            this.rbSearchN.Text = "Search By Name";
+            this.rbSearchN.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
@@ -1054,7 +1120,7 @@
             this.medicalPanel.Controls.Add(this.label29);
             this.medicalPanel.Controls.Add(this.label32);
             this.medicalPanel.Controls.Add(this.label33);
-            this.medicalPanel.Location = new System.Drawing.Point(309, 182);
+            this.medicalPanel.Location = new System.Drawing.Point(903, 565);
             this.medicalPanel.Name = "medicalPanel";
             this.medicalPanel.Size = new System.Drawing.Size(291, 377);
             this.medicalPanel.TabIndex = 53;
@@ -1361,76 +1427,22 @@
             this.addPatientPB.MouseLeave += new System.EventHandler(this.addPatientPB_MouseLeave);
             this.addPatientPB.MouseHover += new System.EventHandler(this.addPatientPB_MouseHover);
             // 
-            // rbSearchID
+            // btnUpdate
             // 
-            this.rbSearchID.AutoSize = true;
-            this.rbSearchID.Location = new System.Drawing.Point(9, 67);
-            this.rbSearchID.Name = "rbSearchID";
-            this.rbSearchID.Size = new System.Drawing.Size(88, 17);
-            this.rbSearchID.TabIndex = 56;
-            this.rbSearchID.TabStop = true;
-            this.rbSearchID.Text = "Search By ID";
-            this.rbSearchID.UseVisualStyleBackColor = true;
-            // 
-            // rbSearchN
-            // 
-            this.rbSearchN.AutoSize = true;
-            this.rbSearchN.Location = new System.Drawing.Point(9, 41);
-            this.rbSearchN.Name = "rbSearchN";
-            this.rbSearchN.Size = new System.Drawing.Size(105, 17);
-            this.rbSearchN.TabIndex = 55;
-            this.rbSearchN.TabStop = true;
-            this.rbSearchN.Text = "Search By Name";
-            this.rbSearchN.UseVisualStyleBackColor = true;
-            // 
-            // rbSI
-            // 
-            this.rbSI.AutoSize = true;
-            this.rbSI.Location = new System.Drawing.Point(8, 79);
-            this.rbSI.Name = "rbSI";
-            this.rbSI.Size = new System.Drawing.Size(88, 17);
-            this.rbSI.TabIndex = 76;
-            this.rbSI.TabStop = true;
-            this.rbSI.Text = "Search By ID";
-            this.rbSI.UseVisualStyleBackColor = true;
-            // 
-            // rbSN
-            // 
-            this.rbSN.AutoSize = true;
-            this.rbSN.Location = new System.Drawing.Point(8, 53);
-            this.rbSN.Name = "rbSN";
-            this.rbSN.Size = new System.Drawing.Size(105, 17);
-            this.rbSN.TabIndex = 75;
-            this.rbSN.TabStop = true;
-            this.rbSN.Text = "Search By Name";
-            this.rbSN.UseVisualStyleBackColor = true;
-            // 
-            // lbAdd
-            // 
-            this.lbAdd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAdd.Location = new System.Drawing.Point(74, 344);
-            this.lbAdd.Name = "lbAdd";
-            this.lbAdd.Size = new System.Drawing.Size(199, 22);
-            this.lbAdd.TabIndex = 73;
-            this.lbAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(6, 347);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(62, 16);
-            this.label42.TabIndex = 72;
-            this.label42.Text = "Address:";
+            this.btnUpdate.Location = new System.Drawing.Point(412, 340);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 77;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // PatientInfoSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(615, 570);
+            this.ClientSize = new System.Drawing.Size(615, 577);
             this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.medicalPanel);
             this.Controls.Add(this.searchPB);
@@ -1594,5 +1606,6 @@
         private System.Windows.Forms.RadioButton rbSearchN;
         private System.Windows.Forms.Label lbAdd;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

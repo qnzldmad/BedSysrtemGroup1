@@ -425,5 +425,28 @@ namespace Bed_System
                 MessageBox.Show("Please Select an Option", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string updateQuery = "UPDATE eahthospital.patientmedicaldetails SET p_systolic = " + systolicTB.Text + ", p_diastolic = " + diastolicTB.Text + ", p_breathing = " + breathingTB.Text + ", p_pulse = " + pulseTB.Text + ", p_temperater = " + temperatureTB.Text + " WHERE p_id = " + int.Parse(txtsearchpatient.Text);
+
+            mySqlConnection.Open();
+            try
+            {
+                mySqlCommand = new MySqlCommand(updateQuery, mySqlConnection);
+                if(mySqlCommand.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Updated!");
+                }
+                else
+                {
+                    MessageBox.Show("Failed");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
