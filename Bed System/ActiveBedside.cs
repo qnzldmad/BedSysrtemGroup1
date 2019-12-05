@@ -141,8 +141,7 @@ namespace Bed_System
             if (bsyst <= sysmin || bsyst >= sysmax)
             {
                 bcolor.BackColor = Color.Red;
-                SoundPlayer player1 = new System.Media.SoundPlayer();
-                player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
+                SoundPlayer player1 = new System.Media.SoundPlayer(Properties.Resources.Alarm);
                 player1.Play();
 
                 DatabaseConnertor databaseConnertor = new DatabaseConnertor();
@@ -159,8 +158,7 @@ namespace Bed_System
             else if (bdiat <= diamin || bdiat >= diamax)
             {
                 bcolor.BackColor = Color.Red;
-                SoundPlayer player1 = new System.Media.SoundPlayer();
-                player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
+                SoundPlayer player1 = new System.Media.SoundPlayer(Properties.Resources.Alarm);
                 player1.Play();
 
                 DatabaseConnertor databaseConnertor = new DatabaseConnertor();
@@ -177,8 +175,7 @@ namespace Bed_System
             else if (bpult <= pulmin || bpult >= pulmax)
             {
                 bcolor.BackColor = Color.Red;
-                SoundPlayer player1 = new System.Media.SoundPlayer();
-                player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
+                SoundPlayer player1 = new System.Media.SoundPlayer(Properties.Resources.Alarm);
                 player1.Play();
 
                 DatabaseConnertor databaseConnertor = new DatabaseConnertor();
@@ -195,8 +192,7 @@ namespace Bed_System
             else if (bbret <= bremin || bbret >= bremax)
             {
                 bcolor.BackColor = Color.Red;
-                SoundPlayer player1 = new System.Media.SoundPlayer();
-                player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
+                SoundPlayer player1 = new System.Media.SoundPlayer(Properties.Resources.Alarm);
                 player1.Play();
 
                 DatabaseConnertor databaseConnertor = new DatabaseConnertor();
@@ -213,8 +209,7 @@ namespace Bed_System
             else if (btemt <= temmin || btemt >= temmax)
             {
                 bcolor.BackColor = Color.Red;
-                SoundPlayer player1 = new System.Media.SoundPlayer();
-                player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Alarm.wav";
+                SoundPlayer player1 = new System.Media.SoundPlayer(Properties.Resources.Alarm);
                 player1.Play();
 
                 DatabaseConnertor databaseConnertor = new DatabaseConnertor();

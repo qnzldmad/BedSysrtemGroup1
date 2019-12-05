@@ -147,8 +147,7 @@ namespace Bed_System
             {
                 timer.Stop();
                 // SoundPlayer player = new System.Media.SoundPlayer();
-                SoundPlayer player1 = new System.Media.SoundPlayer();
-                player1.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Test\BedSysrtemGroup18\BedsideSoundss.wav";
+                SoundPlayer player1 = new SoundPlayer(Properties.Resources.BedsideSoundss);
                 player1.Play();
                 // player.Stop();
 
@@ -156,8 +155,7 @@ namespace Bed_System
 
             else
             {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                player.SoundLocation = @"C:\Users\vi-ci\Desktop\K\Colleage\ARU Y2 SEM1\MOD003263 Software Engineering\Assignment\Test\BedSysrtemGroup18\BedsideSounds.wav";
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.BedsideSounds);
                 player.Play();
             }
 

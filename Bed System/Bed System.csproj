@@ -269,6 +269,8 @@
       <DependentUpon>SetAlarmLimit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="eahthospital%28Final%29.sql.gz" />
+    <None Include="eahthospital%28Final%29.sql.zip" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -326,6 +328,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BedsideSounds.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BedsideSoundss.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
