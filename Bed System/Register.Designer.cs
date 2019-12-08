@@ -216,21 +216,21 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(49, 215);
+            this.label6.Location = new System.Drawing.Point(40, 215);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 16);
+            this.label6.Size = new System.Drawing.Size(124, 16);
             this.label6.TabIndex = 68;
-            this.label6.Text = "Register Time:";
+            this.label6.Text = "Deregister Time:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(49, 187);
+            this.label7.Location = new System.Drawing.Point(40, 187);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 16);
+            this.label7.Size = new System.Drawing.Size(122, 16);
             this.label7.TabIndex = 67;
-            this.label7.Text = "Register Date:";
+            this.label7.Text = "Deregister Date:";
             // 
             // label4
             // 
