@@ -28,6 +28,7 @@ namespace Bed_System
             searchPanel.Hide();
             addInfor.Hide();
             searchInfor.Hide();
+            reportPanel.Hide();
 
             addPanel.Width = 458;
             addPanel.Height = 274;
@@ -41,6 +42,9 @@ namespace Bed_System
             searchInfor.Width = 450;
             searchInfor.Height = 234;
             searchInfor.Location = new Point(24, 195);
+            reportPanel.Width = 458;
+            reportPanel.Height = 274;
+            reportPanel.Location = new Point(21, 158);
         }
 
         private void addStaff_Click(object sender, EventArgs e)
@@ -49,9 +53,11 @@ namespace Bed_System
             searchPanel.Hide();
             addInfor.Hide();
             searchInfor.Hide();
+            reportPanel.Hide();
 
             addStaff.BorderStyle = BorderStyle.Fixed3D;
             checkStaff.BorderStyle = BorderStyle.None;
+            report.BorderStyle = BorderStyle.None;
             exit.BorderStyle = BorderStyle.None;
         }
 
@@ -73,9 +79,11 @@ namespace Bed_System
             searchPanel.Show();
             addInfor.Hide();
             searchInfor.Hide();
+            reportPanel.Hide();
 
             addStaff.BorderStyle = BorderStyle.None;
             checkStaff.BorderStyle = BorderStyle.Fixed3D;
+            report.BorderStyle = BorderStyle.None;
             exit.BorderStyle = BorderStyle.None;
         }
 
@@ -106,6 +114,7 @@ namespace Bed_System
             lbPN.Hide();
             btnSave.Show();
             cbPositon.Show();
+            reportPanel.Hide();
         }
 
         private void btnAddNurse_Click(object sender, EventArgs e)
@@ -118,6 +127,7 @@ namespace Bed_System
             cbPositon.Hide();
             btnSaveN.Show();
             lbPN.Show();
+            reportPanel.Hide();
         }
 
         private void addInfor_Paint(object sender, PaintEventArgs e)
@@ -195,6 +205,7 @@ namespace Bed_System
             searchInfor.Show();
             searchStaff.Show();
             searchNurse.Hide();
+            reportPanel.Hide();
         }
 
         private void btnSearchNurse_Click(object sender, EventArgs e)
@@ -205,6 +216,7 @@ namespace Bed_System
             searchInfor.Show();
             searchStaff.Hide();
             searchNurse.Show();
+            reportPanel.Hide();
         }
 
         private void searchInfor_Paint(object sender, PaintEventArgs e)
@@ -340,8 +352,48 @@ namespace Bed_System
        
         private void report_Click(object sender, EventArgs e)
         {
+            addPanel.Hide();
+            searchPanel.Hide();
+            addInfor.Hide();
+            searchInfor.Hide();
+            searchStaff.Hide();
+            searchNurse.Show();
+            reportPanel.Show();
+
+            addStaff.BorderStyle = BorderStyle.None;
+            checkStaff.BorderStyle = BorderStyle.None;
+            report.BorderStyle = BorderStyle.Fixed3D;
+            exit.BorderStyle = BorderStyle.None;
+        }
+
+        private void btnMRD_Click(object sender, EventArgs e)
+        {
+            ReportMedicalStaff reportMedicalStaff = new ReportMedicalStaff();
+            reportMedicalStaff.Show();
+        }
+
+        private void btnNRD_Click(object sender, EventArgs e)
+        {
+            ReportNurse reportNurse = new ReportNurse();
+            reportNurse.Show();
+        }
+
+        private void btnCBA_Click(object sender, EventArgs e)
+        {
             Report report = new Report();
             report.Show();
+        }
+
+        private void report_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.report, "Report");
+            report.BackColor = Color.Gray;
+        }
+
+        private void report_MouseLeave(object sender, EventArgs e)
+        {
+            report.BackColor = Color.LightGray;
         }
     }
 }

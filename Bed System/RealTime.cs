@@ -106,6 +106,7 @@ namespace Bed_System
             lbTem.Text = trandomnum.ToString();
 
             chart1.Series[0].Points.AddXY(bstime++, bsrandomnum);
+            chart1.Series[0].Color = Color.LightGreen;
             chart1.Series[1].Points.AddXY(bdtime++, bdrandomnum);
             if (chart1.Series[0].Points.Count > 5)
             {
@@ -115,6 +116,7 @@ namespace Bed_System
             }
 
             chart2.Series[0].Points.AddXY(ptime++, prandomnum);
+            chart2.Series[0].Color = Color.LightGreen;
 
             if (chart2.Series[0].Points.Count > 5)
             {
@@ -124,6 +126,7 @@ namespace Bed_System
             }
 
             chart3.Series[0].Points.AddXY(btime++, brandomnum);
+            chart3.Series[0].Color = Color.LightGreen;
 
             if (chart3.Series[0].Points.Count > 5)
             {
@@ -133,6 +136,7 @@ namespace Bed_System
             }
 
             chart4.Series[0].Points.AddXY(ttime++, trandomnum);
+            chart4.Series[0].Color = Color.LightGreen;
 
             if (chart4.Series[0].Points.Count > 5)
             {

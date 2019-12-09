@@ -50,10 +50,8 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
-            this.searchNurse = new System.Windows.Forms.PictureBox();
             this.rbID = new System.Windows.Forms.RadioButton();
             this.rbName = new System.Windows.Forms.RadioButton();
-            this.searchStaff = new System.Windows.Forms.PictureBox();
             this.dtpS = new System.Windows.Forms.DateTimePicker();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lbPosition = new System.Windows.Forms.Label();
@@ -73,27 +71,35 @@
             this.btnSearchMedical = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddMedicalStaff = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddNurse = new System.Windows.Forms.Button();
             this.addPanel = new System.Windows.Forms.Panel();
+            this.reportPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCBA = new System.Windows.Forms.Button();
+            this.btnNRD = new System.Windows.Forms.Button();
+            this.btnMRD = new System.Windows.Forms.Button();
+            this.report = new System.Windows.Forms.PictureBox();
             this.addStaff = new System.Windows.Forms.PictureBox();
             this.checkStaff = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.PictureBox();
-            this.report = new System.Windows.Forms.PictureBox();
+            this.searchNurse = new System.Windows.Forms.PictureBox();
+            this.searchStaff = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.addInfor.SuspendLayout();
             this.searchInfor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).BeginInit();
             this.searchPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.addPanel.SuspendLayout();
+            this.reportPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.report)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkStaff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.report)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // addInfor
@@ -338,18 +344,6 @@
             this.lbID.Size = new System.Drawing.Size(135, 18);
             this.lbID.TabIndex = 40;
             // 
-            // searchNurse
-            // 
-            this.searchNurse.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.searchNurse.Image = global::Bed_System.Properties.Resources.search;
-            this.searchNurse.Location = new System.Drawing.Point(298, 37);
-            this.searchNurse.Name = "searchNurse";
-            this.searchNurse.Size = new System.Drawing.Size(32, 20);
-            this.searchNurse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchNurse.TabIndex = 38;
-            this.searchNurse.TabStop = false;
-            this.searchNurse.Click += new System.EventHandler(this.searchNurse_Click);
-            // 
             // rbID
             // 
             this.rbID.AutoSize = true;
@@ -371,18 +365,6 @@
             this.rbName.TabStop = true;
             this.rbName.Text = "Search By Name";
             this.rbName.UseVisualStyleBackColor = true;
-            // 
-            // searchStaff
-            // 
-            this.searchStaff.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.searchStaff.Image = global::Bed_System.Properties.Resources.search;
-            this.searchStaff.Location = new System.Drawing.Point(258, 37);
-            this.searchStaff.Name = "searchStaff";
-            this.searchStaff.Size = new System.Drawing.Size(32, 20);
-            this.searchStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchStaff.TabIndex = 0;
-            this.searchStaff.TabStop = false;
-            this.searchStaff.Click += new System.EventHandler(this.searchStaff_Click);
             // 
             // dtpS
             // 
@@ -577,17 +559,6 @@
             this.panel1.Size = new System.Drawing.Size(516, 79);
             this.panel1.TabIndex = 47;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = global::Bed_System.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnAddMedicalStaff
             // 
             this.btnAddMedicalStaff.Location = new System.Drawing.Point(200, 9);
@@ -629,6 +600,72 @@
             this.addPanel.Size = new System.Drawing.Size(458, 274);
             this.addPanel.TabIndex = 49;
             // 
+            // reportPanel
+            // 
+            this.reportPanel.BackColor = System.Drawing.Color.DarkRed;
+            this.reportPanel.Controls.Add(this.label5);
+            this.reportPanel.Controls.Add(this.btnCBA);
+            this.reportPanel.Controls.Add(this.btnNRD);
+            this.reportPanel.Controls.Add(this.btnMRD);
+            this.reportPanel.Location = new System.Drawing.Point(492, 159);
+            this.reportPanel.Name = "reportPanel";
+            this.reportPanel.Size = new System.Drawing.Size(458, 276);
+            this.reportPanel.TabIndex = 58;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(187, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Report";
+            // 
+            // btnCBA
+            // 
+            this.btnCBA.Location = new System.Drawing.Point(302, 125);
+            this.btnCBA.Name = "btnCBA";
+            this.btnCBA.Size = new System.Drawing.Size(75, 53);
+            this.btnCBA.TabIndex = 2;
+            this.btnCBA.Text = "Check Bed Active";
+            this.btnCBA.UseVisualStyleBackColor = true;
+            this.btnCBA.Click += new System.EventHandler(this.btnCBA_Click);
+            // 
+            // btnNRD
+            // 
+            this.btnNRD.Location = new System.Drawing.Point(194, 125);
+            this.btnNRD.Name = "btnNRD";
+            this.btnNRD.Size = new System.Drawing.Size(75, 53);
+            this.btnNRD.TabIndex = 1;
+            this.btnNRD.Text = "Nurse Register / Deregister";
+            this.btnNRD.UseVisualStyleBackColor = true;
+            this.btnNRD.Click += new System.EventHandler(this.btnNRD_Click);
+            // 
+            // btnMRD
+            // 
+            this.btnMRD.Location = new System.Drawing.Point(78, 125);
+            this.btnMRD.Name = "btnMRD";
+            this.btnMRD.Size = new System.Drawing.Size(75, 53);
+            this.btnMRD.TabIndex = 0;
+            this.btnMRD.Text = "Medical Register / Deregister";
+            this.btnMRD.UseVisualStyleBackColor = true;
+            this.btnMRD.Click += new System.EventHandler(this.btnMRD_Click);
+            // 
+            // report
+            // 
+            this.report.BackColor = System.Drawing.Color.LightGray;
+            this.report.Image = global::Bed_System.Properties.Resources.select_module;
+            this.report.Location = new System.Drawing.Point(292, 86);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(73, 67);
+            this.report.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.report.TabIndex = 57;
+            this.report.TabStop = false;
+            this.report.Click += new System.EventHandler(this.report_Click);
+            this.report.MouseLeave += new System.EventHandler(this.report_MouseLeave);
+            this.report.MouseHover += new System.EventHandler(this.report_MouseHover);
+            // 
             // addStaff
             // 
             this.addStaff.BackColor = System.Drawing.Color.LightGray;
@@ -669,23 +706,47 @@
             this.exit.TabStop = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // report
+            // searchNurse
             // 
-            this.report.BackColor = System.Drawing.Color.LightGray;
-            this.report.Image = global::Bed_System.Properties.Resources.select_module;
-            this.report.Location = new System.Drawing.Point(292, 86);
-            this.report.Name = "report";
-            this.report.Size = new System.Drawing.Size(73, 67);
-            this.report.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.report.TabIndex = 57;
-            this.report.TabStop = false;
-            this.report.Click += new System.EventHandler(this.report_Click);
+            this.searchNurse.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchNurse.Image = global::Bed_System.Properties.Resources.search;
+            this.searchNurse.Location = new System.Drawing.Point(298, 37);
+            this.searchNurse.Name = "searchNurse";
+            this.searchNurse.Size = new System.Drawing.Size(32, 20);
+            this.searchNurse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchNurse.TabIndex = 38;
+            this.searchNurse.TabStop = false;
+            this.searchNurse.Click += new System.EventHandler(this.searchNurse_Click);
+            // 
+            // searchStaff
+            // 
+            this.searchStaff.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchStaff.Image = global::Bed_System.Properties.Resources.search;
+            this.searchStaff.Location = new System.Drawing.Point(258, 37);
+            this.searchStaff.Name = "searchStaff";
+            this.searchStaff.Size = new System.Drawing.Size(32, 20);
+            this.searchStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchStaff.TabIndex = 0;
+            this.searchStaff.TabStop = false;
+            this.searchStaff.Click += new System.EventHandler(this.searchStaff_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = global::Bed_System.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
             // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 447);
+            this.Controls.Add(this.reportPanel);
             this.Controls.Add(this.report);
             this.Controls.Add(this.addInfor);
             this.Controls.Add(this.addStaff);
@@ -702,18 +763,20 @@
             this.addInfor.PerformLayout();
             this.searchInfor.ResumeLayout(false);
             this.searchInfor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).EndInit();
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
+            this.reportPanel.ResumeLayout(false);
+            this.reportPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.report)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkStaff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.report)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchNurse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -774,5 +837,10 @@
         private System.Windows.Forms.Button btnAddNurse;
         private System.Windows.Forms.Panel addPanel;
         private System.Windows.Forms.PictureBox report;
+        private System.Windows.Forms.Panel reportPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCBA;
+        private System.Windows.Forms.Button btnNRD;
+        private System.Windows.Forms.Button btnMRD;
     }
 }

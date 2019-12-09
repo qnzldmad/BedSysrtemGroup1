@@ -184,6 +184,18 @@
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportMedicalStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMedicalStaff.Designer.cs">
+      <DependentUpon>ReportMedicalStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportNurse.Designer.cs">
+      <DependentUpon>ReportNurse.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +273,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedicalStaff.resx">
+      <DependentUpon>ReportMedicalStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportNurse.resx">
+      <DependentUpon>ReportNurse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPatient.resx">
       <DependentUpon>SearchPatient.cs</DependentUpon>

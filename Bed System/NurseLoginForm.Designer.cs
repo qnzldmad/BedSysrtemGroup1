@@ -200,7 +200,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NurseLoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Log In";
+            this.Text = "Nurse Log In";
             this.Load += new System.EventHandler(this.NurseLoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

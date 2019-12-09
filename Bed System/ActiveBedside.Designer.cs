@@ -48,7 +48,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bedNumber = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRe = new System.Windows.Forms.Button();
             this.bedNo = new System.Windows.Forms.Label();
@@ -76,7 +75,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.pnlBed1 = new System.Windows.Forms.Panel();
             this.lbPatient = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -99,11 +97,98 @@
             this.sysMin = new System.Windows.Forms.Label();
             this.sysMax = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bttbre = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bttsys = new System.Windows.Forms.Label();
+            this.bttpul = new System.Windows.Forms.Label();
+            this.bttcolor = new System.Windows.Forms.Label();
+            this.btttem = new System.Windows.Forms.Label();
+            this.bttdia = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.bfbre = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.bfsys = new System.Windows.Forms.Label();
+            this.bfpul = new System.Windows.Forms.Label();
+            this.bfcolor = new System.Windows.Forms.Label();
+            this.bftem = new System.Windows.Forms.Label();
+            this.bfdia = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.bffbre = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.bffsys = new System.Windows.Forms.Label();
+            this.bffpul = new System.Windows.Forms.Label();
+            this.bffcolor = new System.Windows.Forms.Label();
+            this.bfftem = new System.Windows.Forms.Label();
+            this.bffdia = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.bsbre = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.bssys = new System.Windows.Forms.Label();
+            this.bspul = new System.Windows.Forms.Label();
+            this.bscolor = new System.Windows.Forms.Label();
+            this.bstem = new System.Windows.Forms.Label();
+            this.bsdia = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.bssbre = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.bsssys = new System.Windows.Forms.Label();
+            this.bsspul = new System.Windows.Forms.Label();
+            this.bsscolor = new System.Windows.Forms.Label();
+            this.bsstem = new System.Windows.Forms.Label();
+            this.bssdia = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.bebre = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.besys = new System.Windows.Forms.Label();
+            this.bepul = new System.Windows.Forms.Label();
+            this.becolor = new System.Windows.Forms.Label();
+            this.betem = new System.Windows.Forms.Label();
+            this.bedia = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.timer6 = new System.Windows.Forms.Timer(this.components);
+            this.timer7 = new System.Windows.Forms.Timer(this.components);
+            this.timer8 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -113,6 +198,18 @@
             this.pnlBed1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // temMax
@@ -178,7 +275,7 @@
             // 
             // btnMute
             // 
-            this.btnMute.Location = new System.Drawing.Point(15, 428);
+            this.btnMute.Location = new System.Drawing.Point(12, 76);
             this.btnMute.Name = "btnMute";
             this.btnMute.Size = new System.Drawing.Size(75, 23);
             this.btnMute.TabIndex = 49;
@@ -270,7 +367,7 @@
             this.panel5.Controls.Add(this.btdia);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(518, 3);
+            this.panel5.Location = new System.Drawing.Point(205, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 310);
             this.panel5.TabIndex = 0;
@@ -284,23 +381,12 @@
             this.bedNumber.TabIndex = 41;
             this.bedNumber.Text = "1";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Location = new System.Drawing.Point(724, 342);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "50";
-            this.label8.Visible = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 208);
+            this.label6.Location = new System.Drawing.Point(21, 454);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 10;
@@ -308,7 +394,7 @@
             // 
             // btnRe
             // 
-            this.btnRe.Location = new System.Drawing.Point(588, 428);
+            this.btnRe.Location = new System.Drawing.Point(585, 76);
             this.btnRe.Name = "btnRe";
             this.btnRe.Size = new System.Drawing.Size(75, 23);
             this.btnRe.TabIndex = 53;
@@ -328,7 +414,7 @@
             // lbDateTime
             // 
             this.lbDateTime.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbDateTime.Location = new System.Drawing.Point(328, 428);
+            this.lbDateTime.Location = new System.Drawing.Point(325, 76);
             this.lbDateTime.Name = "lbDateTime";
             this.lbDateTime.Size = new System.Drawing.Size(254, 24);
             this.lbDateTime.TabIndex = 51;
@@ -336,7 +422,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(101, 434);
+            this.label4.Location = new System.Drawing.Point(98, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 52;
@@ -344,7 +430,7 @@
             // 
             // tbStaffName
             // 
-            this.tbStaffName.Location = new System.Drawing.Point(153, 431);
+            this.tbStaffName.Location = new System.Drawing.Point(150, 79);
             this.tbStaffName.Name = "tbStaffName";
             this.tbStaffName.Size = new System.Drawing.Size(169, 20);
             this.tbStaffName.TabIndex = 45;
@@ -358,7 +444,7 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(84, 277);
+            this.btnCheck.Location = new System.Drawing.Point(89, 572);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(75, 23);
             this.btnCheck.TabIndex = 3;
@@ -374,7 +460,7 @@
             // 
             this.lblBed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblBed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBed.Location = new System.Drawing.Point(39, 154);
+            this.lblBed.Location = new System.Drawing.Point(39, 286);
             this.lblBed.Name = "lblBed";
             this.lblBed.Size = new System.Drawing.Size(169, 23);
             this.lblBed.TabIndex = 7;
@@ -397,7 +483,7 @@
             this.panel6.Controls.Add(this.bdia);
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.label12);
-            this.panel6.Location = new System.Drawing.Point(285, 3);
+            this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(196, 310);
             this.panel6.TabIndex = 0;
@@ -520,7 +606,7 @@
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Location = new System.Drawing.Point(1, 1);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(755, 68);
+            this.panel10.Size = new System.Drawing.Size(1113, 68);
             this.panel10.TabIndex = 48;
             // 
             // label1
@@ -528,7 +614,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(314, 21);
+            this.label1.Location = new System.Drawing.Point(486, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 24);
             this.label1.TabIndex = 1;
@@ -545,17 +631,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Location = new System.Drawing.Point(751, 342);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(21, 15);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "80";
-            this.label22.Visible = false;
-            // 
             // pnlBed1
             // 
             this.pnlBed1.BackColor = System.Drawing.Color.Maroon;
@@ -566,16 +641,16 @@
             this.pnlBed1.Controls.Add(this.lblBed);
             this.pnlBed1.Controls.Add(this.label10);
             this.pnlBed1.Controls.Add(this.label2);
-            this.pnlBed1.Location = new System.Drawing.Point(3, 3);
+            this.pnlBed1.Location = new System.Drawing.Point(823, 6);
             this.pnlBed1.Name = "pnlBed1";
-            this.pnlBed1.Size = new System.Drawing.Size(253, 310);
+            this.pnlBed1.Size = new System.Drawing.Size(253, 623);
             this.pnlBed1.TabIndex = 0;
             // 
             // lbPatient
             // 
             this.lbPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbPatient.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbPatient.Location = new System.Drawing.Point(39, 238);
+            this.lbPatient.Location = new System.Drawing.Point(39, 484);
             this.lbPatient.Name = "lbPatient";
             this.lbPatient.Size = new System.Drawing.Size(169, 23);
             this.lbPatient.TabIndex = 9;
@@ -585,7 +660,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(21, 110);
+            this.label10.Location = new System.Drawing.Point(21, 242);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 16);
             this.label10.TabIndex = 6;
@@ -604,7 +679,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(669, 428);
+            this.btnExit.Location = new System.Drawing.Point(666, 76);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 47;
@@ -633,7 +708,7 @@
             this.panel2.Controls.Add(this.sysMin);
             this.panel2.Controls.Add(this.sysMax);
             this.panel2.Controls.Add(this.label44);
-            this.panel2.Location = new System.Drawing.Point(776, 11);
+            this.panel2.Location = new System.Drawing.Point(1111, 105);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(196, 382);
             this.panel2.TabIndex = 50;
@@ -773,39 +848,6 @@
             this.label44.TabIndex = 14;
             this.label44.Text = "Bed";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label20.Location = new System.Drawing.Point(697, 342);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(21, 15);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "37";
-            this.label20.Visible = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label21.Location = new System.Drawing.Point(667, 342);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(21, 15);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "90";
-            this.label21.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Location = new System.Drawing.Point(634, 342);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 15);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "140";
-            this.label9.Visible = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -813,25 +855,824 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.pnlBed1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Location = new System.Drawing.Point(12, 86);
+            this.panel1.Location = new System.Drawing.Point(12, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 336);
+            this.panel1.Size = new System.Drawing.Size(1093, 640);
             this.panel1.TabIndex = 46;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel3.Controls.Add(this.bttbre);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.bttsys);
+            this.panel3.Controls.Add(this.bttpul);
+            this.panel3.Controls.Add(this.bttcolor);
+            this.panel3.Controls.Add(this.btttem);
+            this.panel3.Controls.Add(this.bttdia);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Location = new System.Drawing.Point(411, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 310);
+            this.panel3.TabIndex = 30;
+            // 
+            // bttbre
+            // 
+            this.bttbre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bttbre.Location = new System.Drawing.Point(96, 201);
+            this.bttbre.Name = "bttbre";
+            this.bttbre.Size = new System.Drawing.Size(100, 23);
+            this.bttbre.TabIndex = 29;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(2, 211);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Breathing Rate";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(2, 180);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Pulse Rate";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(2, 135);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 26);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Blood Pressure \r\n(Dias)";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(2, 98);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 26);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Blood Pressure\r\n(Sys)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(2, 240);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Temperature";
+            // 
+            // bttsys
+            // 
+            this.bttsys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bttsys.Location = new System.Drawing.Point(96, 97);
+            this.bttsys.Name = "bttsys";
+            this.bttsys.Size = new System.Drawing.Size(100, 23);
+            this.bttsys.TabIndex = 21;
+            // 
+            // bttpul
+            // 
+            this.bttpul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bttpul.Location = new System.Drawing.Point(96, 170);
+            this.bttpul.Name = "bttpul";
+            this.bttpul.Size = new System.Drawing.Size(100, 23);
+            this.bttpul.TabIndex = 18;
+            // 
+            // bttcolor
+            // 
+            this.bttcolor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bttcolor.Location = new System.Drawing.Point(54, 273);
+            this.bttcolor.Name = "bttcolor";
+            this.bttcolor.Size = new System.Drawing.Size(100, 23);
+            this.bttcolor.TabIndex = 19;
+            // 
+            // btttem
+            // 
+            this.btttem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btttem.Location = new System.Drawing.Point(96, 233);
+            this.btttem.Name = "btttem";
+            this.btttem.Size = new System.Drawing.Size(100, 23);
+            this.btttem.TabIndex = 20;
+            // 
+            // bttdia
+            // 
+            this.bttdia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bttdia.Location = new System.Drawing.Point(96, 134);
+            this.bttdia.Name = "bttdia";
+            this.bttdia.Size = new System.Drawing.Size(100, 23);
+            this.bttdia.TabIndex = 18;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(14, 11);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 13);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Bed 3";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(40, 27);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel4.Controls.Add(this.bfbre);
+            this.panel4.Controls.Add(this.label31);
+            this.panel4.Controls.Add(this.label32);
+            this.panel4.Controls.Add(this.label33);
+            this.panel4.Controls.Add(this.label37);
+            this.panel4.Controls.Add(this.label40);
+            this.panel4.Controls.Add(this.bfsys);
+            this.panel4.Controls.Add(this.bfpul);
+            this.panel4.Controls.Add(this.bfcolor);
+            this.panel4.Controls.Add(this.bftem);
+            this.panel4.Controls.Add(this.bfdia);
+            this.panel4.Controls.Add(this.label47);
+            this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Location = new System.Drawing.Point(617, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 310);
+            this.panel4.TabIndex = 54;
+            // 
+            // bfbre
+            // 
+            this.bfbre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bfbre.Location = new System.Drawing.Point(96, 201);
+            this.bfbre.Name = "bfbre";
+            this.bfbre.Size = new System.Drawing.Size(100, 23);
+            this.bfbre.TabIndex = 29;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(2, 211);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(78, 13);
+            this.label31.TabIndex = 28;
+            this.label31.Text = "Breathing Rate";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(2, 180);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(59, 13);
+            this.label32.TabIndex = 27;
+            this.label32.Text = "Pulse Rate";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(2, 135);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(81, 26);
+            this.label33.TabIndex = 26;
+            this.label33.Text = "Blood Pressure \r\n(Dias)";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(2, 98);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(78, 26);
+            this.label37.TabIndex = 25;
+            this.label37.Text = "Blood Pressure\r\n(Sys)";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(2, 240);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(67, 13);
+            this.label40.TabIndex = 7;
+            this.label40.Text = "Temperature";
+            // 
+            // bfsys
+            // 
+            this.bfsys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bfsys.Location = new System.Drawing.Point(96, 97);
+            this.bfsys.Name = "bfsys";
+            this.bfsys.Size = new System.Drawing.Size(100, 23);
+            this.bfsys.TabIndex = 21;
+            // 
+            // bfpul
+            // 
+            this.bfpul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bfpul.Location = new System.Drawing.Point(96, 170);
+            this.bfpul.Name = "bfpul";
+            this.bfpul.Size = new System.Drawing.Size(100, 23);
+            this.bfpul.TabIndex = 18;
+            // 
+            // bfcolor
+            // 
+            this.bfcolor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bfcolor.Location = new System.Drawing.Point(54, 273);
+            this.bfcolor.Name = "bfcolor";
+            this.bfcolor.Size = new System.Drawing.Size(100, 23);
+            this.bfcolor.TabIndex = 19;
+            // 
+            // bftem
+            // 
+            this.bftem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bftem.Location = new System.Drawing.Point(96, 233);
+            this.bftem.Name = "bftem";
+            this.bftem.Size = new System.Drawing.Size(100, 23);
+            this.bftem.TabIndex = 20;
+            // 
+            // bfdia
+            // 
+            this.bfdia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bfdia.Location = new System.Drawing.Point(96, 134);
+            this.bfdia.Name = "bfdia";
+            this.bfdia.Size = new System.Drawing.Size(100, 23);
+            this.bfdia.TabIndex = 18;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(14, 11);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(35, 13);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "Bed 4";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(40, 27);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel7.Controls.Add(this.bffbre);
+            this.panel7.Controls.Add(this.label49);
+            this.panel7.Controls.Add(this.label50);
+            this.panel7.Controls.Add(this.label51);
+            this.panel7.Controls.Add(this.label52);
+            this.panel7.Controls.Add(this.label53);
+            this.panel7.Controls.Add(this.bffsys);
+            this.panel7.Controls.Add(this.bffpul);
+            this.panel7.Controls.Add(this.bffcolor);
+            this.panel7.Controls.Add(this.bfftem);
+            this.panel7.Controls.Add(this.bffdia);
+            this.panel7.Controls.Add(this.label59);
+            this.panel7.Controls.Add(this.pictureBox6);
+            this.panel7.Location = new System.Drawing.Point(3, 319);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 310);
+            this.panel7.TabIndex = 30;
+            // 
+            // bffbre
+            // 
+            this.bffbre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bffbre.Location = new System.Drawing.Point(96, 201);
+            this.bffbre.Name = "bffbre";
+            this.bffbre.Size = new System.Drawing.Size(100, 23);
+            this.bffbre.TabIndex = 29;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(2, 211);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(78, 13);
+            this.label49.TabIndex = 28;
+            this.label49.Text = "Breathing Rate";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(2, 180);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(59, 13);
+            this.label50.TabIndex = 27;
+            this.label50.Text = "Pulse Rate";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(2, 135);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(81, 26);
+            this.label51.TabIndex = 26;
+            this.label51.Text = "Blood Pressure \r\n(Dias)";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(2, 98);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(78, 26);
+            this.label52.TabIndex = 25;
+            this.label52.Text = "Blood Pressure\r\n(Sys)";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(2, 240);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(67, 13);
+            this.label53.TabIndex = 7;
+            this.label53.Text = "Temperature";
+            // 
+            // bffsys
+            // 
+            this.bffsys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bffsys.Location = new System.Drawing.Point(96, 97);
+            this.bffsys.Name = "bffsys";
+            this.bffsys.Size = new System.Drawing.Size(100, 23);
+            this.bffsys.TabIndex = 21;
+            // 
+            // bffpul
+            // 
+            this.bffpul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bffpul.Location = new System.Drawing.Point(96, 170);
+            this.bffpul.Name = "bffpul";
+            this.bffpul.Size = new System.Drawing.Size(100, 23);
+            this.bffpul.TabIndex = 18;
+            // 
+            // bffcolor
+            // 
+            this.bffcolor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bffcolor.Location = new System.Drawing.Point(54, 273);
+            this.bffcolor.Name = "bffcolor";
+            this.bffcolor.Size = new System.Drawing.Size(100, 23);
+            this.bffcolor.TabIndex = 19;
+            // 
+            // bfftem
+            // 
+            this.bfftem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bfftem.Location = new System.Drawing.Point(96, 233);
+            this.bfftem.Name = "bfftem";
+            this.bfftem.Size = new System.Drawing.Size(100, 23);
+            this.bfftem.TabIndex = 20;
+            // 
+            // bffdia
+            // 
+            this.bffdia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bffdia.Location = new System.Drawing.Point(96, 134);
+            this.bffdia.Name = "bffdia";
+            this.bffdia.Size = new System.Drawing.Size(100, 23);
+            this.bffdia.TabIndex = 18;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(14, 11);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(35, 13);
+            this.label59.TabIndex = 15;
+            this.label59.Text = "Bed 5";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(40, 27);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 14;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel8.Controls.Add(this.bsbre);
+            this.panel8.Controls.Add(this.label61);
+            this.panel8.Controls.Add(this.label62);
+            this.panel8.Controls.Add(this.label63);
+            this.panel8.Controls.Add(this.label64);
+            this.panel8.Controls.Add(this.label65);
+            this.panel8.Controls.Add(this.bssys);
+            this.panel8.Controls.Add(this.bspul);
+            this.panel8.Controls.Add(this.bscolor);
+            this.panel8.Controls.Add(this.bstem);
+            this.panel8.Controls.Add(this.bsdia);
+            this.panel8.Controls.Add(this.label71);
+            this.panel8.Controls.Add(this.pictureBox7);
+            this.panel8.Location = new System.Drawing.Point(205, 319);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(200, 310);
+            this.panel8.TabIndex = 30;
+            // 
+            // bsbre
+            // 
+            this.bsbre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bsbre.Location = new System.Drawing.Point(96, 201);
+            this.bsbre.Name = "bsbre";
+            this.bsbre.Size = new System.Drawing.Size(100, 23);
+            this.bsbre.TabIndex = 29;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(2, 211);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(78, 13);
+            this.label61.TabIndex = 28;
+            this.label61.Text = "Breathing Rate";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(2, 180);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(59, 13);
+            this.label62.TabIndex = 27;
+            this.label62.Text = "Pulse Rate";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(2, 135);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(81, 26);
+            this.label63.TabIndex = 26;
+            this.label63.Text = "Blood Pressure \r\n(Dias)";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(2, 98);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(78, 26);
+            this.label64.TabIndex = 25;
+            this.label64.Text = "Blood Pressure\r\n(Sys)";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(2, 240);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(67, 13);
+            this.label65.TabIndex = 7;
+            this.label65.Text = "Temperature";
+            // 
+            // bssys
+            // 
+            this.bssys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bssys.Location = new System.Drawing.Point(96, 97);
+            this.bssys.Name = "bssys";
+            this.bssys.Size = new System.Drawing.Size(100, 23);
+            this.bssys.TabIndex = 21;
+            // 
+            // bspul
+            // 
+            this.bspul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bspul.Location = new System.Drawing.Point(96, 170);
+            this.bspul.Name = "bspul";
+            this.bspul.Size = new System.Drawing.Size(100, 23);
+            this.bspul.TabIndex = 18;
+            // 
+            // bscolor
+            // 
+            this.bscolor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bscolor.Location = new System.Drawing.Point(54, 273);
+            this.bscolor.Name = "bscolor";
+            this.bscolor.Size = new System.Drawing.Size(100, 23);
+            this.bscolor.TabIndex = 19;
+            // 
+            // bstem
+            // 
+            this.bstem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bstem.Location = new System.Drawing.Point(96, 233);
+            this.bstem.Name = "bstem";
+            this.bstem.Size = new System.Drawing.Size(100, 23);
+            this.bstem.TabIndex = 20;
+            // 
+            // bsdia
+            // 
+            this.bsdia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bsdia.Location = new System.Drawing.Point(96, 134);
+            this.bsdia.Name = "bsdia";
+            this.bsdia.Size = new System.Drawing.Size(100, 23);
+            this.bsdia.TabIndex = 18;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(14, 11);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(35, 13);
+            this.label71.TabIndex = 15;
+            this.label71.Text = "Bed 6";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(40, 27);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel9.Controls.Add(this.bssbre);
+            this.panel9.Controls.Add(this.label73);
+            this.panel9.Controls.Add(this.label74);
+            this.panel9.Controls.Add(this.label75);
+            this.panel9.Controls.Add(this.label76);
+            this.panel9.Controls.Add(this.label77);
+            this.panel9.Controls.Add(this.bsssys);
+            this.panel9.Controls.Add(this.bsspul);
+            this.panel9.Controls.Add(this.bsscolor);
+            this.panel9.Controls.Add(this.bsstem);
+            this.panel9.Controls.Add(this.bssdia);
+            this.panel9.Controls.Add(this.label83);
+            this.panel9.Controls.Add(this.pictureBox8);
+            this.panel9.Location = new System.Drawing.Point(411, 319);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(200, 310);
+            this.panel9.TabIndex = 55;
+            // 
+            // bssbre
+            // 
+            this.bssbre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bssbre.Location = new System.Drawing.Point(96, 201);
+            this.bssbre.Name = "bssbre";
+            this.bssbre.Size = new System.Drawing.Size(100, 23);
+            this.bssbre.TabIndex = 29;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(2, 211);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(78, 13);
+            this.label73.TabIndex = 28;
+            this.label73.Text = "Breathing Rate";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(2, 180);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(59, 13);
+            this.label74.TabIndex = 27;
+            this.label74.Text = "Pulse Rate";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(2, 135);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(81, 26);
+            this.label75.TabIndex = 26;
+            this.label75.Text = "Blood Pressure \r\n(Dias)";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(2, 98);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(78, 26);
+            this.label76.TabIndex = 25;
+            this.label76.Text = "Blood Pressure\r\n(Sys)";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(2, 240);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(67, 13);
+            this.label77.TabIndex = 7;
+            this.label77.Text = "Temperature";
+            // 
+            // bsssys
+            // 
+            this.bsssys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bsssys.Location = new System.Drawing.Point(96, 97);
+            this.bsssys.Name = "bsssys";
+            this.bsssys.Size = new System.Drawing.Size(100, 23);
+            this.bsssys.TabIndex = 21;
+            // 
+            // bsspul
+            // 
+            this.bsspul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bsspul.Location = new System.Drawing.Point(96, 170);
+            this.bsspul.Name = "bsspul";
+            this.bsspul.Size = new System.Drawing.Size(100, 23);
+            this.bsspul.TabIndex = 18;
+            // 
+            // bsscolor
+            // 
+            this.bsscolor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bsscolor.Location = new System.Drawing.Point(54, 273);
+            this.bsscolor.Name = "bsscolor";
+            this.bsscolor.Size = new System.Drawing.Size(100, 23);
+            this.bsscolor.TabIndex = 19;
+            // 
+            // bsstem
+            // 
+            this.bsstem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bsstem.Location = new System.Drawing.Point(96, 233);
+            this.bsstem.Name = "bsstem";
+            this.bsstem.Size = new System.Drawing.Size(100, 23);
+            this.bsstem.TabIndex = 20;
+            // 
+            // bssdia
+            // 
+            this.bssdia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bssdia.Location = new System.Drawing.Point(96, 134);
+            this.bssdia.Name = "bssdia";
+            this.bssdia.Size = new System.Drawing.Size(100, 23);
+            this.bssdia.TabIndex = 18;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(14, 11);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(35, 13);
+            this.label83.TabIndex = 15;
+            this.label83.Text = "Bed 7";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(40, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel11.Controls.Add(this.bebre);
+            this.panel11.Controls.Add(this.label85);
+            this.panel11.Controls.Add(this.label86);
+            this.panel11.Controls.Add(this.label87);
+            this.panel11.Controls.Add(this.label88);
+            this.panel11.Controls.Add(this.label89);
+            this.panel11.Controls.Add(this.besys);
+            this.panel11.Controls.Add(this.bepul);
+            this.panel11.Controls.Add(this.becolor);
+            this.panel11.Controls.Add(this.betem);
+            this.panel11.Controls.Add(this.bedia);
+            this.panel11.Controls.Add(this.label95);
+            this.panel11.Controls.Add(this.pictureBox9);
+            this.panel11.Location = new System.Drawing.Point(617, 319);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(200, 310);
+            this.panel11.TabIndex = 30;
+            // 
+            // bebre
+            // 
+            this.bebre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bebre.Location = new System.Drawing.Point(96, 201);
+            this.bebre.Name = "bebre";
+            this.bebre.Size = new System.Drawing.Size(100, 23);
+            this.bebre.TabIndex = 29;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(2, 211);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(78, 13);
+            this.label85.TabIndex = 28;
+            this.label85.Text = "Breathing Rate";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(2, 180);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(59, 13);
+            this.label86.TabIndex = 27;
+            this.label86.Text = "Pulse Rate";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(2, 135);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(81, 26);
+            this.label87.TabIndex = 26;
+            this.label87.Text = "Blood Pressure \r\n(Dias)";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(2, 98);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(78, 26);
+            this.label88.TabIndex = 25;
+            this.label88.Text = "Blood Pressure\r\n(Sys)";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(2, 240);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(67, 13);
+            this.label89.TabIndex = 7;
+            this.label89.Text = "Temperature";
+            // 
+            // besys
+            // 
+            this.besys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.besys.Location = new System.Drawing.Point(96, 97);
+            this.besys.Name = "besys";
+            this.besys.Size = new System.Drawing.Size(100, 23);
+            this.besys.TabIndex = 21;
+            // 
+            // bepul
+            // 
+            this.bepul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bepul.Location = new System.Drawing.Point(96, 170);
+            this.bepul.Name = "bepul";
+            this.bepul.Size = new System.Drawing.Size(100, 23);
+            this.bepul.TabIndex = 18;
+            // 
+            // becolor
+            // 
+            this.becolor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.becolor.Location = new System.Drawing.Point(54, 273);
+            this.becolor.Name = "becolor";
+            this.becolor.Size = new System.Drawing.Size(100, 23);
+            this.becolor.TabIndex = 19;
+            // 
+            // betem
+            // 
+            this.betem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.betem.Location = new System.Drawing.Point(96, 233);
+            this.betem.Name = "betem";
+            this.betem.Size = new System.Drawing.Size(100, 23);
+            this.betem.TabIndex = 20;
+            // 
+            // bedia
+            // 
+            this.bedia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bedia.Location = new System.Drawing.Point(96, 134);
+            this.bedia.Name = "bedia";
+            this.bedia.Size = new System.Drawing.Size(100, 23);
+            this.bedia.TabIndex = 18;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(14, 11);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(35, 13);
+            this.label95.TabIndex = 15;
+            this.label95.Text = "Bed 8";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(40, 27);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 14;
+            this.pictureBox9.TabStop = false;
             // 
             // ActiveBedside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(756, 460);
+            this.ClientSize = new System.Drawing.Size(1111, 749);
             this.Controls.Add(this.btnMute);
             this.Controls.Add(this.btnRe);
             this.Controls.Add(this.lbDateTime);
@@ -858,7 +1699,24 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -884,7 +1742,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label bedNumber;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRe;
         private System.Windows.Forms.Label bedNo;
@@ -912,7 +1769,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel pnlBed1;
         private System.Windows.Forms.Label lbPatient;
         private System.Windows.Forms.Label label10;
@@ -935,10 +1791,97 @@
         private System.Windows.Forms.Label sysMin;
         private System.Windows.Forms.Label sysMax;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label bebre;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label besys;
+        private System.Windows.Forms.Label bepul;
+        private System.Windows.Forms.Label becolor;
+        private System.Windows.Forms.Label betem;
+        private System.Windows.Forms.Label bedia;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label bssbre;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label bsssys;
+        private System.Windows.Forms.Label bsspul;
+        private System.Windows.Forms.Label bsscolor;
+        private System.Windows.Forms.Label bsstem;
+        private System.Windows.Forms.Label bssdia;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label bsbre;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label bssys;
+        private System.Windows.Forms.Label bspul;
+        private System.Windows.Forms.Label bscolor;
+        private System.Windows.Forms.Label bstem;
+        private System.Windows.Forms.Label bsdia;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label bffbre;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label bffsys;
+        private System.Windows.Forms.Label bffpul;
+        private System.Windows.Forms.Label bffcolor;
+        private System.Windows.Forms.Label bfftem;
+        private System.Windows.Forms.Label bffdia;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label bfbre;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label bfsys;
+        private System.Windows.Forms.Label bfpul;
+        private System.Windows.Forms.Label bfcolor;
+        private System.Windows.Forms.Label bftem;
+        private System.Windows.Forms.Label bfdia;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label bttbre;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label bttsys;
+        private System.Windows.Forms.Label bttpul;
+        private System.Windows.Forms.Label bttcolor;
+        private System.Windows.Forms.Label btttem;
+        private System.Windows.Forms.Label bttdia;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Timer timer6;
+        private System.Windows.Forms.Timer timer7;
+        private System.Windows.Forms.Timer timer8;
     }
 }

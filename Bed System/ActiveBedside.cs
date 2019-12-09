@@ -45,6 +45,7 @@ namespace Bed_System
             random = new Random();
             timer = new Timer();
             Timer = new Timer();
+            
             timer.Interval = 1000;
             Timer.Interval = 1000;
             timer.Tick += timer1_Tick;
@@ -96,6 +97,78 @@ namespace Bed_System
             btbre.Text = brandomnum.ToString();
             bttem.Text = trandomnum.ToString();
             btcolor.BackColor = Color.Green;
+
+            double bsrandomnumtt = random.Next(105, 145);
+            double bdrandomnumtt = random.Next(65, 100);
+            double prandomnumtt = random.Next(65, 75);
+            double brandomnumtt = random.Next(12, 20);
+            double trandomnumtt = random.Next(36, 37);
+            bttsys.Text = bsrandomnumtt.ToString();
+            bttdia.Text = bdrandomnumtt.ToString();
+            bttpul.Text = prandomnumtt.ToString();
+            bttbre.Text = brandomnumtt.ToString();
+            btttem.Text = trandomnumtt.ToString();
+            bttcolor.BackColor = Color.Green;
+
+            double bsrandomnumf = random.Next(105, 145);
+            double bdrandomnumf = random.Next(65, 100);
+            double prandomnumf = random.Next(65, 75);
+            double brandomnumf = random.Next(12, 20);
+            double trandomnumf = random.Next(36, 37);
+            bfsys.Text = bsrandomnumf.ToString();
+            bfdia.Text = bdrandomnumf.ToString();
+            bfpul.Text = prandomnumf.ToString();
+            bfbre.Text = brandomnumf.ToString();
+            bftem.Text = trandomnumf.ToString();
+            bfcolor.BackColor = Color.Green;
+
+            double bsrandomnumff = random.Next(105, 145);
+            double bdrandomnumff = random.Next(65, 100);
+            double prandomnumff = random.Next(65, 75);
+            double brandomnumff = random.Next(12, 20);
+            double trandomnumff = random.Next(36, 37);
+            bffsys.Text = bsrandomnumff.ToString();
+            bffdia.Text = bdrandomnumff.ToString();
+            bffpul.Text = prandomnumff.ToString();
+            bffbre.Text = brandomnumff.ToString();
+            bfftem.Text = trandomnumff.ToString();
+            bffcolor.BackColor = Color.Green;
+
+            double bsrandomnums = random.Next(105, 145);
+            double bdrandomnums = random.Next(65, 100);
+            double prandomnums = random.Next(65, 75);
+            double brandomnums = random.Next(12, 20);
+            double trandomnums = random.Next(36, 37);
+            bssys.Text = bsrandomnums.ToString();
+            bsdia.Text = bdrandomnums.ToString();
+            bspul.Text = prandomnums.ToString();
+            bsbre.Text = brandomnums.ToString();
+            bstem.Text = trandomnums.ToString();
+            bscolor.BackColor = Color.Green;
+
+            double bsrandomnumss = random.Next(105, 145);
+            double bdrandomnumss = random.Next(65, 100);
+            double prandomnumss = random.Next(65, 75);
+            double brandomnumss = random.Next(12, 20);
+            double trandomnumss = random.Next(36, 37);
+            bsssys.Text = bsrandomnumss.ToString();
+            bssdia.Text = bdrandomnumss.ToString();
+            bsspul.Text = prandomnumss.ToString();
+            bssbre.Text = brandomnumss.ToString();
+            bsstem.Text = trandomnumss.ToString();
+            bsscolor.BackColor = Color.Green;
+
+            double bsrandomnume = random.Next(105, 145);
+            double bdrandomnume = random.Next(65, 100);
+            double prandomnume = random.Next(65, 75);
+            double brandomnume = random.Next(12, 20);
+            double trandomnume = random.Next(36, 37);
+            besys.Text = bsrandomnume.ToString();
+            bedia.Text = bdrandomnume.ToString();
+            bepul.Text = prandomnume.ToString();
+            bebre.Text = brandomnume.ToString();
+            betem.Text = trandomnume.ToString();
+            becolor.BackColor = Color.Green;
 
             lbDateTime.Text = DateTime.Now.ToString();
         }
